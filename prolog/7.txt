@@ -1,0 +1,26 @@
+/* #7 */
+
+domains
+	list=integer*
+	i = integer
+ 	
+predicates
+	nondeterm vvod(list)
+	nondeterm change(list, i)
+
+clauses
+	vvod([H|T]) :-
+		write("write element: "),  readint(H), !,
+		vvod(T).
+	vvod([]).
+	
+	change([H|T], X) :-
+		K = H + X*10,
+		change(T, K).
+
+	change([], X) :-
+		write("Result: ", X),nl.
+goal
+	vvod(L),
+	change(L, 0).
+

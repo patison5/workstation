@@ -1,0 +1,81 @@
+/********************************************************/
+/************************ ПОДВАЛ ************************/
+/********************************************************/
+
+
+
+/***********  ПЕРЕМЕННЫЕ  *************/
+@import "_colors";
+
+footer {
+	background: $backgroundDark;
+	color: #fff;
+	padding: 25px 0;
+}
+
+footer .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer__block {
+	min-height: 150px;
+	// background: #ccc;
+}
+
+
+
+.block__paragraph {
+	margin-bottom: 25px;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+.block__paragraph:last-child {
+	margin-bottom: 0;
+}
+
+.footer__title {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+/* ИКОНКИ */
+.footer__social li {
+	float: left;
+}
+.footer__social li a {
+	display: block;
+	height: 30px;
+	width: 30px;
+	background: url(../images/social.png) 0 0 no-repeat;
+	margin: 5px 5px 0 0;
+}
+.footer__social li:last-child a { margin-right: 0; }
+
+#s-vk 		{ background-position: 0px 0; 	   }
+#s-tw 		{ background-position: 0px -30px;  }
+#s-mail 	{ background-position: 0px -60px;  }
+#s-od		{ background-position: 0px -90px;  }
+#s-google 	{ background-position: 0px -120px; }
+
+
+// телефонный номер
+.footer__number {
+	margin-top: 7px;
+	display: block;
+	font-size: 22px;
+}
+
+
+// меню
+.footer__menu {
+	margin-top: 10px;
+}
+.footer-menu__element {
+	margin-bottom: 4px;
+}
+.footer-menu__link {
+	color: #b5b5b5;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="public/css/select.css">
+	<link rel="stylesheet" href="public/css/style.min.css">
+
+	<style>
+		.basketIco {
+			position: relative; 
+			top: 0; 
+			left: 0; 
+			margin-right: 5px; 
+			display: inline-block;
+		}
+		.header__basket {
+			display: block; 
+			text-align: right;
+		}
+
+		header .container {
+			height: 235px;
+		}
+
+		#basketMessage,
+		#basketPrice {
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wraper">
+		<header>
+			<div class="container">
+				<div class="header__block header__logo">
+					<a href="#" class="logo__link"><img src="public/images/logo.png" alt=""></a>
+				</div>
+
+				<!-- <div class="header__block header__basket">
+					basket
+				</div> -->
+
+				<div class="header__block">
+						<div class="header__basket">
+
+							<p id="basketMessage">
+								<i class="basketIco" style="">&nbsp;</i>
+								Ваша корзина
+								<a href="#"> пуста</a>
+							</p> 
+							<p id="basketPrice">Сумма: <a href="basket.html">0.00 р.</a> </p>
+							
+							<% if (user.id && user.login) { %>
+								<p>
+									<a href="/api/auth/logout"  class="login_link">Выйти</a>
+<!-- 									<span class="login__separator">/</span>
+									<a>Личный кабинет</a>
+ -->								</p>
+							<% } else { %>
+
+								<div class="header__login">
+									<a href="/api/auth" class="login_link">Вход</a>
+									<span class="login__separator">/</span>
+									<a href="/api/auth" class="">Регистрация</a>
+								</div>
+
+							<% } %>
+
+						</div>
+
+
+					<div class="header__search">
+						<form action="#" class="header-search__form">
+							<input type="text"	 class="header-search__text" placeholder="Поиск по артиклу или id">
+							<input type="submit" class="header-search__button" value="&nbsp;">
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>

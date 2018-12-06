@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Переставь фигуру</title>
+</head>
+<body>
+<h1 align=center><font color="Indigo">Практическая работа №4(4)</font></h1>
+<table border=6 align=center>
+	<caption>Переставь фигуры</caption>
+	<tr>
+		<td>3</td> 
+		<td>
+			<INPUT type="button" name="button1" value=&#9819; style="width:50px;height:50px;font-size:32px" onclick="onclick1(0,0,this.value)">
+		</td>
+		<td>
+			<INPUT type="button" name="button2" value=&#9819; style="background:white;width:50px;height:50px;font-size:32px" onclick="onclick1(0,1,this.value)">
+		</td>
+		<td>
+			<INPUT type="button" name="button3" value=&#9819; style="width:50px;height:50px;font-size:32px" onclick="onclick1(0,2,this.value)">
+		</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>
+			<INPUT type="button" name="button4" value=""; style="background:white;width:50px;height:50px;font-size:32px" onclick="onclick1(1,0,this.value)">
+		</td>
+		<td>
+			<INPUT type="button" name="button5" value=""; style="width:50px;height:50px;font-size:32px" onclick="onclick1(1,1,this.value)">
+		</td>
+		<td>
+			<INPUT type="button" name="button6" value=""; style="background:white;width:50px;height:50px;font-size:32px" onclick="onclick1(1,2,this.value)">
+		</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>
+			<INPUT type="button" name="button7" value="&#9817"; style="width:50px;height:50px;font-size:32px" onclick="onclick1(2,0,this.value)">
+		</td>
+		<td>
+			<INPUT type="button" name="button8" value="&#9817"; style="background:white;width:50px;height:50px;font-size:32px" onclick="onclick1(2,1,this.value)">
+		</td>
+		<td>
+			<INPUT type="button" name="button9" value="&#9817"; style="width:50px;height:50px;font-size:32px" onclick="onclick1(2,2,this.value)">
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<th>a</th>
+		<th>b</th>
+		<th>c</th>
+	</tr>
+</table>
+
+<script>
+var ip=1,
+	jp=0,
+	vp="";
+
+var nm=[['button1','button2','button3'],
+		['button4','button5','button6'],
+		['button7','button8','button9']]
+
+// function onclick1(i,j,v, type) {
+// 	if(vp != "") {
+// 		var z1 = Math.abs(j-jp);
+// 		var z2 = Math.abs(i-ip);
+
+// 		// тут пишшеш только циферки тех фигур
+// 		if (document.all(nm[ip][jp]).value.charCodeAt(0) == "9819") {
+// 			console.log('___________ тут ходит первый тип фигуры ___________')
+// 		} else if (document.all(nm[ip][jp]).value.charCodeAt(0) == "9817") {
+// 			console.log("___________ тут ходит второй тип фигуры ___________ ")
+// 		}
+
+// 		// тут ты меняешь алгоритм для хода фигуры
+// 		if((z1 == 1 && z2 == 2)||(z1==2 && z2==1)) {
+// 			console.log('я пошел!!!!')
+
+// 			document.all(nm[i][j]).value=vp
+// 			document.all(nm[ip][jp]).value=""
+
+// 			console.log('я обнулил значения для второго хода')
+// 			vp = "";
+// 		}
+// 	} else {
+// 		ip=i
+// 		jp=j
+// 		vp=document.all(nm[i][j]).value
+// 		console.log("я сохранил значнеия")
+// 		console.log(ip, jp, vp);
+
+// 	}
+
+// 	c = String.fromCharCode(9819)
+
+// 	if (document.all(nm[1][0]).value == "" && document.all(nm[1][1]).value == "" && 
+// 		document.all(nm[1][2]).value == "" && document.all(nm[2][0]).value == c  && 
+// 		document.all(nm[2][1]).value == c  && document.all(nm[2][2]).value == c) {
+// 		alert("Молодец!")
+// 		window.location.reload(true)
+// 	}
+// }
+
+
+function onclick1(i,j,v, type) {
+	if(vp != "") {
+		
+		var z1 = Math.abs(i-ip);
+		var z2 = Math.abs(j-jp);
+
+		if (document.all(nm[ip][jp]).value.charCodeAt(0)== "9819") {
+			console.log(i, j)
+			console.log(ip, jp)
+			console.log(z1, z2)
+
+		    if(((z1 == 0 && z2 >= 1) || (z2 == 0 && z1 >= 1) || (z1 == z2))) {			
+			   document.all(nm[i][j]).value=vp
+			   document.all(nm[ip][jp]).value=""
+			}
+
+		} 
+
+		vp = "";
+
+	} else {
+		ip=i
+		jp=j
+		vp=document.all(nm[i][j]).value
+	}
+
+	c = String.fromCharCode(9819)
+
+	if (document.all(nm[1][0]).value == "" && document.all(nm[1][1]).value == "" && 
+		document.all(nm[1][2]).value == "" && document.all(nm[2][0]).value == c  && 
+		document.all(nm[2][1]).value == c  && document.all(nm[2][2]).value == c) {
+		alert("Молодец!")
+		window.location.reload(true)
+	}
+}
+
+</script>
+</body>
+</html>

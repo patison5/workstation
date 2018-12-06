@@ -1,0 +1,16 @@
+$blueLight: rgb(204, 230, 255);
+$blueDark:  rgb(0, 40, 77);
+
+* {
+	margin: 0;
+	outline: none;
+	padding: 0;
+	box-sizing: border-box;
+	transition: top 1s ease-out 0.5s;
+}
+
+html {
+	background: $blueLight;
+	text-align: center;
+	color: $blueDark;
+}

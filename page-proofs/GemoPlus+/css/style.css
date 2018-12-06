@@ -1,0 +1,235 @@
+.bor_top {
+  border-top: 1px solid #ccc;
+}
+.bor_right {
+  border-right: 1px solid #ccc;
+}
+.bor_left {
+  border-left: 1px solid #ccc;
+}
+.bor_bot {
+  border-bottom: 1px solid #ccc;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  /*font: 13px/16px "Lato-Regular", sans-serif, Arial, Tahoma;*/
+  /*overflow: hidden;*/
+}
+ol,
+ul {
+  list-style: none;
+}
+* {
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  color: #383838;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+a:hover {
+  color: #6eaadc;
+  text-decoration: none;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after { clear: both; }
+
+.left  { float: left; }
+.right { float: right;} 
+
+
+
+/* COMMON Styles
+===================================================*/
+.btn {
+	padding: 10px 20px;
+	background-color: #6eaadc;
+	color: #fefefe;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: 20px;
+	display: inline-block;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+.btn:hover {
+	text-decoration: none;
+	color:  #fff;
+	background-color: #4B9CCF;
+}
+
+.email__grey {
+	color: #428bca;
+	padding-left: 10px;
+	margin-left: 10px;
+	border-left: 1px solid #ededee;
+}
+
+.main__title {
+	font-size: 25px;
+	color: #333;
+	margin-top: 0px;
+}
+
+.row { overflow: hidden; }
+
+
+
+/* CSS Grid
+===================================================*/
+.wraper {
+	overflow: hidden;
+	/*height: 100%;*/
+	width: 100%;
+}
+
+
+
+/* HEADER Styles
+===================================================*/
+header {
+	border-bottom: 1px solid #ededee;
+	overflow: hidden;
+	height: 30px;
+	line-height:  30px;
+}
+.header__info {
+	float:  right;
+	color:  #939598;
+	font-size: 12px;
+}
+
+.header__info p { margin-bottom: 0; }
+
+
+/* MENU Styles
+=====================*/
+.header__menu {
+	overflow: hidden;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 5px;
+}
+.nav {
+	list-style: none;
+	float:  right;
+	margin: 0;
+}
+.nav li {
+	float:  left;
+	list-style: none;
+}
+.nav li a {
+	color: #414042;
+	padding: 20px 10px;
+	transition: all .5 ease-in-out;
+	font-size: 13px;
+}
+/*.nav li:last-child a {
+	padding-right: 0;
+}*/
+.nav li a:hover {
+	color: #4B9CCF;
+	text-decoration: none;
+	border-top: 2px solid #4B9CCF;
+}
+
+
+
+
+/* BANNER Styles
+===================================================*/
+.banner__wrap {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.banner h1 {
+	margin-top: 43px;
+	border-bottom: 3px solid #fff;
+	font-size: 25px;
+}
+.banner {
+	color:  #fff;
+	background: url(http://stom.bit-ecommerce.ru/bitrix/templates/stom_grey_st/images/bc-back4.jpg);
+	background-size: cover;
+	height: 120px;
+	line-height: 120px;
+}
+
+
+/* PAGE COUNT Styles
+=====================*/
+.page__count  ul {
+	overflow: hidden;
+	margin: 0;
+}
+
+.page__count li {
+	/*display: inlin;*/
+	float: left;
+}
+.page__count a {
+	background: #6eaadc;
+	color: #fff;
+	padding: 5px 7px;
+	font-size: 11px;
+}
+.page__count li:first-child a {
+	padding-right: 5px;
+	padding-left: 15px;
+}
+.page__count li:last-child a { padding-right: 15px; }
+.page__count a:hover {
+	background: #6eaadc;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* MAIN PAGE Styles
+===================================================*/
+.main-page__info {
+	margin-bottom: 35px;
+}
+
+/* SLIDER Styles
+=====================*/
+.main__slider {
+	width: 100%;
+}
+
+
+
+/* ARTICLE Styles
+=====================*/
+.news__article {
+	border-bottom: 1px solid #ddd;
+	padding: 20px 0 !important;
+	margin: 0 30px;
+}
+.news__img {
+	padding-left: 0 !important;
+}
+.news__img img {
+	width:  100%;
+}

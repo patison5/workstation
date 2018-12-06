@@ -1,0 +1,70 @@
+<include href='template/head.html'/>	
+<script src="https://use.fontawesome.com/19b78bdbb2.js"></script>
+</head>
+<body>
+	<include href='template/menu.html'/>	
+    <section id="content_wrapper">
+	    <div style="margin-top: 2em; padding-left: 1em; padding-right: 1em;" >
+	    	<!-- <repeat group="{{ @f3Test }}" value="{{ @value }}">
+				<div class="panel col-xs-12" style="padding: 0; border: 0; margin-bottom: 0.3em;">
+					<div class="panel-body">
+						{{ @value.name }}
+					</div>
+				</div>
+			</repeat> -->
+	    </div>
+    </section>
+	</div>
+</body>
+<script src="assets/admin/js/utility.js"></script>
+<script src="assets/admin/js/demo.js"></script>
+<script src="assets/admin/js/main.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Demo JS  
+    Demo.init();
+ 
+
+    // Init Theme Core    
+    Core.init();
+
+
+    // Init Widget Demo JS
+    // demoHighCharts.init();
+
+    // Because we are using Admin Panels we use the OnFinish 
+    // callback to activate the demoWidgets. It's smoother if
+    // we let the panels be moved and organized before 
+    // filling them with content from various plugins
+
+    // Init plugins used on this page
+    // HighCharts, JvectorMap, Admin Panels
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      draggable: true,
+      preserveGrid: true,
+      // mobile: true,
+      onStart: function() {
+        // Do something before AdminPanels runs
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps(); // function below
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+});
+</script>
+</html>

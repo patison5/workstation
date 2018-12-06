@@ -1,0 +1,30 @@
+/* #10.2 */
+
+
+DOMAINS 
+	list = integer* 
+PREDICATES 
+	nondeterm vvod(list) 
+	nondeterm change(integer,list,list) 
+CLAUSES 
+	vvod([H|T]):- 
+		write("Write element: "),readint(H),!, 
+		vvod(T). 
+	vvod([]). 
+ 
+	change(_,[],[]). 
+ 
+	change(X,[H|T],[H1|T1]):- 
+		0 = X mod 2, 
+		H1 = H, 
+		D = X - 1, 
+		change(D,T,T1),!. 
+ 
+	change(X,[_|T],List):- 
+		D = X + 1, 
+		change(D,T,List). 
+ 
+GOAL 
+	vvod(L),nl, 
+	change(1,L,T),nl, 
+	write("Answer is : ", T),nl.

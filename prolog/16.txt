@@ -1,0 +1,32 @@
+/* #16 */
+
+domains
+	list = integer*
+	newList = integer*
+	
+predicates
+	nondeterm vvod(list)
+	nondeterm update(list, list)
+
+clauses
+	vvod([H|T]) :-
+		write("write element: "),  readint(H), !,
+		vvod(T).
+	vvod([]).
+	
+	update([],[]).
+	
+	update([H1|T1], [H2|T2]) :-
+		H1 > 0,
+		H2 = H1,
+		update(T1, T2).
+		
+	update([H1|T1], [H2|T2]) :-
+		H1 < 0,
+		H2 = H1 * -1,
+		update(T1, T2).
+		
+
+goal
+	vvod(L),
+	update(L, K).

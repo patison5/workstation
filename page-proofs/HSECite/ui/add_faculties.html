@@ -1,0 +1,357 @@
+<include href='template/head.html'/>  
+<script src="https://use.fontawesome.com/19b78bdbb2.js"></script>
+
+  <style>
+    .notifications__main {
+      margin-top: 2em; 
+      padding-left: 1em; 
+      padding-right: 1em;
+    } 
+    .panel {
+      padding: 0; 
+      border: 0; 
+      margin-bottom: 0.3em;
+    }
+  </style>
+  <link rel="stylesheet" href="../ui/backend/assets/admin/css/admin-forms.min.css">
+  <!-- другой шаблоан -->
+  <link href="../ui/backend/chosen/chosen.css" rel="stylesheet">
+</head>
+<body>
+  <include href='template/menu.html'/>  
+    <section id="content_wrapper">
+      <div class="notifications__main">
+        <!-- recent orders table -->
+        <div class="panel">
+          <div class="panel-body">
+                                          
+              <!-- форма редактирования Факультета -->
+              <div class="admin-form theme-primary">              
+                <div class="row">
+                  <!-- Form Wizard -->
+                  <div class="admin-form">
+                    <form method="post" action="add_facultie" id="form-wizard">
+                      <div class="wizard steps-bg steps-left">
+
+                        <!-- Wizard step 1 -->
+                        <h4 class="wizard-section-title">
+                          <i class="fa fa-user pr5"></i> Основная инфа</h4>
+                        <section class="wizard-section">
+
+                          <div class="section">
+                            <label class="field select">
+                            <select id="faculty_dir" name="faculty_dir">
+                              <option value="1">Выбор направления факультета</option>
+                              
+                             <!--  <repeat group="{{@Info.faculties_directions}}" value="{{@directions}}">
+                                <option value="{{@directions.dir_id}}">{{@directions.dir_name}}</option>
+                              </repeat> -->
+
+                              <repeat group="{{@Info.faculties_directions}}" value="{{@directions}}">
+                                <option value="{{@directions.dir_id}}">{{@directions.dir_name}}</option>
+                              </repeat>                           
+                            </select>
+                            <i class="arrow"></i>
+                          </label>
+                            <!-- end .smart-widget section -->
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="fac_title" class="field-label">Название факультета</label>
+                            <label for="fac_title" class="field prepend-icon">
+                              <input type="text" name="fac_title" id="fac_title" class="gui-input" placeholder="Название факультета">
+                              <label for="fac_title" class="field-icon">
+                                  <i class="fa fa-user"></i>
+                                </label>
+                            </label>
+                          </div>
+
+                          <div class="section">
+                            <label for="fac_desc" class="field-label">Описание факультета</label>
+                            <label for="fac_desc" class="field prepend-icon">
+                              <input type="text" name="fac_desc" id="fac_desc" class="gui-input" placeholder="описание факультета">
+                              <label for="fac_desc" class="field-icon">
+                                  <i class="fa fa-user"></i>
+                                </label>
+                            </label>
+                          </div>
+                          <!-- end section -->
+                        </section>
+
+
+
+
+                        <!-- Wizard step 2 -->
+                        <h4 class="wizard-section-title">
+                          <i class="fa fa-dollar pr5"></i> Паспорт программы</h4>
+                        <section class="wizard-section">
+
+                          <div class="section">
+                            <label for="budget" class="field prepend-icon">
+                              <input type="text" name="budget" id="budget" class="gui-input" placeholder="Кол-во бюджетных мест">
+                              <label for="budget" class="field-icon">
+                                <i class="fa fa-user"></i>
+                              </label>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="paytype" class="field prepend-icon">
+                              <input type="text" name="paytype" id="paytype" class="gui-input" placeholder="Кол-во платных мест">
+                              <label for="paytype" class="field-icon">
+                                <i class="fa fa-user"></i>
+                              </label>
+                            </label>
+                          </div>
+
+                           <div class="section">
+                            <label for="pay" class="field prepend-icon">
+                              <input type="text" name="pay" id="pay" class="gui-input" placeholder="Стоимость">
+                              <label for="pay" class="field-icon">
+                                <i class="fa fa-user"></i>
+                              </label>
+                            </label>
+                          </div>
+
+                           <div class="section">
+                            <label for="comment1" class="field prepend-icon">
+                              <input type="text" name="comment1" id="comment1" class="gui-input" placeholder="Комментарий 1">
+                              <label for="comment1" class="field-icon">
+                                <i class="fa fa-user"></i>
+                              </label>
+                            </label>
+                          </div>
+
+                           <div class="section">
+                            <label for="comment2" class="field prepend-icon">
+                              <input type="text" name="comment2" id="comment2" class="gui-input" placeholder="комментарий 2">
+                              <label for="comment2" class="field-icon">
+                                <i class="fa fa-user"></i>
+                              </label>
+                            </label>
+                          </div>
+
+
+                          <div class="section">
+                            <!-- multi -->
+                            <div class="form-group">
+                              <label for="fac_desc" class="field-label">Выберите предметы</label>
+                              <div class="input-group">
+                                <select data-placeholder="Выберите предметы" class="chosen-select" multiple style="width:350px;" tabindex="4">
+                                  <!-- <repeat group="{{@Info}}" value="{{@Info}}">
+                                    <option value="{{@Info.dir_id}}">{{@Info.dir_name}}</option>
+                                  </repeat> -->
+
+
+                                  <repeat group="{{@Info.subjects}}" value="{{@subject}}">
+                                    <option value="{{@subject.sub_id}}">{{@subject.sub_name}}</option>
+                                  </repeat>
+
+
+                                </select>
+                              </div>
+                            </div>
+                            <!-- multi -->
+                          </div>
+                          <script>
+                              var config = {
+                                '.chosen-select'           : {},
+                                '.chosen-select-deselect'  : {allow_single_deselect:true},
+                                '.chosen-select-no-single' : {disable_search_threshold:10},
+                                '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                                '.chosen-select-width'     : {width:"95%"}
+                              }
+
+                              for (var selector in config) {
+                                $(selector).chosen(config[selector]);
+                              }
+
+                          </script>                                                   
+                        </section>
+                        <!-- end section -->
+
+
+
+
+
+
+                        <!-- Wizard step 3 -->
+                        <h4 class="wizard-section-title">
+                          <i class="fa fa-shopping-cart pr5"></i> Будущая профессия</h4>
+                        <section class="wizard-section">
+
+                          <div class="section">
+                            <label for="program_link" class="field prepend-icon">
+                              <input type="program_link" name="program_link" id="program_link" class="gui-input" placeholder="Ссылка на программу">
+                              <label for="program_link" class="field-icon">
+                                <i class="fa fa-envelope"></i>
+                              </label>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                          <div class="section">
+                            <label for="QB_link" class="field prepend-icon">
+                              <input type="tel" name="QB_link" id="QB_link" class="gui-input" placeholder="Q&A ссылка">
+                              <label for="QB_link" class="field-icon">
+                                <i class="fa fa-phone-square"></i>
+                              </label>
+                            </label>
+                          </div>
+                          <!-- end section -->
+
+                        </section>
+
+                          <input type="submit" value="отправить">
+                      </div>
+                      <!-- End: Wizard -->
+
+                    </form>
+                    <!-- End Account2 Form -->
+
+                  </div>
+                  <!-- end: .admin-form -->
+                </div>
+              </div><!-- форма добавления статьи -->
+
+
+          </div>
+        </div>
+      </div>  
+                        <!-- <div class="wizard-section">
+                          <div class="section">
+                            <div class="form-group">
+                              <label class="font-noraml">Multi select</label>
+                              <div class="input-group">
+                                <select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:350px;" tabindex="4">
+                                  <option value="">Select</option>
+                                  <option value="United States">United States</option>
+                                  <option value="United Kingdom">United Kingdom</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>   
+                        </div>       --> 
+
+    </section>
+</body>
+
+<style>
+  /*page demo styles*/
+  .wizard .steps .fa,
+  .wizard .steps .glyphicon,
+  .wizard .steps .glyphicon {
+    display: none;
+  }
+  </style>
+
+<script src="../ui/backend/vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="../ui/backend/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Page Plugins -->
+  <script src="../ui/backend/assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+  <script src="../ui/backend/assets/admin-tools/admin-forms/js/jquery.steps.min.js"></script>
+    <!-- Theme Javascript -->
+  <script src="../ui/backend/assets/js/utility/utility.js"></script>
+  <!-- <script src="../ui/backend/assets/js/demo/demo.js"></script> -->
+  <script src="../ui/backend/assets/js/main.js"></script>
+
+  <!-- другой шаблон -->
+  <!-- Chosen -->
+    <script src="../ui/backend/chosen/chosen.jquery.js"></script>
+
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+
+    // Form Wizard 
+    var form = $("#form-wizard");
+    form.validate({
+      errorPlacement: function errorPlacement(error, element) {
+        element.before(error);
+      },
+      rules: {
+        confirm: {
+          equalTo: "#password"
+        }
+      }
+    });
+    form.children(".wizard").steps({
+      headerTag: ".wizard-section-title",
+      bodyTag: ".wizard-section",
+      onStepChanging: function(event, currentIndex, newIndex) {
+        form.validate().settings.ignore = ":disabled,:hidden";
+        return form.valid();
+      },
+      onFinishing: function(event, currentIndex) {
+        form.validate().settings.ignore = ":disabled";
+        return form.valid();
+      }
+    });
+
+
+
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+
+
+<!-- main scripts for the page -->
+<script src="assets/admin/js/utility.js"></script>
+<!-- <script src="assets/admin/js/demo.js"></script> -->
+<script src="assets/admin/js/main.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Demo JS  
+    Demo.init();
+ 
+
+    // Init Theme Core    
+    Core.init();
+
+
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      draggable: true,
+      preserveGrid: true,
+      // mobile: true,
+      onStart: function() {
+        // Do something before AdminPanels runs
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps(); // function below
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+});
+</script>
+
+
+
+
+
+</html>

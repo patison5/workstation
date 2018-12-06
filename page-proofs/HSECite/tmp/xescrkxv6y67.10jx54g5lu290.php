@@ -1,0 +1,177 @@
+<?php echo $this->render('template/head.html',$this->mime,get_defined_vars(),0); ?>	
+<script src="https://use.fontawesome.com/19b78bdbb2.js"></script>
+
+	<style>
+		.notifications__main {
+			margin-top: 2em; 
+			padding-left: 1em; 
+			padding-right: 1em;
+		}	
+		.panel {
+			padding: 0; 
+			border: 0; 
+			margin-bottom: 0.3em;
+		}
+	</style>
+	<link rel="stylesheet" href="assets/admin/css/admin-forms.min.css">
+</head>
+<body>
+	<?php echo $this->render('template/menu.html',$this->mime,get_defined_vars(),0); ?>	
+    <section id="content_wrapper">
+	    <div class="notifications__main">
+			<!-- <?php echo $test; ?> -->
+
+			<!-- recent orders table -->
+			<div class="panel">
+			  <div class="panel-menu admin-form theme-primary">
+			  	<div class="row mb15">
+			  		<div class="col-md-12 text-right">
+			      		<a href="" class="btn btn-success br2 btn-xs fs12 dropdown-toggle">Добавить новость</a>
+			      	</div>
+			  	</div>
+			    <div class="row">
+			      <div class="col-md-4">
+			        <label class="field select">
+			          <select id="filter-purchases" name="filter-purchases">
+			            <option value="0">Фильтровать по</option>
+			          </select>
+			          <i class="arrow double"></i>
+			        </label>
+			      </div>
+			      <div class="col-md-4">
+			        <label class="field select">
+			          <select id="filter-group" name="filter-group">
+			            <option value="0">Фильтровать по группам</option>
+			          </select>
+			          <i class="arrow double"></i>
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel-body pn">
+			    <div class="table-responsive">
+			      <table class="table admin-form theme-warning tc-checkbox-1 fs13">
+			        <thead>
+			          <tr class="bg-light">
+			            <th class="text-center">Выбрать</th>
+			            <th class="">Картинка</th>
+			            <th class="">Название</th>
+			            <th class="">Автор</th>
+			            <th class="">Добавлено</th>
+			            <th class="text-right">Статус</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+
+
+					<?php foreach (($articles?:array()) as $article): ?>
+				        <!-- Вывод из бд -->
+				          <tr>
+				            <td class="text-center">
+				              <label class="option block mn">
+				                <input type="checkbox" name="mobileos" value="FR">
+				                <span class="checkbox mn"></span>
+				              </label>
+				            </td>
+				            <td class="w50">
+				              <img class="img-responsive mw30 ib mr10" title="user" src="assets/img/avatars/1.jpg">
+				            </td>
+				            <td class="">Dave Robert</td>
+				            <td class="">Super Puper Admin</td>
+				            <td class=""><?php echo $article['article_text']; ?></td>
+				            <td class="text-right">
+				              <div class="btn-group text-right">
+				                <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Active
+				                  <span class="caret ml5"></span>
+				                </button>
+				                <ul class="dropdown-menu" role="menu">
+				                  <li>
+				                    <a href="#">Edit</a>
+				                  </li>
+				                  <li>
+				                    <a href="#">Contact</a>
+				                  </li>
+				                  <li class="divider"></li>
+				                  <li class="active">
+				                    <a href="#">Active</a>
+				                  </li>
+				                  <li>
+				                    <a href="#">Suspend</a>
+				                  </li>
+				                  <li>
+				                    <a href="#">Remove</a>
+				                  </li>
+				                </ul>
+				              </div>
+				            </td>
+				          </tr> <!-- Вывод из бд -->
+			          <?php endforeach; ?>
+
+
+			        </tbody>
+			      </table>
+			    </div>
+			  </div>
+			</div>
+
+	
+		</div>
+	</section>
+</body>
+
+
+
+
+<!-- main scripts for the page -->
+<script src="assets/admin/js/utility.js"></script>
+<script src="assets/admin/js/demo.js"></script>
+<script src="assets/admin/js/main.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Demo JS  
+    Demo.init();
+ 
+
+    // Init Theme Core    
+    Core.init();
+
+
+    // Init Widget Demo JS
+    // demoHighCharts.init();
+
+    // Because we are using Admin Panels we use the OnFinish 
+    // callback to activate the demoWidgets. It's smoother if
+    // we let the panels be moved and organized before 
+    // filling them with content from various plugins
+
+    // Init plugins used on this page
+    // HighCharts, JvectorMap, Admin Panels
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      draggable: true,
+      preserveGrid: true,
+      // mobile: true,
+      onStart: function() {
+        // Do something before AdminPanels runs
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps(); // function below
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+});
+</script>
+</html>

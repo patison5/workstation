@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        
+        <title>Главная страница</title>
+    </head>
+    <body>
+        <div class="wraper index__wrap">
+          <div class="container center">
+            <div class="header">
+              <div class="header__img">&nbsp;</div>
+
+              <div class="header__info">
+                <span class="burger__btn">&nbsp;</span>
+                <div class="burger-menu__wrap">
+                  <ul class="burger-menu">
+                    <li class="burger-menu__element"><a href="#">Факты</a></li>
+                    <li class="burger-menu__element"><a href="#">Игра</a></li>
+                    <li class="burger-menu__element"><a href="#">Обучение</a></li>
+                    <li class="burger-menu__element"><a href="#">Лидеры</a></li>
+                    <li class="burger-menu__element"><a href="#">Настройки</a></li>
+                    <li class="burger-menu__element"><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+                <h1 class="header__title">Поздравляем!</h1>
+              </div>
+            </div>
+
+            <div class="content__wrap">
+              <div class="win-message__wrap">
+                <h4 class="win-message__title">Вы вошли в топ-10!</h4>
+
+                <form action="#" class="win-message__form" method="POST">
+                  <input type="text"   class="win-message__input" name="" placeholder="Фамилия" />
+                  <input type="text"   class="win-message__input" name="" placeholder="Город" />
+                  <input type="submit" class="win-message__btn"  value="Сохранить" />
+                </form>
+              </div>
+
+              <div class="message__wrap">
+                <p class="message__result-text">Ваш результат: <span>200</span></p>
+
+                <div class="buttons__wrap">
+                  <a href="#" class="buttons__element btn__more">Подробнее</a>
+                  <a href="#" class="buttons__element btn__again">Еще разок</a>
+                </div>
+
+                <div class="counting__wrap">
+                  <h4 class="counting__title">Расчет результата</h4>
+                  <p>Верно угаданных: 10x20 баллов х1 коэффициент сложности = 200</p>
+                  <p>Неверно угаданных: 0 х 30 = 0</p>
+                  <p>Результат: 200 - 0 = 200</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+/********************************************************/
+/************************ САЛОНЫ ************************/
+/********************************************************/
+
+
+
+/***********  ПЕРЕМЕННЫЕ  *************/
+@import "_colors";
+
+/************************ АКЦИИ ************************/
+.salons-content__wrap {
+	display: block;
+	overflow: hidden;
+	margin: 20px 0;
+}
+
+/*************** КАРТА ****************/
+.salons__map {
+	height: 500px;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	background: $backgroundLight;
+	margin-bottom: 25px;
+}
+
+
+/*************** СТИЛИЗАЦИЯ ТРЕХ БЛОКОВ ****************/
+.salons-info__block_left,
+.salons-info__block_right {
+	float: left;
+	background: #fff;
+}
+
+.salons-info__block_left  { width: 60%; }
+.salons-info__block_right { width: 40%; }
+
+.salons-info__block_left {
+    border-right: 20px solid transparent;
+    // border: 1px solid #999999;
+}
+
+
+/*************** ОБЩИЕ СТИЛИ ДЛЯ ТРЕХ БЛОКОВ ****************/
+.salons-info__block {
+	border: 1px solid #999999;
+	overflow: hidden;
+}
+
+.info-block__title {
+	padding-left: 15px;
+    font: 20px times;
+    height: 60px;
+    line-height: 60px;
+    background: #F0F0F0;
+    color: #7f0000;
+}
+
+
+/*************** МАГАЗИНЫ ****************/
+.info__block-table { margin-bottom: 30px; padding: 20px;}
+
+.info__block-table td,
+.contact__blow-wrap p {
+	padding: 5px 0;
+}
+
+.info__title-red {
+	margin-bottom: 15px;
+	color: #cc0000;
+    font-size: 18px;
+}
+.info-title__arrow {
+	background: url(../images/arrow_up.png) no-repeat center center;
+    float: right;
+    margin-right: 10px;
+    width: 20px;
+    height: 100%;
+}
+
+
+/*************** БЛОК ОБРАТНОЙ СВЯЗИ ****************/
+.bgGrey {
+	background: #F0F0F0;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.backlink,
+.contact__blow-wrap {
+	padding: 20px;
+}
+.backlink input[type="text"], .backlink textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 15px;
+    height: 30px;
+    padding: 10px;
+    resize: none;
+}
+
+.backlink textarea {
+    height: 100px;
+}
+
+.backlink input[type="submit"] {
+    background: #CC0000;
+    width: 100px;
+    color: #fefefe;
+    display: block;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    float: right;
+}
+
+.backlink input[type="submit"]:hover {
+    background: #7F0000;
+}

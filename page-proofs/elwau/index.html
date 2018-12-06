@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>elwau</title>
+	<link rel="stylesheet" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+	<script src="js/jquery.bxslider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider({
+		  	slideWidth: 670,
+				minSlides: 1,
+				maxSlides: 1,
+				moveSlides: 1,
+				pager: false,
+				auto: true
+		  });
+		});
+	</script>
+	
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+</head>
+<body>
+	<!-- Обвертка -->
+	<div class="wrapper">
+		<!-- Верхняя панель -->
+		<div class="panel_top clearfix">
+			<ul class="left">
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Наши магазины</a></li>
+				<li><a href="#">Оптовикам</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<!--Поисковик-->
+			<div class="search_line right">
+				<form>
+					<input type="text" placeholder="Поиск по каталогу" class="search left" />
+					<input type="submit" class="right scope" value="" />
+				</form>
+			</div>	<!--//Поисковик-->
+		</div>	
+		<!--//Верхняя панель-->
+
+		<!--Шапка-->
+		<div class="header center">
+			<div class="logo left">
+				<a href="#"><img src="img/logo.png"></a>
+			</div>
+			<div class="basket right">
+				<ul>
+					<li class="i-basket"><a href="#">В вашей корзине пусто</a></li>
+					<li class="cabinet"><a href="#">Личный Кабинет</a></li>
+				</ul>
+			</div>
+			<!--Контакты-->
+			<div class="contacts">
+				<div class="numbers">
+					<a href="#" class="left number"><span>(495)</span> 234-22-33,</a>
+					<a href="#" class="number">&nbsp;<span>(495)</span> 232-22-35</a> 
+				</div>
+				<div class="social">
+					<a href="#" id="mail">Написать сообщение</a>
+					<a href="#" id="s-dribble">288-22-08</a>
+				</div>
+			</div>	<!--//контакты-->
+		</div>	<!--//Шапка-->
+
+		<!--контент-->
+		<div class="content">
+			<!--Левый сайдбар-->
+			<div class="left_sidebar left">
+				<!--Меню-->
+				<ul id="menu">
+					<li>
+						<div class="color"><a href="#">Автомодели</a></div>
+						<ul>
+						 	<li><span>&mdash;</span> <a href="#">ДВС</a></li>
+							<li><span>&mdash;</span> <a href="#">С электродвигателем</a></li>
+						</ul>
+					</li>
+					 <li>
+						<div><a href="#">Самолеты</a></div>
+						<ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 4</a></li>
+						</ul>
+					 </li>
+					 <li>
+						<div><a href="#">Вертолеты</a></div>
+						<ul>
+							<li><span>&mdash;</span> <a href="#">Для начинающих (соосные)</a></li>
+							<li><span>&mdash;</span> <a href="#">С электродвигателем</a></li>
+							<li><span>&mdash;</span> <a href="#">ДВС</a></li>
+							<li><span>&mdash;</span> <a href="#">Вертолеты mikado</a></li>
+						</ul>
+					 <li>
+					 	<div><a href="#">Аккумуляторы, кабели</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+					 <li>
+					 	<div><a href="#">Аппаратура</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+					 <li>
+					 	<div><a href="#">Инструмент, материалы</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+					 <li>
+					 	<div><a href="#">Винты, крепеж, клей</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+					 <li>
+					 	<div><a href="#">Двигатели ДВС</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+					<li>
+					 	<div><a href="#">Электродвигатели</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+					 <li>
+					 	<div><a href="#">Катера, яхты</a></div>
+						 <ul>
+							<li><span>&mdash;</span> <a href="#">Ссылка 1</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 2</a></li>
+							<li><span>&mdash;</span> <a href="#">Ссылка 3</a></li>
+						 </ul>
+					</li>
+				</ul><!--//Меню-->
+				<!-- скрипт для менюшки -->
+				<script src="js/menu.js"></script>
+				<!-- почему-то не работает... вопрос: почему? (для замены фона)-->
+				<script scr="js/class.js"></script><!-- скрипт для менюшки -->
+				
+				<!--Новости-->
+				<div class="news">
+					<div class="state">
+						<a href="#">
+							<p class="date">12.10.2011</p>
+							<h3 class="title">Много скидок!</h3>
+							<p>Скоро ноябрь, а это значит, что скоро вас ждет большое количе-ство скидок в связи с нашим юбелеем.</p>
+						</a>
+					</div>
+					<div class="state">
+						<a href="#">
+							<p class="date">12.10.2011</p>
+							<h3 class="title">Много скидок!</h3>
+							<p>Скоро ноябрь, а это значит, что скоро вас ждет большое количе-ство скидок в связи с нашим юбелеем.</p>
+						</a>
+					</div>
+					<div class="state">
+						<a href="#">
+							<p class="date">12.10.2011</p>
+							<h3 class="title">Много скидок!</h3>
+							<p>Скоро ноябрь, а это значит, что скоро вас ждет большое количе-ство скидок в связи с нашим юбелеем.</p>
+						</a>
+					</div>
+				</div><!--//Новости-->
+					<a href="#" class="write_us">Написать нам</a>
+			</div><!--//Левый сайдбар-->
+
+			<!--Правый сайдбар-->
+				<div class="right_sidebar right">
+					<!--Слайдер-->
+					<div class="slider">
+						<ul class="bxslider">
+							<!-- фото 1 -->
+							<li>
+								<div>
+									<div class="charackters">
+									<h3>Электрический мини-вертолет Beacon</h3>
+										<table>
+											<tr class="t-bg">
+												<td>Тип</td>
+												<td>Мини вертолет</td>
+											</tr>
+											<tr>
+												<td>Шасси</td>
+												<td>Пластик</td>
+											</tr>
+											<tr class="t-bg">
+												<td>Электродвигатели</td>
+												<td>180 размера (2 шт.)</td>
+											</tr>
+											<tr>
+												<td>Время полета</td>
+												<td>10-12 мин</td>
+											</tr>
+										</table>
+										<div>
+											<div class="left">
+												<p class="left">Цена</p><span class="left">6 960</span><p class="right">рублей</p>
+											</div>
+											<div class="left">
+												<a href="#">в корзину</a>
+											</div>
+										</div>
+									</div>
+									<a href="#">
+										<img src="img/s-hellihopter.png" title="Текс 4" class="right"/>
+									</a>
+								</div>
+							</li><!-- //фото 1 -->
+
+							<!-- фото 2 -->
+							<li>
+								<div>
+									<div class="charackters">
+									<h3>Кордовая модель PT-19 Profile controlline 36 ARF</h3>
+										<table>
+											<tr class="t-bg">
+												<td>Тип</td>
+												<td>Самолет</td>
+											</tr>
+											<tr>
+												<td>Шасси</td>
+												<td>Металл</td>
+											</tr>
+											<tr class="t-bg">
+												<td>Электродвигатели</td>
+												<td>180 размера (2 шт.)</td>
+											</tr>
+											<tr>
+												<td>Время полета</td>
+												<td>15-25 мин</td>
+											</tr>
+										</table>
+										<div>
+											<div class="left">
+												<p class="left">Цена</p><span class="left">5 712</span><p class="right">рублей</p>
+											</div>
+											<div class="left">
+												<a href="#">в корзину</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<img src="img/plane_2.png" title="Текс 4" class="right"/>
+								</a>
+							</li><!-- //фото 2 -->
+
+							<!-- фото 3 -->
+							<li>
+								<div>
+									<div class="charackters">
+									<h3>Электрический мини-вертолет Beacon</h3>
+										<table>
+											<tr class="t-bg">
+												<td>Тип</td>
+												<td>Мини вертолет</td>
+											</tr>
+											<tr>
+												<td>Шасси</td>
+												<td>Пластик</td>
+											</tr>
+											<tr class="t-bg">
+												<td>Электродвигатели</td>
+												<td>180 размера (2 шт.)</td>
+											</tr>
+											<tr>
+												<td>Время полета</td>
+												<td>10-12 мин</td>
+											</tr>
+										</table>
+										<div>
+											<div class="left">
+												<p class="left">Цена</p><span class="left">18 900</span><p class="right">рублей</p>
+											</div>
+											<div class="left">
+												<a href="#">в корзину</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<img src="img/s-car.png" title="Текс 4" class="right"/>
+								</a>
+							</li><!-- //фото 3 -->
+						</ul>
+					</div><!--//слайдер-->
+
+					<!--Каталог-->
+					<div class="catalog">
+						<!--Распродажа-->
+						<div class="sale_out">
+							<h3 class="clearfix">Распродажа</h3>
+
+				<!-- Продукт 1-->
+							<div class="goods left">
+								<a href="#">
+									<img src="img/car.png" alt="car" />
+									<span class="price">18 480 р.</span>
+									<h4>CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</h4>
+								</a>
+							</div>
+				<!-- Продукт 2-->
+							<div class="goods product_2 left">
+								<a href="#">
+									<img src="img/plane.png" alt="car" />
+									<span class="price">5 712 p.</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+				<!-- Продукт 3-->
+							<div class="goods left">
+								<a href="#">
+									<img src="img/hellihopter.png" alt="hellihopter" />
+									<span class="price">18 280 р.</span>
+									<h4>Электрический<br> мини-вертолет HM 60#B</h4>
+								</a>
+							</div>
+						</div><!--//Распродажа-->
+
+						<div class="bestseller">
+							<h3 class="clearfix">Хиты продаж</h3>
+				<!-- Продукт 1-->
+							<div class="goods left">
+								<a href="#">
+									<img src="img/car.png" alt="car" />
+									<span class="price">5 712 p</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+				<!-- Продукт 2-->
+							<div class="goods product_2 left">
+								<a href="#">
+									<img src="img/hellihopter.png" alt="car" />
+									<span class="price">5 712 p</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+				<!-- Продукт 3-->
+							<div class="goods left">
+								<a href="#">
+									<img src="img/plane.png" alt="car" />
+									<span class="price">5 712 p</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+				<!-- Продукт 4-->
+							<div class="goods left">
+								<a href="#">
+									<img src="img/hellihopter.png" alt="car" />
+									<span class="price">5 712 p</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+				<!-- Продукт 5-->
+							<div class="goods product_2 left">
+								<a href="#">
+									<img src="img/car.png" alt="car" />
+									<span class="price">5 712 p</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+				<!-- Продукт 6-->
+							<div class="goods left">
+								<a href="#">
+									<img src="img/plane.png" alt="car" />
+									<span class="price">5 712 p</span>
+									<h4>Кордовая модель-копия<br> PT-19 Profile Control Line 36 ARF</h4>
+								</a>
+							</div>
+						</div>
+					</div><!--//каталог-->
+					
+					<!--Последние обзоры-->
+					<div class="latest_views">
+						<h3 class="clearfix">Последние обзоры</h3>
+							<div class="view clearfix">
+								<a href="#">
+									<img src="img/hellihopter_2.png" alt="hellihopter_2" class="left">
+								</a>
+									<a href="#">
+										<span>Наша компания организовала тест на прочность и выносливость эктрическому мини-вертолету HM60#B</span>
+									</a>
+									<p>Было приглашено около 30 человек, но зрителей собралось в разы больше. Место проведения теста - площадь.</p>
+							</div>
+							<div class="view clearfix">
+								<a href="#">
+									<img src="img/hellihopter_2.png" alt="hellihopter_2" class="left">
+								</a>
+									<a href="#">
+										<span>Наша компания организовала тест на прочность и выносливость эктрическому мини-вертолету HM60#B</span>
+									</a>
+									<p>Зрители смотрели как на шоу, маневры и падения вертолета сопровождались возгласами, вот вот и ходила бы волна по зрителям.</p>
+							</div>
+					</div><!--//Последние обзоры-->
+
+					<!--О компании-->
+					<div class="about_comp">
+					 	<h3>О компаниии</h3>
+					 	<p>История компании elwau.ru – один из примеров сочетания творческого подхода с чрезвычайной практичностью. Знаменитая идея братьев Венинг – оснастить различные виды транспорта мобильными холодильниками – в 70-х годах прошлого века перешагнула стандарты инженерного мышления.Что же до применения этой и множества других разработок – автохолодильники автокондиционеры, автопылесосы, автокофеварки elwau.ru – то здесь братья-изобретатели блестяще продемонстрировали свои организаторские таланты. <a href="#">читать дальше</a></p>
+					 </div> <!--//О компании-->
+				</div><!--//Правый сайдбар-->
+		</div>	<!--//контент-->
+
+		<!--Подвал-->
+		<div class="footer">
+				<ul class="s-menu left ">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Наши магазины</a></li>
+					<li><a href="#">Оптовикам</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+
+			<div class="footer_btm">
+				<p class="info left">© 2007-2011 Интернет-супермаркет «<a href="#">Elwau.ru</a>» Адрес: 105118, г.Москва, ул. Кирпичная, д. 22 Тел.: +7 (495) 540-55-11, 8 (800) 555-55-90 Email: info@elwau.ru</p>
+				<div class="visitors">
+					<div class="visitor left">
+					</div>
+					<div class="visitor right">
+					</div>
+				</div>
+				<p class="author right">Дизайн сайта - <a href="#">Плюснин Никита</a></p>
+			</div>
+		</div><!--//Подвал-->
+	</div>	
+	<!--//обвертка-->
+</body>
+</html>

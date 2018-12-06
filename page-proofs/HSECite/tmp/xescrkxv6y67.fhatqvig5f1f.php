@@ -1,0 +1,141 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> </title>
+</head>
+<body>
+	<form action="add_organization">
+		<input type="text" value="name" name="name">
+		<input type="text" value="link" name="link">
+		<input type="text" value="description" name="description">
+		<input type="text" value="group" name="group">
+		<input type="submit" value="отправииить!">
+	</form>
+</body>
+</html>
+ -->
+
+
+<?php echo $this->render('template/head.html',$this->mime,get_defined_vars(),0); ?>	
+<script src="https://use.fontawesome.com/19b78bdbb2.js"></script>
+
+	<style>
+		.notifications__main {
+			margin-top: 2em; 
+			padding-left: 1em; 
+			padding-right: 1em;
+		}	
+		.panel {
+			padding: 0; 
+			border: 0; 
+			margin-bottom: 0.3em;
+		}
+	</style>
+	<link rel="stylesheet" href="../assets/admin/css/admin-forms.min.css">
+</head>
+<body>
+	<?php echo $this->render('template/menu.html',$this->mime,get_defined_vars(),0); ?>	
+    <section id="content_wrapper">
+	    <div class="notifications__main">
+  			<!-- recent orders table -->
+  			<div class="panel">
+  			  <div class="panel-body">
+                                          
+              <!-- форма редактирования Факультета -->
+              <div class="admin-form theme-primary">
+                <form action="/add_organization" method="POST" id="form-ui">
+                  <!-- Basic Inputs -->
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="section">
+                        <input type="text" value="name" name="name" class="gui-input">
+							<input type="text" value="link" name="link" class="gui-input">
+							<input type="text" value="description" name="description" class="gui-input">
+							<input type="text" value="1" name="group" class="gui-input">
+                      </div>
+                    </div>
+                  </div>                
+
+                  <div class="panel-footer text-right">
+                      <input type="submit" class="btn btn-xs btn-success  button btn-primary" value="Сохранить">
+                      <button type="button" class="btn btn-xs btn-danger button btn-primary">Отмена</button>
+                  </div>
+                </form>
+              </div><!-- форма добавления статьи -->
+  			  </div>
+  			</div>
+		  </div>
+
+
+<!-- <form action="/add_faculties" method="post">
+                  <input type="text" name="title" id="title" class="gui-input" value="название">
+                  <input type="text" name="type" id="type" class="gui-input" value="тип">
+                  <input type="text" name="price" id="price" class="gui-input" value="цена">
+                  <input type="text" name="qouta" id="qouta" class="gui-input" value="квота">
+                  <input type="text" name="program_link" id="program_link" class="gui-input" value="ссылка на программу">
+                  <input type="text" name="QB_link" id="QB_link" class="gui-input" value="ссылка на qb">
+                  <input type="submit" value="отправить">
+                </form>
+ -->
+
+
+    </section>
+</body>
+
+
+
+
+<!-- main scripts for the page -->
+<script src="assets/admin/js/utility.js"></script>
+<!-- <script src="assets/admin/js/demo.js"></script> -->
+<script src="assets/admin/js/main.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Demo JS  
+    Demo.init();
+ 
+
+    // Init Theme Core    
+    Core.init();
+
+
+    // Init Widget Demo JS
+    // demoHighCharts.init();
+
+    // Because we are using Admin Panels we use the OnFinish 
+    // callback to activate the demoWidgets. It's smoother if
+    // we let the panels be moved and organized before 
+    // filling them with content from various plugins
+
+    // Init plugins used on this page
+    // HighCharts, JvectorMap, Admin Panels
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      draggable: true,
+      preserveGrid: true,
+      // mobile: true,
+      onStart: function() {
+        // Do something before AdminPanels runs
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps(); // function below
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+});
+</script>
+</html>

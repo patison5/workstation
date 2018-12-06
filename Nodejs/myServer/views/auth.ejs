@@ -1,0 +1,46 @@
+<%- include('layout/header'); %>
+
+		<div class="main">
+			<%- include('layout/menu__dark'); %>
+
+			<div class="container">				
+				<div class="salons-content__wrap">
+
+					<% if (!user.id && !user.login) { %>
+
+					<form method="post" class="authentification-form" autocomplete="on">
+
+					<h2>Вход</h2>
+						<input type="text" 		autocomplete="username"			id="login-login" 	name="login">
+						<input type="password" 	autocomplete="current-password" id="login-password" name="password">
+						
+						<input type="submit" value="Вход" class="login__button">
+					</form>
+
+					<form method="post" class="registeration-form" autocomplete="on">
+						<h2>Регистрация</h2>
+
+						<input type="text" 	   autocomplete="username" 	   id="register-login" 				name="login">
+						<input type="password" autocomplete="new-password" id="register-password" 			name="password">
+						<input type="password" autocomplete="new-password" id="register-password-confirm" 	name="passwordConfirm">
+
+						<input type="submit" value="Регистрация" class="register__button">
+					</form>
+
+					<% } else { %>
+						
+						<h5>Привет, <%= user.login %></h5>
+						<a href="/api/auth/logout" class="item__btn-red">Выйти</a>
+
+					<% } %>
+
+					<div class="error-field"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- скрипты авторизации -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="public/js/auth.js"></script>
+
+<%- include('layout/footer'); %>

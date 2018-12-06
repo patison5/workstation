@@ -1,0 +1,608 @@
+body
+{
+	padding: 0;
+	margin: 0;
+}
+a
+{
+	text-decoration: none;
+	color: black;
+}
+body a:focus, body a:hover
+{
+    color: black;
+    text-decoration: none;
+}
+
+#background
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	background-image: url('../myaso.jpg');
+	background-repeat: no-repeat;
+	/*background-position: center top;*/
+/*	z-index: -1;
+  top: 0;
+  left: 0;
+  background-size: 100%;*/
+
+-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+#navmenu
+{
+	position: relative;
+	width: 100%;
+	background-color: white;
+	height: 60px;
+}
+
+.centralcontainermenu
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.centralcontainermenufacultytop
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.centralcontainermenufacultybottom
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#navbar
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#navbar li
+{
+	display: inline;
+}
+
+.centralcontainer
+{
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+#logo
+{
+	position: inherit;
+	width: 40px;
+	height: 40px;
+}
+
+#alogo
+{
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menubutton
+{
+	text-decoration: none !important;
+	text-decoration-color: black;
+	color: black;
+	line-height: 20px;
+	position: relative;
+	padding-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+
+.menubutton:after
+{
+	display: block;
+	content: "";
+	width: 0;
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	bottom: 4px;
+	background: #000;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.menubutton:hover:after,
+.menubutton.active:after
+{
+	left: 0;
+	width: 100%;
+}
+
+.menubutton:active
+{
+	color: darkslategrey;
+}
+
+.menubutton:hover
+{
+	color: darkslategrey;
+}
+
+.facultyname
+{
+	font-weight: bold;
+	font-size: 24px !important;
+	padding: 0 !important;
+}
+
+.mainboxes
+{
+	position: relative;
+	margin-bottom: 20px;
+	background-color: rgba(255, 255, 255, 0.85);
+	font: bold;
+	flex-direction: column;
+  	align-items: center !important;
+  	align-content: center !important;
+  	display: flex;
+}
+
+.verticalcenterbox
+{
+	display: block;
+	margin-top: auto !important;
+	margin-bottom: auto !important;
+	width: 100%;
+}
+
+.bigbutton
+{
+	color: black !important;
+	text-decoration: none !important;
+	width: 90%;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 24px;
+	white-space: pre-line;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.bigbutton:hover
+{
+	color: darkgray;
+}
+
+.blackline
+{
+	width: 90%;
+	height: 2px;
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sections
+{
+	color: black;
+	text-decoration: none !important;
+	width: 90%;
+	display: block;
+	margin-left: 5%;
+	white-space: pre-wrap;
+	line-height: 1;
+	margin-top: 1.8%;
+	margin-bottom: 1.8%;
+}
+
+.sections:hover
+{
+	color: darkslategrey;
+}
+
+.sectionsbox
+{
+	display: none;
+}
+
+.hidden 
+{
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.centralcontainermaxwidth
+{
+	background-color: rgba(255, 255, 255, 0.85);
+	position: relative;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.newsbox
+{
+	background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+.newspic
+{
+	width: 100%;
+}
+
+.newsinfo
+{
+	text-align:justify;
+}
+
+.goodtext
+{
+	padding: 15px;
+	text-align: justify;
+}
+
+.aboutbox
+{
+	background-color: rgba(255, 255, 255, 0.85);
+	position: relative;
+	flex-direction: column;
+    align-items: center !important;
+    align-content: center !important;
+    display: flex;
+}
+
+.aboutboxtitle
+{
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.aboutboxtext
+{
+	font-size: 18px;
+}
+
+.centertext
+{
+	text-align: center;
+}
+
+.lefttext
+{
+	text-align: left;
+}
+
+.toptext
+{
+	text-align: top
+}
+
+.marginbottom
+{
+	margin-bottom: 20px !important;
+}
+
+.importanttext
+{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+@media screen and (min-width: 0px)
+{
+	.wraper
+	{ 
+		height: 100%; 
+		width: 100%; 
+		background: url('../myaso.jpg') no-repeat center center; 
+		background-size: cover; 
+	} 
+	.background
+	{ 
+		display: none; 
+	}
+	.centralcontainermenu,
+	.centralcontainermenufacultytop,
+	.centralcontainermenufacultybottom,
+	.centralcontainer,
+	.centralcontainermaxwidth
+	{
+		width: 280px;
+	}
+	.centralcontainermenufacultytop
+	{
+		height: 100%;
+	}
+	.mainboxes
+	{
+		width: 100%;
+		height: 180px;
+	}
+	ul.topnav li a
+	{
+		font-size: 20px;
+	}
+	#news
+	{
+		padding-top: 1em;
+		margin-left: 5%;
+		margin-right: 5%;
+   		column-gap: 1em;
+		column-count: 1;
+	}
+	.aboutbox
+	{
+		width: 100%;
+		margin-bottom: 20px;
+		height: 170px;
+	}
+}
+
+@media screen and (min-width: 600px)
+{
+	.wraper
+	{ 
+		height: 100%; 
+		width: 100%; 
+		background: url('../myaso.jpg') no-repeat center center; 
+		background-size: cover; 
+	} 
+	.background
+	{ 
+		display: none;
+	}
+	.centralcontainermenu,
+	.centralcontainermenufacultytop,
+	.centralcontainermenufacultybottom,
+	.centralcontainer,
+	.centralcontainermaxwidth
+	{
+		width: 550px;
+	}
+	.centralcontainermenufacultytop
+	{
+		height: 100%;
+	}
+	.mainboxes
+	{
+		width: 46%;
+		height: 180px;
+	}
+	ul.topnav li a
+	{
+		font-size: 20px;
+	}
+	#news
+	{
+		padding-top: 1em;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+    	column-gap: 1em;
+		column-count: 2;
+	}
+	.aboutbox
+	{
+		width: 30%;
+		margin-bottom: 20px;
+		height: 170px;
+	}
+}
+
+@media screen and (min-width: 800px)
+{
+	.wraper
+	{ 
+		background: none; 
+	} 
+	.centralcontainermenu,
+	.centralcontainermenufacultytop,
+	.centralcontainermenufacultybottom,
+	.centralcontainer,
+	.centralcontainermaxwidth
+	{
+		width: 700px;
+	}
+	.centralcontainermenufacultytop
+	{
+		height: 60%;
+	}
+	.centralcontainermenufacultybottom
+	{
+		height: 30%;
+	}
+	.mainboxes
+	{
+		width: 46%;
+		height: 200px;
+	}
+	.sections
+	{
+		font-size: 15px;
+	}
+	ul.topnav li a
+	{
+		font-size: 14px;
+	}
+	#news
+	{
+		padding-top: 1em;
+		margin-left: 2%;
+		margin-right: 2%;
+    	column-gap: 1em;
+		column-count: 3;
+	}
+	.aboutbox
+	{
+		width: 30%;
+		margin-bottom: 20px;
+		height: 170px;
+	}
+}
+
+@media screen and (min-width: 1400px)
+{
+	.wraper
+	{ 
+		background: none; 
+	} 
+	.centralcontainermenu,
+	.centralcontainermenufacultytop,
+	.centralcontainermenufacultybottom,
+	.centralcontainer,
+	.centralcontainermaxwidth
+	{
+		width: 1100px;
+	}
+	.centralcontainermenufacultytop
+	{
+		height: 60%;
+	}
+	.centralcontainermenufacultybottom
+	{
+		height: 30%;
+	}
+	.mainboxes
+	{
+		width: 30%;
+		height: 250px;
+	}
+	.sections
+	{
+		font-size: 18px;
+	}
+	ul.topnav li a
+	{
+		font-size: 14px;
+	}
+	#news
+	{
+		padding-top: 1em;
+		margin-left: 2%;
+		margin-right: 2%;
+    	column-gap: 1em;
+		column-count: 3;
+	}
+	.aboutbox
+	{
+		width: 30%;
+		margin-bottom: 20px;
+		height: 170px;
+	}
+}
+
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    height: 60px;
+}
+
+/* Float the list items side by side */
+ul.topnav li
+{
+	float: left;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a
+{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover
+{
+
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon
+{
+	display: none;}
+
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:799px)
+{
+  ul.topnav li:not(:first-child)
+  {
+  	display: none;
+  }
+  ul.topnav li.icon
+  {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:799px) {
+  ul.topnav.responsive
+  {
+  	position: relative;
+  }
+  ul.topnav.responsive li.icon
+  {
+    position: absolute;
+    right: 0;
+    top: 2px;
+  }
+  ul.topnav.responsive li:not(:last-child)
+  {
+    width: 100%;
+    display: inline;
+  }
+  /*ul.topnav.responsive li:not(:first-of-type) {
+    display: block;
+    text-align: center;
+  }*/
+}

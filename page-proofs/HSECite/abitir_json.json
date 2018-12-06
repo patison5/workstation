@@ -1,0 +1,157 @@
+///////....*************** POST ЗАПРОСЫ ***************....\\\\\\\
+
+////*************** ARTICLES ***************\\\\
+метод: http://abitir.styleru.net/api/articles
+параметры: article_id
+поля (пример json): 
+[
+  {
+    "article_id": "2",
+    "article_title": "ipsum dolor sit",
+    "article_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, omnis! Consequuntur, magni doloribus velit perspiciatis natus ducimus quos quod alias.",
+    "article_date": "2030-10-20",
+    "article_file": "img/avatar.jpg",
+    "article_status": "confirmed"
+  }
+]
+
+
+////*************** CAMPUS ***************\\\\
+метод: http://abitir.styleru.net/api/campus
+параметры: campus_id
+поля: 
+[
+  {
+    "campus_id": "1",
+    "campus_name": "test"
+  }
+]
+
+
+////*************** PROFESSIONS ***************\\\\
+метод: http://abitir.styleru.net/api/professions
+параметры: prof_id
+поля: 
+[
+  {
+    "prof_id": "1",
+    "prof_name": "мойщик посуды"
+  }
+]
+
+
+
+////*************** FACULTIES ***************\\\\
+метод: http://abitir.styleru.net/api/Faculties_group
+параметры: group_id
+поля: 
+[
+  {
+    "id": "1",
+    "name": "Социальные науки"
+  }
+]
+
+
+
+
+///////....*************** GET ЗАПРОСЫ ***************....\\\\\\\
+
+////*************** ALL ORGANIZATION  GROUP ***************\\\\
+метод: http://abitir.styleru.net/api/getAllOrganizations
+параметры: нет
+поля:
+[
+  {
+    "id": "1",
+    "name": "Ассоциация интеллектуальных клубов (АИК): «Что? Где? Когда?», «Брейн-ринг», «Своя игра»",
+    "link": "http://vk.com/chgk_aic",
+    "description": "Смог пробиться через решето вступительных испытаний? Ума, эрудиции, находчивости и соображалки тебе не занимать? Хочешь узнать, где можно реально применить свои знания и способности? В вышкинском интеллектуальном движении!",
+    "id_group": "7"
+  },
+  {
+    "id": "2",
+    "name": "«Киви»",
+    "link": "http://vk.com/kiviclubhse",
+    "description": "Сообщество предпринимателей и бизнесменов Высшей школы экономики.\r\nМы даем возможность найти новые связи, работаем над созданием интервью с успешными предпринимателями, проводим массовые лекции по бизнес секретам, а также создаем проекты, которые помогают людям, которые уже создали или только собираются создать свой бизнес, становиться успешнее и достигать в своем деле новых высот.\r\nПодписывайтесь на нашу страницу, читайте материалы на сайте и следите за новыми анонсами встреч!",
+    "id_group": "8"
+  }
+  // и так и далее....
+]
+
+
+////*************** ALL ORGANIZATION GROUP ***************\\\\
+метод: http://abitir.styleru.net/api/getAllOrganizationGroup
+параметры: нет
+поля:
+[
+  {
+    "id": "1",
+    "name": "Спортивные (Спорт и туризм)"
+  },
+  {
+    "id": "2",
+    "name": "Социальные"
+  }
+  // и так и далее....
+]
+
+
+////*************** ALL ORGANIZATION PROFESSIONS ***************\\\\
+метод: http://abitir.styleru.net/api/getAllProfessions
+параметры: нет
+поля:
+[
+  {
+    "prof_id": "1",
+    "prof_name": "мойщик посуды"
+  }
+  // и та и далее
+]
+
+
+////*************** ALL ORGANIZATION CAMPUS ***************\\\\
+метод: http://abitir.styleru.net/api/getAllCampus
+параметры: нет
+поля:
+[
+  {
+    // БАЗА ПУСТАЯ
+  }
+]
+
+////*************** ALL ORGANIZATION ARTICLES ***************\\\\
+метод: http://abitir.styleru.net/api/getAllArticles
+параметры: нет
+поля:
+[
+  {
+    "article_id": "2",
+    "article_title": "ipsum dolor sit",
+    "article_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, omnis! Consequuntur, magni doloribus velit perspiciatis natus ducimus quos quod alias.",
+    "article_date": "2030-10-20",
+    "article_file": "img/avatar.jpg",
+    "article_status": "confirmed"
+  }
+  // и так и далее....
+]
+
+////*************** ALL ORGANIZATION DIRECTIONS ***************\\\\
+метод: http://abitir.styleru.net/api/getAllDirections
+параметры: нет
+поля:
+[
+  {
+    // БАЗА ПУСТАЯ
+  }
+]
+
+////*************** ALL ORGANIZATION SUBJECTS ***************\\\\
+метод: http://abitir.styleru.net/api/getAllSubjects
+параметры: нет
+поля:
+[
+  {
+    // БАЗА ПУСТАЯ
+  }
+]

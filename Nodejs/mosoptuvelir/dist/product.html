@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>MosOptGewelry</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider({
+		  	slideWidth: 160,
+				minSlides: 5,
+				maxSlides: 5,
+				moveSlides: 1,
+				slideMargin: 15,
+				pager: false
+		  });
+		});
+	</script>
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+</head>
+<body>
+	<!-- обвертка -->
+	<div class="wraper">
+		<!-- шапка -->
+		<header>
+			<div class="container">
+				<div class="header__block header__logo">
+					<a href="#" class="logo__link"><img src="images/logo.png" alt=""></a>
+				</div>
+
+				<div class="header__block header__basket">
+					basket
+				</div>
+
+				<div class="header__block">
+					<div class="header__login">
+						<a href="#" class="login_link">Вход</a>
+						<span class="login__separator">/</span>
+						<a href="#" class="registration_link">Регистрация</a>
+					</div>
+					<div class="header__search">
+						<form action="#" class="header-search__form">
+							<input type="text"	 class="header-search__text" placeholder="Поиск по артиклу или id">
+							<input type="submit" class="header-search__button" value="&nbsp;">
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main-menu__wrap_dark">
+			<menu class="main__menu container">
+				<li class="main-menu__element"><a class="main-menu__link" href="/">Главная</a></li>
+				<li class="main-menu__element"><a class="main-menu__link" href="news.html">Акции</a></li>
+				<li class="main-menu__element"><a class="main-menu__link" href="salons.html">Салоны</a></li>
+				<li class="main-menu__element"><a class="main-menu__link" href="catalog.html">Каталог</a></li>
+				<li class="main-menu__element"><a class="main-menu__link" href="#">Услуги и Цены</a></li>
+				<li class="main-menu__element"><a class="main-menu__link" href="#">Разное</a></li>
+			</menu>
+		</div>
+
+		<div class="container">
+			<div class="product__wrap">
+				
+				<div class="product-img__wrap">
+					<img src="images/product_1.jpg" alt="" class="product__img-main">
+				</div>
+
+				<div class="product__info">
+					<h3 class="product-info__title clearfix">Серьги длинные золотые</h3>
+					<div class="product__articul clearfix"><p>Акртикул <span>2564343</span></p></div>
+					<div class="product__text">
+						<p>Ничто так не красит человека как благородство, а с этим изделием вам позавидуют даже дворянки!</p>
+					</div>
+					<div class="characters__wrap clearfix">
+						<h4 class="characters__title">Характеристики</h4>
+
+						<table>
+							<tr>
+								<td>Для кого</td>
+								<td>Женское</td>
+							</tr>
+							<tr>
+								<td>Металл</td>
+								<td>Золото 585°</td>
+							</tr>
+							<tr>
+								<td>Вес:</td>
+								<td>2,27 г.</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="product__menu">
+						<a href="#" class="menu__btn-add_to_bookmark">В закладки</a>
+						<a href="#" class="menu__btn-add_to_compare">К сравнению</a>
+					</div>
+
+					<div class="product__footer">
+						<div class="product__price">
+							<p class="product__last-price">21 700</p>
+							<p class="product__new-price">17 900</p>
+						</div>
+						<a href="#" class="product__btn">В корзину</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="same_product">
+			<h3 class="black_title">Похожие товары</h3>
+				<ul class="bxslider">
+					<li><a href="catalog.html"><img src="images/products/021075.jpg" height="160" width="160" title="Текс 1" /></a></li>
+					<li><a href="catalog.html"><img src="images/products/021457.jpg" height="160" width="160" title="Текс 2"/></a></li>
+					<li><a href="catalog.html"><img src="images/products/021929.jpg" height="160" width="160" title="Текс 3"/></a></li>
+					<li><a href="catalog.html"><img src="images/products/021939.jpg" height="160" width="160" title="Текс 4"/></a></li>
+					<li><a href="catalog.html"><img src="images/products/021987.jpg" height="160" width="160" title="Текс 5"/></a></li>
+				</ul>
+			</div>
+
+			<div class="leaders__wrap">
+				<h3 class="black_title">Лидеры продаж</h3>
+				<div class="b-items leaders-blocks__wrap">
+
+					<!-- карточка товара -->
+					<div class="leader__item">
+						<img src="images/products/021987.jpg" alt="product_1.png" class="leader-item__img">
+
+						<h3 class="leader-item__title">Серьги длинные золотые</h3>
+
+						<div class="leader-item__footer">
+							<span class="item__price">От 12 300 р.</span>
+							<div class="leader__btn-wrap">
+								<input type="checkbox" id="takeProduct">
+								<label for="takeProduct"><span></span>Беру</label>
+							</div>
+						</div>
+					</div>
+					<!-- карточка товара -->
+					<!-- карточка товара -->
+					<div class="leader__item">
+						<img src="images/products/021929.jpg" alt="product_1.png" class="leader-item__img">
+
+						<h3 class="leader-item__title">Серьги длинные золотые</h3>
+
+						<div class="leader-item__footer">
+							<span class="item__price">От 12 300 р.</span>
+							<div class="leader__btn-wrap">
+								<input type="checkbox" id="takeProduct">
+								<label for="takeProduct"><span></span>Беру</label>
+							</div>
+						</div>
+					</div>
+					<!-- карточка товара -->
+					<!-- карточка товара -->
+					<div class="leader__item">
+						<img src="images/products/021939.jpg" alt="product_1.png" class="leader-item__img">
+
+						<h3 class="leader-item__title">Серьги длинные золотые</h3>
+
+						<div class="leader-item__footer">
+							<span class="item__price">От 12 300 р.</span>
+							<div class="leader__btn-wrap">
+								<input type="checkbox" id="takeProduct">
+								<label for="takeProduct"><span></span>Беру</label>
+							</div>
+						</div>
+					</div>
+					<!-- карточка товара -->
+					<!-- карточка товара -->
+					<div class="leader__item">
+						<img src="images/product_1.png" alt="product_1.png" class="leader-item__img">
+
+						<h3 class="leader-item__title">Серьги длинные золотые</h3>
+
+						<div class="leader-item__footer">
+							<span class="item__price">От 12 300 р.</span>
+							<div class="leader__btn-wrap">
+								<input type="checkbox" id="takeProduct">
+								<label for="takeProduct"><span></span>Беру</label>
+							</div>
+						</div>
+					</div>
+					<!-- карточка товара -->
+					<!-- карточка товара -->
+					<div class="leader__item">
+						<img src="images/products/021929.jpg" alt="product_1.png" class="leader-item__img">
+
+						<h3 class="leader-item__title">Серьги длинные золотые</h3>
+
+						<div class="leader-item__footer">
+							<span class="item__price">От 12 300 р.</span>
+							<div class="leader__btn-wrap">
+								<input type="checkbox" id="takeProduct">
+								<label for="takeProduct"><span></span>Беру</label>
+							</div>
+						</div>
+					</div>
+					<!-- карточка товара -->
+
+				</div>
+			</div>
+		</div>	<!-- //контейнер -->
+
+		<footer>
+			<div class="container">
+				<div class="footer__block">
+					<div class="block__paragraph">
+						<h5 class="footer__title">Мы в социальных сетях</h5>
+						<ul class="footer__social">
+							<li><a href="#" class="social__link" id="s-vk">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-tw">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-mail">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-od">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-google">&nbsp;</a></li>
+						</ul>
+					</div>
+
+					<div class="block__paragraph">
+						<h5 class="footer__title">Появились вопросы?</h5>
+						<span class="footer__number">8 (499) 463-38-20</span>
+					</div>
+
+					<div class="block__paragraph">
+						<span>© ИП Пенин В.И</span>
+					</div>
+				</div>
+				<div class="footer__block">
+					<h5 class="footer__title">О нас</h5>
+					<ul class="footer__menu">
+						<li class="footer-menu__element"><a class="footer-menu__link" href="main.html">О компании</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="contacts.html">Контакты</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="">Гарантии качества</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="#">Вакансии</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="#">Дисконтные карты</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="news.html">Новости</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="news.html">Акции</a></li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h5 class="footer__title">Изделия</h5>
+					<ul class="footer__menu">
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Каталог</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Новинки</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Кольца</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Серьги</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Подвески</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Цепочки</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Браслеты</a></li>
+					</ul>
+				</div>
+				<div class="footer__block">hello</div>
+			</div>
+
+		</footer>
+	</div>	<!-- //обвертка -->
+</body>
+</html>

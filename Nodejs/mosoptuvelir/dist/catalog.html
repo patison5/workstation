@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/select.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<link rel="stylesheet" href="css/style.min.css">
+	
+	<!--  Стилизованый селект -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cusel-min-2.5.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/* select style */
+			var params = {
+				changedEl: "select",
+				visRows: 5,
+				scrollArrows: true
+			}
+			cuSel(params);
+		});
+	</script>
+
+</head>
+<body>
+	<div class="wraper">
+		<header>
+			<div class="container">
+				<div class="header__block header__logo">
+					<a href="#" class="logo__link"><img src="images/logo.png" alt=""></a>
+				</div>
+
+				<div class="header__block">
+					<div class="header__basket">
+						
+						<p><i class="basketIco">&nbsp;</i>В корзине <a href="basket.html">2 товара</a></p> 
+						<p>на сумму <a href="basket.html">2.000 р.</a> </p>
+					</div>
+
+					<div class="header__login">
+						<a href="#" class="login_link">Вход</a>
+						<span class="login__separator">/</span>
+						<a href="#" class="registration_link">Регистрация</a>
+					</div>
+					<div class="header__search">
+						<form action="#" class="header-search__form">
+							<input type="text"	 class="header-search__text" placeholder="Поиск по артиклу или id">
+							<input type="submit" class="header-search__button" value="&nbsp;">
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<div class="main catalog">
+			<div class="main-menu__wrap_dark">
+				<menu class="main__menu container">
+					<li class="main-menu__element"><a class="main-menu__link" href="/">Главная</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="news.html">Акции</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="salons.html">Салоны</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Каталог</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Услуги и Цены</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Разное</a></li>
+				</menu>
+			</div>
+
+			<div class="menu__wrap_light">
+				<ul class="main__menu container">
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Главная</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Акции</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Салоны</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Каталог</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Услуги и Цены</a></li>
+					<li class="main-menu__element"><a class="main-menu__link" href="#">Разное</a></li>
+				</ul>
+			</div>
+
+			<div class="container">				
+				<div class="catalog-content__wrap">
+					<div class="filter__wrap clearfix">
+						<form action="" method="post" class="clearfix">
+							<div class="filter__block clearfix">
+								<h3 class="black_title clearfix">Сортировать по</h3>
+
+								<div class="selector__wrap">
+									<select class="selector">
+										<option value="">популярности</option>
+										<option value="">рейтингу</option>
+										<option value="">сначала дорогие</option>
+										<option value="">сначала недорогие</option>
+									</select>
+								</div>
+
+								<ul class="filter__list">
+									<li><input type="checkbox" id="check1"><label for="check1"><span></span>Скидка</label></li>
+									<li><input type="checkbox" id="check2"><label for="check2"><span></span>Новинки</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Тип украшения</h3>
+								<ul class="filter__list">
+									<li><input type="checkbox" id="check3"><label for="check3"><span></span>Все</label></li>
+									<li><input type="checkbox" id="check4"><label for="check4"><span></span>Шармы</label></li>
+									<li><input type="checkbox" id="check5"><label for="check5"><span></span>Цепочки</label></li>
+									<li><input type="checkbox" id="check6"><label for="check6"><span></span>Серьги</label></li>
+									<li><input type="checkbox" id="check7"><label for="check7"><span></span>Подвески</label></li>
+									<li><input type="checkbox" id="check8"><label for="check8"><span></span>Кольца</label></li>
+									<li><input type="checkbox" id="check9"><label for="check9"><span></span>Колье</label></li>
+									<li><input type="checkbox" id="check10"><label for="check10"><span></span>Броши</label></li>
+									<li><input type="checkbox" id="check11"><label for="check11"><span></span>Браслеты</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Материал</h3>
+								<ul class="filter__list">
+									<li><input type="checkbox" id="check12"><label for="check12"><span></span>Все золото</label></li>
+									<li><input type="checkbox" id="check13"><label for="check13"><span></span>Белое золото</label></li>
+									<li><input type="checkbox" id="check14"><label for="check14"><span></span>Желтое золото</label></li>
+									<li><input type="checkbox" id="check15"><label for="check15"><span></span>Красное золото</label></li>
+									<li><input type="checkbox" id="check7"><label for="check7"><span></span>Серебро</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Коллекции</h3>
+								<ul class="filter__list">
+									<li><input type="checkbox" id="check17"><label for="check17"><span></span>Женская коллекция</label></li>
+									<li><input type="checkbox" id="check18"><label for="check18"><span></span>Мужская коллекция</label></li>
+									<li><input type="checkbox" id="check19"><label for="check19"><span></span>Детская коллекция</label></li>
+									<li><input type="checkbox" id="check20"><label for="check20"><span></span>Православная тематика</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Вставка</h3>
+								<ul class="filter__list">
+									<li><input type="checkbox" id="check21"><label for="check21"><span></span>Бриллиант</label></li>
+									<li><input type="checkbox" id="check22"><label for="check22"><span></span>Изумруд</label></li>
+									<li><input type="checkbox" id="check23"><label for="check23"><span></span>Сапфир</label></li>
+									<li><input type="checkbox" id="check24"><label for="check24"><span></span>Топаз</label></li>
+									<li><input type="checkbox" id="check25"><label for="check25"><span></span>Гранат</label></li>
+									<li><input type="checkbox" id="check26"><label for="check26"><span></span>Аметист</label></li>
+									<li><input type="checkbox" id="check27"><label for="check27"><span></span>Хризолит</label></li>
+									<li><input type="checkbox" id="check28"><label for="check28"><span></span>Хризопраз</label></li>
+									<li><input type="checkbox" id="check29"><label for="check29"><span></span>Жемчуг</label></li>
+									<li><input type="checkbox" id="check30"><label for="check30"><span></span>Бирюза</label></li>
+									<li><input type="checkbox" id="check31"><label for="check31"><span></span>Коралл</label></li>
+									<li><input type="checkbox" id="check32"><label for="check32"><span></span>Агат</label></li>
+									<li><input type="checkbox" id="check33"><label for="check33"><span></span>Авантюрин</label></li>
+									<li><input type="checkbox" id="check34"><label for="check34"><span></span>Фианит</label></li>
+								</ul>
+							</div>
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Диапозон цены</h3>
+								<div class="selector__wrap">
+									<select class="selector">
+										<option value="" class="selector__element">Любая цена</option>
+										<option value="" class="selector__element">от 599 до 1499</option>
+										<option value="" class="selector__element">от 1500 до 5000</option>
+										<option value="" class="selector__element">от 5000 до 15000</option>
+										<option value="" class="selector__element">от 15000 и больше</option>
+									</select>
+								</div>
+							</div>
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Размер</h3>
+								<ul class="filter__list left">
+									<li><input type="checkbox" id="ckeck35"><label for="ckeck35"><span></span>14</label></li>
+									<li><input type="checkbox" id="ckeck36"><label for="ckeck36"><span></span>14.5</label></li>
+									<li><input type="checkbox" id="ckeck37" checked><label for="ckeck37"><span></span>15</label></li>
+									<li><input type="checkbox" id="ckeck38"><label for="ckeck38"><span></span>15.5</label></li>
+									<li><input type="checkbox" id="ckeck39"><label for="ckeck39"><span></span>16</label></li>
+									<li><input type="checkbox" id="ckeck40"><label for="ckeck40"><span></span>16.5</label></li>
+									<li><input type="checkbox" id="ckeck41"><label for="ckeck41"><span></span>17</label></li>
+									<li><input type="checkbox" id="ckeck42"><label for="ckeck42"><span></span>17.5</label></li>
+									<li><input type="checkbox" id="ckeck43"><label for="ckeck43"><span></span>18</label></li>
+									<li><input type="checkbox" id="ckeck44"><label for="ckeck44"><span></span>18.5</label></li>
+									<li><input type="checkbox" id="ckeck45"><label for="ckeck45"><span></span>19</label></li>
+									<li><input type="checkbox" id="ckeck46"><label for="ckeck46"><span></span>19.5</label></li>
+									<li><input type="checkbox" id="ckeck47"><label for="ckeck47"><span></span>20</label></li>
+									<li><input type="checkbox" id="ckeck48"><label for="ckeck48"><span></span>20.5</label></li>
+								</ul>
+
+								<ul class="filter__list left">
+									<li><input type="checkbox" id="ckeck49"><label for="ckeck49"><span></span>21</label></li>
+									<li><input type="checkbox" id="ckeck50"><label for="ckeck50"><span></span>21.5</label></li>
+									<li><input type="checkbox" id="ckeck51"><label for="ckeck51"><span></span>22</label></li>
+									<li><input type="checkbox" id="ckeck52"><label for="ckeck52"><span></span>22.5</label></li>
+									<li><input type="checkbox" id="ckeck53"><label for="ckeck53"><span></span>23</label></li>
+									<li><input type="checkbox" id="ckeck54"><label for="ckeck54"><span></span>23.5</label></li>
+									<li><input type="checkbox" id="ckeck55"><label for="ckeck55"><span></span>24</label></li>
+									<li><input type="checkbox" id="ckeck56"><label for="ckeck56"><span></span>24.5</label></li>
+									<li><input type="checkbox" id="ckeck57"><label for="ckeck57"><span></span>25</label></li>
+									<li><input type="checkbox" id="ckeck58"><label for="ckeck58"><span></span>40</label></li>
+									<li><input type="checkbox" id="ckeck59"><label for="ckeck59"><span></span>45</label></li>
+									<li><input type="checkbox" id="ckeck60"><label for="ckeck60"><span></span>50</label></li>
+									<li><input type="checkbox" id="ckeck61"><label for="ckeck61"><span></span>55</label></li>
+									<li><input type="checkbox" id="ckeck62"><label for="ckeck62"><span></span>60</label></li>
+								</ul>
+							</div>
+						</form>
+					</div>
+					<div class="catalog__content">
+						<div class="second_filter clearfix">
+							<div class="selected-tags__wrap clearfix">
+								<span class="left">Ваш выбор:</span>
+
+								<div class="selected-tags">
+									<div class="selected-tags__element"><span>Кольца</span><i></i></div>
+									<div class="selected-tags__element"><span>Серьги</span><i></i></div>
+									<div class="selected-tags__element"><span>Шармы</span><i></i></div>
+								</div>
+							</div>
+							<div class="s-filter_line clearfix">
+								<p class="amounting__elements">Найдено товаров: <span>975</span></p>
+
+								<form action="" method="post" class="right">
+									<div class="check-sale__wrap">
+										<span>Скидка</span>
+										<select class="Select-small">
+											<option value="">5%</option>
+											<option value="">10%</option>
+											<option value="">15%</option>
+											<option value="">30%</option>
+											<option value="">50%</option>
+										</select>
+									</div>
+									<div class="check-value__wrap left">
+										<span>Отображать</span>
+										<select class="Select-small">
+											<option value="">По 20</option>
+											<option value="">По 40</option>
+											<option value="">По 60</option>
+										</select>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+						<div class="catalog-items__wrap">
+							<!-- карточка товара -->
+							<div class="catalog__item">
+								<a href="product.html"  class="item__link clearfix">
+									<img src="images/product_1.png" alt="product_1.png">
+									<div class="sale-p"><span>50%</span></div>
+								</a>
+
+								<h3 class="item__title">Серьги длинные золотые</h3>
+
+								<div class="item__footer">
+									<span class="item__price">От 12 300 р.</span>
+									<a href="#" class="item__btn-red">Купить</a>
+								</div>
+							</div>
+							<!-- карточка товара -->
+							<!-- карточка товара -->
+							<div class="catalog__item">
+								<a href="product.html"  class="item__link clearfix">
+									<img src="images/product_1.png" alt="product_1.png">
+									<div class="sale-p"><span>50%</span></div>
+								</a>
+
+								<h3 class="item__title">Серьги длинные золотые</h3>
+
+								<div class="item__footer">
+									<span class="item__price">От 12 300 р.</span>
+									<a href="#" class="item__btn-red">Купить</a>
+								</div>
+							</div>
+							<!-- карточка товара -->
+							<!-- карточка товара -->
+							<div class="catalog__item">
+								<a href="product.html"  class="item__link clearfix">
+									<img src="images/product_1.png" alt="product_1.png">
+									<div class="sale-p"><span>50%</span></div>
+								</a>
+
+								<h3 class="item__title">Серьги длинные золотые</h3>
+
+								<div class="item__footer">
+									<span class="item__price">От 12 300 р.</span>
+									<a href="#" class="item__btn-red">Купить</a>
+								</div>
+							</div>
+							<!-- карточка товара -->
+							<!-- карточка товара -->
+							<div class="catalog__item">
+								<a href="product.html"  class="item__link clearfix">
+									<img src="images/product_1.png" alt="product_1.png">
+									<div class="sale-p"><span>50%</span></div>
+								</a>
+
+								<h3 class="item__title">Серьги длинные золотые</h3>
+
+								<div class="item__footer">
+									<span class="item__price">От 12 300 р.</span>
+									<a href="#" class="item__btn-red">Купить</a>
+								</div>
+							</div>
+							<!-- карточка товара -->
+							<!-- карточка товара -->
+							<div class="catalog__item">
+								<a href="product.html"  class="item__link clearfix">
+									<img src="images/product_1.png" alt="product_1.png">
+									<div class="sale-p"><span>50%</span></div>
+								</a>
+
+								<h3 class="item__title">Серьги длинные золотые</h3>
+
+								<div class="item__footer">
+									<span class="item__price">От 12 300 р.</span>
+									<a href="#" class="item__btn-red">Купить</a>
+								</div>
+							</div>
+							<!-- карточка товара -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="footer__block">
+					<div class="block__paragraph">
+						<h5 class="footer__title">Мы в социальных сетях</h5>
+						<ul class="footer__social">
+							<li><a href="#" class="social__link" id="s-vk">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-tw">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-mail">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-od">&nbsp;</a></li>
+							<li><a href="#" class="social__link" id="s-google">&nbsp;</a></li>
+						</ul>
+					</div>
+
+					<div class="block__paragraph">
+						<h5 class="footer__title">Появились вопросы?</h5>
+						<span class="footer__number">8 (499) 463-38-20</span>
+					</div>
+
+					<div class="block__paragraph">
+						<span>© ИП Пенин В.И</span>
+					</div>
+				</div>
+				<div class="footer__block">
+					<h5 class="footer__title">О нас</h5>
+					<ul class="footer__menu">
+						<li class="footer-menu__element"><a class="footer-menu__link" href="main.html">О компании</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="contacts.html">Контакты</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="">Гарантии качества</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="#">Вакансии</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="#">Дисконтные карты</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="news.html">Новости</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="news.html">Акции</a></li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h5 class="footer__title">Изделия</h5>
+					<ul class="footer__menu">
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Каталог</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Новинки</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Кольца</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Серьги</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Подвески</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Цепочки</a></li>
+						<li class="footer-menu__element"><a class="footer-menu__link" href="catalog.html">Браслеты</a></li>
+					</ul>
+				</div>
+				<div class="footer__block">hello</div>
+			</div>
+
+		</footer>
+	</div>
+</body>
+</html>

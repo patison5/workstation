@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	outline: none;
+	padding: 0;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+html {
+	text-align: center;
+}
+
+.menu {
+	display: block;
+	margin: 150px auto;
+	width: 150px;
+}
+
+.menu li {
+	text-align: center;
+	background: #3385ff;
+	border-bottom: 1px solid #fff;
+	list-style: none;
+}
+
+.menu li a {
+	padding: 15px 0;
+	width: 100%;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+.menu li:hover {
+	background: #0066ff;
+}
+
+.header {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.reset {
+	padding: 10px 15px;
+	background:  #3385ff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+.reset:hover {
+	background: #0066ff;
+}
+
+.game {
+	width: 220px;
+	margin: 270px auto;
+}
+
+.block {
+	display: block;
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border: 1px solid #000;
+    float: left;
+    font-size: 45px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px;
+    transition: all .3s ease-out;
+    margin-left: 5px;
+    position: relative;
+}
+.block:hover {
+    background: #9999ff !important;
+}
+.line {
+    display: inline-block;
+    /*overflow: hidden;*/
+}
+
+
+.f-s {
+	font-size: 22px;
+	background: #3385ff;
+	color: #fff;
+	cursor: default;
+}
+.f-s:hover {
+	background: #3385ff !important;
+}
+
+.showHow {
+	cursor: pointer;
+	padding: 10px 15px;
+	background:  #3385ff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+.showHow:hover {
+	background: #0066ff;
+}
+
+.set-menu_wraper {
+	position: absolute;
+	left: 48px;
+	top: -1px;
+	font-size: 15px;
+	color: #fff;
+	width: 300px;
+	z-index: 999;
+	border: 4px double black;
+	background: #0066ff;
+}
+
+.set-menu_wraper li {
+	width: 146px;
+	float: left;
+	display: block;
+
+	text-align: center;
+	background: #3385ff;
+	border-top: 1px solid #fff;
+	list-style: none;
+}
+
+.set-menu_wraper li:first-child {
+	width: 100%;
+	border-top: none;
+}
+
+
+.set-menu_wraper li a {
+	width: 100%;
+	color: #fff;
+	text-decoration: none;
+}
+.set-menu_wraper li:hover {
+	background: #0066ff;
+}

@@ -1,0 +1,33 @@
+/* #23 */
+
+domains
+	list = integer*
+	newList = integer*
+	
+predicates
+	nondeterm vvod(list)
+	nondeterm getLast(list)
+	nondeterm reverse(list,list)
+	nondeterm append(list,list,list)
+
+clauses
+	vvod([H|T]) :-
+		write("write element: "),  readint(H), !,
+		vvod(T).
+	vvod([]).
+	
+	/* reverse list */
+	reverse([X], [X]):-!.
+	reverse ([X | T], Z) :- reverse (T, W), append(W, [X], Z).
+	
+	/* append to list */
+	append([],L,L):-!.
+	append([H|T],P,[H|Y]):-append(T,P,Y).
+
+	getLast(L):-reverse(L,[H|_]),write("last number is ", H),nl.
+	
+
+
+goal
+	vvod(L),
+	getLast(L).

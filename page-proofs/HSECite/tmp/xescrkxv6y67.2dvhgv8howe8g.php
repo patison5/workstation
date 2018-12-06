@@ -1,0 +1,114 @@
+<?php echo $this->render('template/head.html',$this->mime,get_defined_vars(),0); ?>	
+<script src="https://use.fontawesome.com/19b78bdbb2.js"></script>
+
+	<style>
+		.notifications__main {
+			margin-top: 2em; 
+			padding-left: 1em; 
+			padding-right: 1em;
+		}	
+		.panel {
+			padding: 0; 
+			border: 0; 
+			margin-bottom: 0.3em;
+		}
+	</style>
+	<link rel="stylesheet" href="../assets/admin/css/admin-forms.min.css">
+</head>
+<body>
+	<?php echo $this->render('template/menu.html',$this->mime,get_defined_vars(),0); ?>	
+    <section id="content_wrapper">
+	    <div class="notifications__main">
+  			<!-- recent orders table -->
+  			<div class="panel">
+  			  <div class="panel-body">
+  			    <?php foreach (($professions?:array()) as $professions): ?>
+                                          
+              <!-- форма редактирования Факультета -->
+              <div class="admin-form theme-primary">
+                <form action="/edit_professions" method="POST" id="form-ui">
+                  <!-- Basic Inputs -->
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="section">
+                        <label for="title" class="field">
+                          <input type="text" name="title" id="title" class="gui-input" value="<?php echo $professions['prof_name']; ?>">
+                        </label>
+                        <input type="hidden" name="id" class="gui-input" value="<?php echo $professions['prof_id']; ?>">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-footer text-right">
+                      <input type="submit" class="btn btn-xs btn-success  button btn-primary" value="Сохранить"></input>
+                      <button type="button" class="btn btn-xs btn-danger button btn-primary">Отмена</button>
+                  </div>
+                </form>
+              </div><!-- форма добавления статьи -->
+            <?php endforeach; ?>
+  			  </div>
+  			</div>
+		  </div>
+
+
+
+
+
+    </section>
+</body>
+
+
+
+
+<!-- main scripts for the page -->
+<script src="assets/admin/js/utility.js"></script>
+<!-- <script src="assets/admin/js/demo.js"></script> -->
+<script src="assets/admin/js/main.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Demo JS  
+    Demo.init();
+ 
+
+    // Init Theme Core    
+    Core.init();
+
+
+    // Init Widget Demo JS
+    // demoHighCharts.init();
+
+    // Because we are using Admin Panels we use the OnFinish 
+    // callback to activate the demoWidgets. It's smoother if
+    // we let the panels be moved and organized before 
+    // filling them with content from various plugins
+
+    // Init plugins used on this page
+    // HighCharts, JvectorMap, Admin Panels
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      draggable: true,
+      preserveGrid: true,
+      // mobile: true,
+      onStart: function() {
+        // Do something before AdminPanels runs
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps(); // function below
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+});
+</script>
+</html>

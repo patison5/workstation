@@ -1,0 +1,50 @@
+/*****************************************************************/
+/************************ БЛОКИ С АКЦИЯМИ ************************/
+/*****************************************************************/
+
+
+
+/***********  ПЕРЕМЕННЫЕ  *************/
+@import "_colors";
+
+
+/***********  ОСНОВНОЙ КОНТЕНТ  *************/
+.cubes__wraper {
+	margin: 25px auto;
+	display: block;
+}
+
+.cubes__block {
+	display: flex;
+	background: #ccc;
+}
+.cubes__block img {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #9C9B9B;
+	flex:1; 
+}
+
+.cubes__line-style1,
+.cubes__line-style2,
+.cubes__line-style3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+	justify-content: stretch;
+	align-items: stretch;
+	grid-gap: .5em;
+	margin-bottom: .5em;
+}
+
+.cubes__line-style1 .cubes__block:first-child {
+	grid-row: 1/3;
+}
+.cubes__line-style3 .cubes__block:last-child {
+	grid-column: 2/3;
+	grid-row: 1/3;
+}
+
+.cubes__img-center {
+	grid-column: 1/3;
+}

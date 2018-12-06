@@ -1,0 +1,114 @@
+/********************************************************************/
+/************************ ЗАГОЛОВОЧНАЯ ЧАСТЬ ************************/
+/********************************************************************/
+
+
+
+/***********  ПЕРЕМЕННЫЕ  *************/
+@import "_colors";
+
+
+
+
+header {
+	width: 100%;
+	background: url("../images/bg.png") no-repeat 0px -125px, url("../images/bg2.png") no-repeat 1140px -125px, $backgroundGradientRed;
+}
+
+header .container {
+	display: flex;
+	// flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 195px;
+	padding-bottom: 25px;
+}
+
+.header__block {
+	display: block;
+}
+
+// логотип
+.logo__link {
+	display: block;
+}
+
+
+// Корзина
+.header__basket {
+	display: none;
+	padding: 0 5px 0 65px;
+	text-align: left;
+	position: relative;
+	color: #b5b5b5;
+}
+
+.header__basket p {
+	position: relative;
+}
+
+.basketIco { 
+	background: url(../images/basket.png) no-repeat 0px 0px;
+	width: 18px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	left: -28px;
+	top: -1px;
+}
+
+.basket a:hover { text-decoration: underline; }
+
+
+// вход и регистрация
+.header__login {
+	font: 12px verdana;
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+.login_link {
+	background: url(../images/reg.png) no-repeat left center;
+	padding-left: 25px;
+}
+
+.login__separator {
+	margin: 0 10px;
+}
+
+.registration_link {
+	color: #000;
+}
+
+
+// поисковик
+.header__search {
+	position: relative;
+	margin-top: 15px;
+}
+
+.header-search__text {
+	width: 100%;
+    height: 28px;
+    padding: 1px 45px 0 15px;
+    color: #767676;
+    font-style: italic;
+    font-size: 12px;
+	border: none;
+}
+
+.header-search__button {
+	border: none;
+	position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    background: url("../images/scope.png") no-repeat center center;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+.search__button:hover {
+	background: url(../images/scopeHover.png) no-repeat center center
+}

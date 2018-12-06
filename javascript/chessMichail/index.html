@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.block {
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			border: 1px solid #ccc;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td class="block" id="block_1" data-x="" data-y="" onclick="moveElement(this)"></td>
+			<td class="block" id="block_2" data-x="" data-y="" onclick="moveElement(this)"></td>
+			<td class="block" id="block_3" data-x="" data-y="" onclick="moveElement(this)"></td>
+		</tr>
+		<tr>
+			<td class="block" id="block_4" data-x="" data-y="" onclick="moveElement(this)"></td>
+			<td class="block" id="block_5" data-x="" data-y="" onclick="moveElement(this)"></td>
+			<td class="block" id="block_6" data-x="" data-y="" onclick="moveElement(this)"></td>
+		</tr>
+		<tr>
+			<td class="block" id="block_7" data-x="" data-y="" onclick="moveElement(this)"></td>
+			<td class="block" id="block_8" data-x="" data-y="" onclick="moveElement(this)"></td>
+			<td class="block" id="block_9" data-x="" data-y="" onclick="moveElement(this)"></td>
+		</tr>
+	</table>
+
+	<script>
+		var elementValue = "",
+			parentX = "",
+			parentY = "";
+
+		var arr = [
+			['block_1', 'block_2', 'block_3'],
+			['block_4', 'block_5', 'block_6'],
+			['block_7', 'block_8', 'block_9']
+		]
+
+		var res = [ ["&#9815", "&#9815", "&#9815"],  
+              		["", "", ""],
+              		["&#9822", "&#9822", "&#9822"]];
+
+		for (var i = 0; i < arr.length; i++) {
+			for (var j = 0; j < arr.length; j++) {
+				var element = document.getElementById(arr[i][j]);
+
+				element.innerHTML = res[i][j];
+				element.dataset.x = i;
+				element.dataset.y = j;
+			}
+		}
+
+		function moveElement (el) {
+			if (elementValue == "" && parentX == "" && parentY == "") {
+				elementValue = el.innerHTML;
+				parentX = el.dataset.x;
+				parentY = el.dataset.y;
+			} else {
+				// проверить кто ходит
+				// написать как он ходит
+
+				console.log(elementValue)
+
+				if (el.innerHTML == "") {
+					el.innerHTML = elementValue;
+
+					document.getElementById(arr[parentX][parentY]).innerHTML = '';
+					elementValue = "",
+					parentX = "",
+					parentY = "";
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>
+
+
+<!-- 
+
+	tr - строка
+	td - столбец 
+
+	. - class
+	# - id
+
+	document.getElementsByClassName - получаем массив данных
+	document.getElementsByClassName[INDEX] - element ИНДЕКС ЭЛЕМЕНТА
+
+	&#9815 - слон
+	&#9822 - конь
+
+-->

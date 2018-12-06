@@ -1,0 +1,147 @@
+body
+{
+	background: #ffffff;
+}
+
+#navbar
+{
+	width: 100%;
+	height: 10vh;
+	background-color: green;
+}
+.navbarbox
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	align-content: stretch;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-between;
+	height: 100%;
+	width: 65%
+}
+#hselogo
+{
+	position: relative;
+	height: 80%;
+	/*width: 2.8vw;*/
+}
+.navbarword
+{
+	position: relative;
+	align-content: center;
+	float: left;
+	font-size: 2vh;
+	font-family: Helvetica;
+}
+#fon
+{
+	position: relative;
+	background-image: url('{{@BASE}}/ui/frontend/myaso.jpg');
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+.mainbox
+{
+	padding: 0;
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	align-content: stretch;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-between;
+	width: 100%;
+	background-color: white;
+}
+/*бэм*/
+
+.center {
+	width: 960px;
+}
+
+
+.hse__menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+.header__wrap {
+	width: 100%;
+	background: #ccc;
+	overflow: hidden;
+}
+.menu__wrap {
+	display: block;
+	overflow: hidden;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 0;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	align-content: stretch;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.menu__wrap li {
+	display: inline-block;
+	margin-right: 15px;
+}
+.menu__wrap li a {
+	color: #fff;
+	text-decoration: none;
+	list-style: none;
+}
+ .fuck
+{
+	display: inline-block;
+	line-height: 50px !important;
+	
+}
+#background
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	top: 65px;
+	left: 0;
+	right: 0;
+}
+.boxes
+{
+	position: relative;
+	width: 48.5%;
+	height: 200px;
+	text-align: center;
+	background-color: #b2fcd6;
+	margin-top: 1%;
+	margin-right: 1%;
+}
+.boxes2
+{
+	position: relative;
+	width: 48.5%;
+	height: 200px;
+	text-align: center;
+	background-color: #b2fcd6;
+	margin-top: 1%;
+	margin-right: 1%;
+	margin-left: 1%;
+}

@@ -1,0 +1,243 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {height: 100%;}
+body {
+	height: 100%;
+	font: 13px/16px Arial, Tahoma, sans-serif;
+	color: #000;
+	background: url(../images/background.png) repeat;
+}
+ol, ul {
+	list-style: none; 
+	font-size: 0px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+a, a:hover {color: #000; text-decoration: none;}
+
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {clear: both;}
+
+.left {float:left;}
+.right {float:right;}
+.f-center {text-align: center;}
+
+/************************ CONTENT ************************/
+.wraper {
+
+	width: 960px;
+	margin: 30px auto;
+	background: url(../images/border_top.png) repeat-x top, url(../images/border_bottom.png) repeat-x bottom;
+	padding: 15px 0 15px 0;
+} 
+.center {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.a-wrap {
+	overflow: hidden;
+	background: #fff;
+}
+
+/************************ BANNER TOP ************************/
+
+.banner_top {
+	background: #000;
+	color: #fff;
+	margin-bottom: 10px;
+	height: 45px;
+}
+
+/************************ MENU ************************/
+.nav {
+	height: 100%;
+	line-height: 45px;
+	float: left;
+}
+.nav li {
+	display: inline-block;
+	background: #00AFDE;
+	width: 105px;
+	font-size: 14px;
+	border-right: 1px solid #000;
+	vertical-align: center;
+	text-align: center;
+}
+.nav li a {
+	color: #fff;
+	display: block;
+}
+.nav li:hover {
+	background: #0051DE;
+}
+
+/************************ SEARCH ************************/
+.banner_top form {
+	float: right;
+	margin: 7.5px 5px 7.5px 0;
+	height: 30px;
+}
+.search {
+	width: 178px;
+	height: 30px;
+	color: #000;
+	border: none;
+	padding-left: 10px;
+}
+.scope {
+	width: 30px;
+	height: 30px;
+	background: #00AFDE url(../images/scope.png) no-repeat center center;
+	border: none;
+	cursor: pointer;
+}
+
+
+.slider {
+	height: 400px;
+	margin-bottom: 34px;
+	/*background: #000 url(../images/slider_1.png) no-repeat right center;*/
+}
+
+/************************ CONTAINER ************************/
+.container {
+}
+.baner {
+	height: 205px;
+	background: #000;
+	color: #fff;
+	padding: 25px;
+}
+.slider_text_1, 
+.slider_text_2, 
+.slider_text_3, 
+.slider_text_4 {
+	position: absolute;
+	color: #fff;
+	font: 15px Arial;
+}
+
+.slider_botton_text {
+	position: absolute;
+    width: 100%;
+    /*height: 91px;*/
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+    color: #dbdbdb;
+    font-size: 12px;
+	padding: 30px 25px;
+	line-height: 17px;
+}
+.slider_botton_text h3 {
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+}
+/******************** slider_1 ********************/
+.slider_text_1 {
+	margin: 163px 0 0 80px;
+	color: #8D8D92;
+	font-size: 10px;
+	width: 350px;
+}
+.slider_text_1 h3 {
+	font-size: 23px;
+	color: #fff;
+	text-transform: uppercase;
+}
+/******************** slider_2 ********************/
+.slider_text_2 {
+	width: 940px;
+	height: 400px;
+	padding: 150px 0 0 270px;
+}
+.slider_text_2 h3 {
+	font: bold 40px Tahoma;	
+	width: 395px;
+	margin-bottom: 10px;
+}
+.slider_text_2 p {
+	width: 395px;
+	height: 40px;
+	background: #000;
+	text-align: center;
+}
+
+/******************** блоки ********************/
+.block {
+	float: left;
+	width: 250px;
+	margin-left: 70px;
+	font-size: 12px;
+	color: #bbb;
+	line-height: 20px;
+}
+.block:first-child {
+	margin-left: 0;
+}
+.block h3 {
+	color: #fff;
+	font: bold 14px Arial;
+	border-bottom: 1px solid #bbb;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.continue_reading {	color: #1caedd; }
+.continue_reading:hover {	color: #fff; }
+
+.news { margin-top: 25px; }
+.state {
+	width: 318px;
+	float: left;
+	padding: 0 26.5px;
+}
+.state:nth-child(2) {
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 0 25px;
+	margin: 0 3px;
+}
+.state img {
+	width: 100%;
+	height: 125px;
+	background: #2C2C2C;
+}
+.state h3 {
+	font-weight: bold;
+	font-size: 18px;
+	color: #454545;
+	margin: 20px 0;
+}

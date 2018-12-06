@@ -1,0 +1,65 @@
+/*********************  ПЕРЕМЕННЫЕ  *********************/
+@import "_colors";
+
+/********************* СБРОС СТИЛЕЙ *********************/
+@import "reset";
+
+/****************** ЗАГОЛОВОК СТРАНИЦЫ *******************/
+@import "header";
+
+/************************ ГЛАВНАЯ ************************/
+@import "main";
+
+/************************* АКЦИИ *****************(*******/
+@import "news";
+
+/************************ САЛОНЫ *************************/
+@import "salons";
+
+/************************ КАТАЛОГ ************************/
+@import "catalog";
+
+/************************ ПРОДУКТЫ ************************/
+@import "product";
+
+/******************* ПОДВАЛ СТРАНИЦЫ ********************/
+@import "footer";
+
+
+
+// html {
+// 	display: flex;
+// 	flex-direction: column;
+// 	min-height: 100%;
+// }
+
+body {
+	display: flex;
+	flex-direction: column;
+	// flex: auto;
+}
+
+.main-content__wrap,
+.container,
+header .container,
+footer .container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after { clear: both; }
+
+.wraper {}
+
+.main {
+	display: flex;
+  	flex-direction: column;
+	height: 100%;
+	flex-grow: 1;
+}
+

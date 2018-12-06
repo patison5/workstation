@@ -1,0 +1,400 @@
+@media ( max-width: 768px ) {
+	
+	/********************** ОСНОВНЫЕ **********************/
+
+	.wrapper {
+		position: relative;
+		width: 768px;
+		margin: 0 auto;
+		border-radius: 5px;
+		background: #ECEEEF;
+		
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+	.center {
+		width: 723px; 
+	}
+
+	/********************** ШАПКА **********************/
+	.header {
+		width: 100%;
+		height: 76px;
+		line-height: 76px;
+		color: #3F444E;
+		padding: 0 30px;
+	}
+
+	/************** ФИКСИРОВАННАЯ ШАПКА **************/
+	.default {
+		width: 768px;
+		position: fixed;
+		top: 0;
+		background: #ECEEEF;
+		z-index: 9999;
+
+		-webkit-border-radius: 5px 5px 0 0;
+		   -moz-border-radius: 5px 5px 0 0;
+			 -o-border-radius: 5px 5px 0 0;
+				border-radius: 5px 5px 0 0;
+	}
+	.logo {
+		width: 120px;
+		height: 100%;
+		margin-right: 35px;
+		float: left;
+	}
+
+	/************** МЕНЮШКА **************/
+	.menu {
+		width: 350px;
+		height: 100%;
+		float: left;
+	}
+	.menu ul { margin-top: 23px; }
+
+	.menu li {
+		float: left;
+		margin-left: 43px;
+		position: relative;
+
+	}
+	.menu li:first-child { margin-left: 0; }
+	.menu li a {
+		position: relative;
+		display: block;
+	    width: 22px;
+	    height: 22px;
+	    background: #fff;
+	}
+
+	/************** ПОДМЕНЮ **************/
+	.menu div {
+		display: none;
+		background: url(../images/Rectangle.png) no-repeat center 0;
+		position: absolute;
+		top: 49px;
+		left: -23px;
+		z-index: 9999;
+		width: 66px;
+		text-align: center;
+		line-height: 23px;
+		padding-top: 3px;
+		
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+	.menu li:hover .menu div {
+		display: inline;
+	}
+
+	.menu div a {
+		background: #D7232A;
+		width: 66px;
+		display: inline;
+		height: 23px;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		font: 12px 'AdobeGothicStd-Bold', times;
+		padding: 5px 10px;
+
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+
+	/************** ПРОФИЛЬ **************/
+
+	.profile {
+		color: #3F444E;
+		font: 15px 'AdobeGothicStd-Bold', times;
+		height: 76px;
+		line-height: 76px;
+	}
+	.profile p {
+		background: url(../images/edit_profile.png) no-repeat right 27px;
+		padding-right: 20px;
+	}
+	.profile img { margin: 18px 5px 0 0; }
+	.profile a {
+		color: #3F444E;
+	}
+	.profile a:hover {
+		color: #D7232A;
+	}
+
+	/********************** СЛАЙДЕР **********************/
+	.container {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		padding-bottom: 40px;
+	}
+	.slider {
+		width: 100%;
+		height: 495px;
+	}
+
+	.slider_info {
+		width: 100%;
+		height: 50px;	
+		background: rgba(0,0,0,.4);
+		position: absolute;
+		bottom: 0;
+		line-height: 50px;
+		left: 0;			/*QUESTION!!*/
+		padding: 11px 5px 0;
+		font: 14px 'AdobeGothicStd-Bold', sans-serif;
+	}
+	.slider_info p {
+		margin-left: 10px;
+		color: #fff;
+		text-transform: uppercase;
+		margin-left: 30px;
+	}
+	.slider_info p:first-child { margin-left: 0; }
+
+	.slider_info span {
+		color: #B82024;
+		margin-left: 8px;
+	}
+
+	/********************** ПРАВАЯ ЧАСТЬ ИНФЫ СЛАЙДЕРА **********************/
+
+	.likes, .commnets, .downloads {
+		padding-left: 27px;
+
+		-webkit-transition: background-image 0.1s ease;
+		   -moz-transition: background-image 0.1s ease;
+		    -ms-transition: background-image 0.1s ease;
+		 	 -o-transition: background-image 0.1s ease;
+				transition: background-image 0.1s ease;
+
+	}
+	.likes a, .commnets a, .downloads a { color: #F7F7F7; }
+	.commnets a:hover, .downloads a:hover {
+		color: #CACACA;
+	}
+
+
+	/********************** ФИЛЬМЫ **********************/
+
+	/*********** ОБЩИЕ ***********/
+	.movie {
+		width: 723px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.movie img {
+		width: 100%;
+		height: 100%;
+
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+	.b-info a, .movie h4 {
+		position: absolute;
+		bottom: 15px;
+		left: 20px;
+		font: 13px 'AdobeGothicStd-Bold', times;
+		color: #fff;
+		z-index: 100;
+	}
+
+	.b-info a {
+		width: 33px;
+		height: 33px;
+		top: 0;
+		left: 167px;
+		background: url(../images/download.png) no-repeat center center;
+		
+		-webkit-border-radius: 0 0 0 5px;
+		   -moz-border-radius: 0 0 0 5px;
+			 -o-border-radius: 0 0 0 5px;
+				border-radius: 0 0 0 5px;
+	}
+
+
+	/*у первых пяти элементов убираем top:12px;*/
+	.block1:nth-child(1),
+	.block1:nth-child(2),
+	.block1:nth-child(3),
+	.block1:nth-child(4),
+	.block1:nth-child(5),
+
+	.block2:nth-child(1),
+	.block2:nth-child(2),
+	.block2:nth-child(3),
+	.block2:nth-child(4),
+	.block2:nth-child(5) {
+		top: 0 !important;
+	}
+	/*********** ЛАЙКИ ***********/
+	.like {
+		background: url(../images/likes.png) no-repeat 0 6px;
+		padding-left: 27px;
+		color: #FFF;
+		font: 14px 'AdobeGothicStd-Bold', times;
+		z-index: 100;
+	}
+
+	.movie .likes a, 
+	.movie .commnets a, 
+	.movie .downloads a {
+		position: static;
+		background: none;
+		color: #656565;
+	}
+	.movie .likes a:hover, 
+	.movie .commnets a:hover, 
+	.movie .downloads a:hover {
+		position: static;
+		background: none;
+		color: #1E1E1E;
+	}
+
+
+	/********************** БЛОК 1 (КВАДРАТ) **********************/
+
+	.block1 {
+		width: 206px !important;
+		height: 189px;
+		background: #ccc;
+		position: relative;
+		background: #3F444E;
+		cursor: pointer;
+		
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+	.block1 .like {
+		position: absolute;
+		left: 16px;
+		top: 13px;
+	}
+
+	/********************** БЛОК 2 (ПРЯМОУГОЛЬНИК) **********************/
+	.block2 {
+		width: 205px !important;
+		height: 400px;
+		background: #fff;
+		position: relative;
+		z-index: 101;
+
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+	.block2 a {
+		background: #3F444E url(../images/play.png) no-repeat center center;
+		border-radius: 0 5px 0 5px;
+		left: 172px;
+	}
+
+	.block2 a:hover { background: #B82024 url(../images/play.png) no-repeat center center; }
+
+	.block2 .likes:hover { background: url(../images/likes.png) no-repeat 0 6px !important; }
+
+	/****************** ИНОФРМАЦИЯ БЛОКА ******************/
+	.b-info {
+		width: 100%;
+		height: 165px;
+		background: #fff;
+		padding: 18px 0 0 18px; 
+
+		-webkit-border-radius: 5px 5px 0 0;
+		   -moz-border-radius: 5px 5px 0 0;
+			 -o-border-radius: 5px 5px 0 0;
+				border-radius: 5px 5px 0 0;
+	}
+
+	.b-info p {	font: 14px 'AdobeGothicStd-Bold', times; }
+
+	.b-info span {
+		font: 15px 'calibri', times;
+		color: #3F444E;
+		margin-left: 5px;
+	}
+
+	.block2 img {
+		width: 100%;
+		height: 235px; /* 294px*/
+		background: #39464F;
+
+		-webkit-border-radius: 0 0 5px 5px;
+		   -moz-border-radius: 0 0 5px 5px;
+			 -o-border-radius: 0 0 5px 5px;
+				border-radius: 0 0 5px 5px;
+	}
+
+
+	/********************** БЛОК ВИДЕО **********************/
+
+	.vidos {
+		width: 435px !important;
+		height: 190px;
+		position: relative;
+
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+	.vid_info {
+		height: 20px;
+		position: absolute;
+		bottom: 14px;
+		left: 28px;
+		z-index: 100;
+	}
+
+	.v_play {
+		background: url(../images/play.png) no-repeat center center;
+		background-position: cover;
+		width: 20px;
+		height: 20px;
+		float: left;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.length_line {
+		margin: 8.5px 0 0 12px;
+		background: #fff;
+		width: 340px;
+		height: 3px;
+		float: left;
+		position: relative;
+
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+			 -o-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+	.length_line  span {
+		position: absolute;
+		background: #D8232A;
+		height: 3px;
+		max-width: 340px;
+	}
+

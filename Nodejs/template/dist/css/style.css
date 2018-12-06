@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: top 1s ease-out 0.5s;
+  -o-transition: top 1s ease-out 0.5s;
+  transition: top 1s ease-out 0.5s; }
+
+html {
+  background: #cce6ff;
+  text-align: center;
+  color: #00284d; }

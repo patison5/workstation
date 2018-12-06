@@ -1,0 +1,253 @@
+/* ------ STYLE SELECT ----------------  */
+/* Основная часть */
+.first {
+	width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #6d6e76;
+}
+.cusel {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	border: 1px solid #E7E7E7;
+	height: 25px;
+	background: #fff;
+	vertical-align: middle;
+	cursor: pointer;
+	
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		 -o-border-radius: 4px;
+			border-radius: 4px;
+}
+/* Стрелочка справа */
+.cuselFrameRight {
+	position: absolute;
+	z-index: 2;
+	top: 8px;
+	right: 10px;
+	width: 14px;
+	height: 7px;
+	background: url(../images/arrow_2.png) no-repeat left top;
+	background-position: 0 -7px;
+}
+/* Текст в селекте */
+.cuselText { 
+	position: absolute;
+	font: 12px sans-serif;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding: 0 5px 0 15px; 
+    line-height: 25px;
+    cursor: pointer;
+	overflow: hidden;
+	color: #383838;
+    cursor: pointer;
+	overflow: hidden;
+	font-weight: 500;
+
+}
+* html .cuselText {height: 25px;}
+
+/* Оформление пунктов списка */
+.cusel span { 
+	display: block;
+	font: bold 12px sans-serif;
+	color: #383838;
+	padding: 0 5px 0 15px; 
+    line-height: 26px;
+	zoom: 1;
+	cursor: pointer;
+	white-space: nowrap;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+/* Оформление пунктов списка при наведении*/
+.cusel span:hover,
+.cusel .cuselOptHover { 
+color: #9C2020;
+}
+
+/* Оформление активного пункта списка  */
+/*.cusel .cuselActive,
+.cusel .cuselActive:hover { background: #d2edf4;} */
+
+/* Оформление селекта при наведении и клике */
+.cusel:hover,
+.cusel:focus,
+.cuselFocus {background:none;}
+
+/* Оформление стрелки при наведении и клике */
+.cusel:hover .cuselFrameRight,
+.cusel:focus .cuselFrameRight,
+.cuselFocus .cuselFrameRight {
+	width: 14px;
+	height: 7px;
+	background: url(../images/arrow_2.png) no-repeat left top;
+	-webkit-border-radius: 0 4px 4px 0 ;
+	   -moz-border-radius: 0 4px 4px 0 ;
+		-ms-border-radius: 0 4px 4px 0 ;
+		 -o-border-radius: 0 4px 4px 0 ;
+			border-radius: 0 4px 4px 0 ;
+}
+
+/* видимость выпадающего списка */
+.cuselOpen {z-index: 999;}
+
+/* Оформление селекта и стрелки disabled */
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+	background: url(../images/arr.png) no-repeat center;
+	cursor: default;
+	color: #ccc;
+	width: 50px;
+}
+/* Оформление текста в селекте когда он disabled */
+.classDisCusel .cuselText {
+	cursor: default;
+	color: #ccc;
+}
+
+/* Оформление выпадающего списка */
+.cusel .cusel-scroll-wrap {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	display: block;
+	min-width: 100%;
+	width: auto;
+	height: auto !important;
+	visibility: hidden;
+	margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+	background: #fff;
+	overflow: hidden;
+    
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+   	   -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    	-ms-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    	 -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		 -o-border-radius: 4px;
+			border-radius: 4px;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+    background: #fff;
+}
+/* блок для элементов списка с отступом справа для скролла */
+.cusel-scroll-pane {
+	top: 5px;
+	right: 0px;
+	left: 0;
+	width: auto !important;
+}
+
+
+/* Линия по которой будет проходить скролл */
+.cusel .jScrollPaneTrack {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	height: 100%;
+	width: 5px !important;
+	background: #EEE;
+}
+
+/* кнопка для скролла */
+.cusel .jScrollPaneDrag {
+	position: absolute;
+	left: 0px;
+	width: 5px !important;
+	height: 27px !important;
+	background: #262626;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+/* эти 2 стиля не трогаем */
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0 !important;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0 !important;
+	overflow: hidden;
+}
+
+/* Стрелка вверху для скролла */
+.cusel .jScrollArrowUp {
+	position: absolute;
+	top: 0;
+	right: -1px;
+	/*width: 0 !important;*/
+	background: url(../images/arr.png);
+	height: 8px;
+	cursor: pointer;
+	overflow: hidden;	
+}
+
+/* Стрелка внизу для скролла */
+.cusel .jScrollArrowDown {
+	background: url(../images/arrowdown.png);
+	height: 8px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: -1px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+
+
+
+/* ВТОРОЙ СЕЛЕКТ (страница контактов) */
+.select02 .cusel{
+	width: 300px !important;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 20px 20px;
+}
+
+.select02 .cuselText {
+	font: 17px sans-serif;
+	line-height: 30px;
+}
+
+.select02 .cuselFrameRight {
+	background:  url(../images/select_bg_arrow.png) no-repeat center;
+	height: 100%;
+	width: 50px;
+	top: 0;
+	right: 0;
+}
+/* Оформление стрелки при наведении и клике */
+.select02 .cusel:hover .cuselFrameRight,
+.select02 .cusel:focus .cuselFrameRight,
+.select02 .cuselFocus .cuselFrameRight {
+	width: 50px;
+	height: 100%;
+	background: #9C2020 url(../images/select_bg_arrow_hover.png) no-repeat center;
+}
+
+.select02 .cusel span {
+	font-size: 15px;
+}
+/* //ВТОРОЙ СЕЛЕКТ (страница контактов) */

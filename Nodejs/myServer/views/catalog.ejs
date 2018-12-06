@@ -1,0 +1,226 @@
+<%- include('layout/header'); %>
+
+		<div class="main catalog">
+			<%- include('layout/menu__dark'); %>
+
+			<%- include('layout/menu__light'); %>
+
+			<div class="container">				
+				<div class="catalog-content__wrap">
+					<div class="filter__wrap clearfix">
+						<form action="" method="post" class="clearfix" id="mainFilter" ">
+							<div class="filter__block clearfix">
+								<h3 class="black_title clearfix">Сортировать по</h3>
+
+								<div class="selector__wrap">
+									<select class="selector" name="sortingBy"  value="">
+										<option value="popular">популярности</option>
+										<option value="rating">рейтингу</option>
+										<option value="expencive">сначала дорогие</option>
+										<option value="cheap">сначала недорогие</option>
+									</select>
+								</div>
+
+								<ul class="filter__list" data-category="decoration_extra_info">
+									<li><input type="checkbox" id="onSale" 	data-title="Скидка" name="onSale"><label for="onSale"><span></span>Скидка</label></li>
+									<li><input type="checkbox" id="novelty" data-title="Новинки" name="novelty"><label for="novelty"><span></span>Новинки</label></li>
+								</ul>
+							</div>
+							
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Тип украшения</h3>
+								<ul class="filter__list" data-category="decoration_type">
+									<li><input type="checkbox" name="all_types" data-title="Все" 	  id="all_types"><label for="all_types"><span></span>Все</label></li>
+									<li><input type="checkbox" name="sharms" 	data-title="Шармы"    id="sharms"><label for="sharms"><span></span>Шармы</label></li>
+									<li><input type="checkbox" name="chains" 	data-title="Цепочки"  id="chains"><label for="chains"><span></span>Цепочки</label></li>
+									<li><input type="checkbox" name="earings" 	data-title="Серьги"   id="earings"><label for="earings"><span></span>Серьги</label></li>
+									<li><input type="checkbox" name="pandants"  data-title="Подвески" id="pandants"><label for="pandants"><span></span>Подвески</label></li>
+									<li><input type="checkbox" name="rings" 	data-title="Кольца"   id="rings"><label for="rings"><span></span>Кольца</label></li>
+									<li><input type="checkbox" name="necklace"  data-title="Колье" 	  id="necklace"><label for="necklace"><span></span>Колье</label></li>
+									<li><input type="checkbox" name="brooches"  data-title="Броши"    id="brooches"><label for="brooches"><span></span>Броши</label></li>
+									<li><input type="checkbox" name="braslets"  data-title="Браслеты" id="braslets"><label for="braslets"><span></span>Браслеты</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Материал</h3>
+								<ul class="filter__list" data-category="decoration_material">
+									<li><input type="checkbox" name="allGold" 	 	data-title="Все золото" 	 id="allGold"><label for="allGold"><span></span>Все золото</label></li>
+									<li><input type="checkbox" name="WhiteGold"  	data-title="Белое золото"    id="WhiteGold"><label for="WhiteGold"><span></span>Белое золото</label></li>
+									<li><input type="checkbox" name="YellowGold" 	data-title="Желтое золото"   id="YellowGold"><label for="YellowGold"><span></span>Желтое золото</label></li>
+									<li><input type="checkbox" name="RedGold" 		data-title="Красное золото"  id="RedGold"><label for="RedGold"><span></span>Красное золото</label></li>
+									<li><input type="checkbox" name="Silver" 	 	data-title="Серебро" 	 	 id="Silver"><label for="Silver"><span></span>Серебро</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Коллекции</h3>
+								<ul class="filter__list" data-category="decoration_collections">
+									<li><input type="checkbox" data-title="Женская коллекция" 	  name="female" id="female"><label for="female"><span></span>Женская коллекция</label></li>
+									<li><input type="checkbox" data-title="Мужская коллекция" 	  name="male"   id="male"><label for="male"><span></span>Мужская коллекция</label></li>
+									<li><input type="checkbox" data-title="Детская коллекция" 	  name="children" id="children"><label for="children"><span></span>Детская коллекция</label></li>
+									<li><input type="checkbox" data-title="Православная тематика" name="orthodoxSubject" id="orthodoxSubject"><label for="orthodoxSubject"><span></span>Православная тематика</label></li>
+								</ul>
+							</div>
+
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Вставка</h3>
+								<ul class="filter__list" data-category="decoration_insert">
+									<li><input type="checkbox" data-title="Бриллиант" 	name="Diamond"  	id="Diamond"><label for="Diamond"><span></span>Бриллиант</label></li>
+									<li><input type="checkbox" data-title="Изумруд" 	name="Emerald"  	id="Emerald"><label for="Emerald"><span></span>Изумруд</label></li>
+									<li><input type="checkbox" data-title="Сапфир" 		name="Sapphire" 	id="Sapphire"><label for="Sapphire"><span></span>Сапфир</label></li>
+									<li><input type="checkbox" data-title="Топаз" 		name="Topaz" 		id="Topaz"><label for="Topaz"><span></span>Топаз</label></li>
+									<li><input type="checkbox" data-title="Гранат" 		name="Garnet" 		id="Garnet"><label for="Garnet"><span></span>Гранат</label></li>
+									<li><input type="checkbox" data-title="Аметист" 	name="Amethyst" 	id="Amethyst"><label for="Amethyst"><span></span>Аметист</label></li>
+									<li><input type="checkbox" data-title="Хризолит" 	name="Chrysolite"   id="Chrysolite"><label for="Chrysolite"><span></span>Хризолит</label></li>
+									<li><input type="checkbox" data-title="Хризопраз" 	name="Chrysoprase"  id="Chrysoprase"><label for="Chrysoprase"><span></span>Хризопраз</label></li>
+									<li><input type="checkbox" data-title="Жемчуг" 		name="Pearls" 		id="Pearls"><label for="Pearls"><span></span>Жемчуг</label></li>
+									<li><input type="checkbox" data-title="Бирюза" 		name="Turquoise" 	id="Turquoise"><label for="Turquoise"><span></span>Бирюза</label></li>
+									<li><input type="checkbox" data-title="Коралл" 		name="Coral" 		id="Coral"><label for="Coral"><span></span>Коралл</label></li>
+									<li><input type="checkbox" data-title="Агат" 		name="Agate" 		id="Agate"><label for="Agate"><span></span>Агат</label></li>
+									<li><input type="checkbox" data-title="Авантюрин" 	name="Aventurine" 	id="Aventurine"><label for="Aventurine"><span></span>Авантюрин</label></li>
+									<li><input type="checkbox" data-title="Фианит" 		name="Fianit" 		id="Fianit"><label for="Fianit"><span></span>Фианит</label></li>
+								</ul>
+							</div>
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Диапозон цены</h3>
+								<div class="selector__wrap" data-category="decoration_price">
+									<select class="selector">
+										<option value="" class="selector__element">Любая цена</option>
+										<option value="" class="selector__element">от 599 до 1499</option>
+										<option value="" class="selector__element">от 1500 до 5000</option>
+										<option value="" class="selector__element">от 5000 до 15000</option>
+										<option value="" class="selector__element">от 15000 и больше</option>
+									</select>
+								</div>
+							</div>
+							<div class="filter__block clearfix">
+								<h3 class="black_title">Размер</h3>
+								<ul class="filter__list left" data-category="decoration_size">
+									<li><input type="checkbox" name="14" 	id="14"><label for="14"><span></span>14</label></li>
+									<li><input type="checkbox" name="14.5"  id="14.5"><label for="14.5"><span></span>14.5</label></li>
+									<li><input type="checkbox" name="15" 	id="15"><label for="15"><span></span>15</label></li>
+									<li><input type="checkbox" name="15.5"  id="15.5"><label for="15.5"><span></span>15.5</label></li>
+									<li><input type="checkbox" name="16" 	id="16"><label for="16"><span></span>16</label></li>
+									<li><input type="checkbox" name="16.5"  id="16.5"><label for="16.5"><span></span>16.5</label></li>
+									<li><input type="checkbox" name="17" 	id="17"><label for="17"><span></span>17</label></li>
+									<li><input type="checkbox" name="17.5"  id="17.5"><label for="17.5"><span></span>17.5</label></li>
+									<li><input type="checkbox" name="18" 	id="18"><label for="18"><span></span>18</label></li>
+									<li><input type="checkbox" name="18.5"  id="18.5"><label for="18.5"><span></span>18.5</label></li>
+									<li><input type="checkbox" name="19" 	id="19"><label for="19"><span></span>19</label></li>
+									<li><input type="checkbox" name="19.5"  id="19.5"><label for="19.5"><span></span>19.5</label></li>
+									<li><input type="checkbox" name="20" 	id="20"><label for="20"><span></span>20</label></li>
+									<li><input type="checkbox" name="20.5"  id="20.5"><label for="20.5"><span></span>20.5</label></li>
+								</ul>
+
+								<ul class="filter__list left" data-category="decoration_size">
+									<li><input type="checkbox" name="21" 	id="21"><label for="21"><span></span>21</label></li>
+									<li><input type="checkbox" name="21.5"  id="21.5"><label for="21.5"><span></span>21.5</label></li>
+									<li><input type="checkbox" name="22" 	id="22"><label for="22"><span></span>22</label></li>
+									<li><input type="checkbox" name="22.5"  id="22.5"><label for="22.5"><span></span>22.5</label></li>
+									<li><input type="checkbox" name="23" 	id="23"><label for="23"><span></span>23</label></li>
+									<li><input type="checkbox" name="23.5"  id="23.5"><label for="23.5"><span></span>23.5</label></li>
+									<li><input type="checkbox" name="24" 	id="24"><label for="24"><span></span>24</label></li>
+									<li><input type="checkbox" name="24.5"  id="24.5"><label for="24.5"><span></span>24.5</label></li>
+									<li><input type="checkbox" name="25" 	id="25"><label for="25"><span></span>25</label></li>
+									<li><input type="checkbox" name="40" 	id="40"><label for="40"><span></span>40</label></li>
+									<li><input type="checkbox" name="45" 	id="45"><label for="45"><span></span>45</label></li>
+									<li><input type="checkbox" name="50" 	id="50"><label for="50"><span></span>50</label></li>
+									<li><input type="checkbox" name="55" 	id="55"><label for="55"><span></span>55</label></li>
+									<li><input type="checkbox" name="60" 	id="60"><label for="60"><span></span>60</label></li>
+								</ul>
+							</div>
+
+						</form>
+					</div>
+					<div class="catalog__content">
+						<div class="second_filter clearfix">
+							<div class="selected-tags__wrap clearfix">
+								<span class="left">Ваш выбор:</span>
+								<div class="selected-tags"></div>
+							</div>
+							<div class="s-filter_line clearfix">
+								<p class="amounting__elements">Найдено товаров: <span>975</span></p>
+
+								<form action="" method="post" class="right">
+									<div class="check-sale__wrap">
+										<span>Скидка</span>
+										<select class="Select-small">
+											<option value="5">5%</option>
+											<option value="10">10%</option>
+											<option value="15">15%</option>
+											<option value="30">30%</option>
+											<option value="50">50%</option>
+										</select>
+									</div>
+									<div class="check-value__wrap left">
+										<span>Отображать</span>
+										<select class="Select-small">
+											<option value="">По 20</option>
+											<option value="">По 40</option>
+											<option value="">По 60</option>
+										</select>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+						<div class="catalog-items__wrap">
+
+							<!-- карточка товара -->
+							<% catalogElements.forEach(function (item) { %>
+
+							<div class="catalog__item">
+								<a href="/catalog/<%= item.product_id %>"  class="item__link clearfix">
+									<img src="public/<%= item.product_img %>" alt="product_1.png">
+										
+									<% if (item.product_discount_value) { %>
+									  <div class="sale-p"><span><%= item.product_discount_value %>%</span></div>
+									<% } %>
+
+									<% if (item.newProduct) { %>
+									  <div class="new-p"><span>new</span></div>
+									<% } %>
+								</a>
+
+								<h3 class="item__title"><%= item.product_title %></h3>
+
+								<div class="item__footer">
+									<span class="item__price"><%= item.product_price %> р.</span>
+									<a  class="item__btn-red addToCart" data-id="<%= item.product_id %>" 
+																		data-title="<%= item.product_title %>"
+																		data-price="<%= item.product_price %>"
+																		data-discount="<%= item.product_discount_value %>">Купить</a>
+								</div>
+							</div>
+
+							<% });%>
+							<!-- карточка товара -->
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	<!--  Стилизованый селект -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="public/js/cusel-min-2.5.js"></script>
+	<script src="public/js/catalog.js"></script>
+
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			/* select style */
+			var params = {
+				changedEl: "select",
+				visRows: 5,
+				scrollArrows: true
+			}
+			cuSel(params);
+		});
+	</script> -->
+
+	<script src="public/js/filter.js"></script>
+
+<%- include('layout/footer'); %>
