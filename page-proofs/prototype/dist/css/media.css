@@ -158,6 +158,10 @@
 		padding-right: 20%;
 	}
 
+	.list-menu__link {
+		font-size: 12px;
+	}
+
 	/* ОПЫТ */
 	.expierence-list__element {
 		line-height: 1.3em;
@@ -489,6 +493,10 @@
 
     .widget__staff-text {
         margin-bottom: 20px;
+    }
+
+    .widget__footer-list {
+    	display: inline-block;
     }
 }
 

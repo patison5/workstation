@@ -1,0 +1,12 @@
+D:\workstation\c++\sabina\cursach.cpp: In function 'int main()':
+D:\workstation\c++\sabina\cursach.cpp:10:3: error: 'json' was not declared in this scope
+   json j;
+   ^~~~
+D:\workstation\c++\sabina\cursach.cpp:10:3: note: suggested alternative:
+In file included from D:\workstation\c++\sabina\cursach.cpp:3:0:
+D:\workstation\c++\sabina\json.hpp:110:26: note:   'nlohmann::json'
+ using json = basic_json<>;
+                          ^
+D:\workstation\c++\sabina\cursach.cpp:13:3: error: 'j' was not declared in this scope
+   j["pi"] = 3.141;
+   ^

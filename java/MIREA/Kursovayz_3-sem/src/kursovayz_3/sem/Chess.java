@@ -1,10 +1,18 @@
+/**
+ *
+ * @author Lulex.py
+ * 
+ */
+
 package kursovayz_3.sem;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableCellRenderer;
 
 public class Chess {
     private static final int WORLD_X = 3;
     private static final int WORLD_Y = 3;
-
-    Console console = new Console();
+    private int STEP = 0;
 
     private String boxValue = "";
     private int corX = 0;
@@ -13,7 +21,13 @@ public class Chess {
     String[][] Matrix = {
           {"\u2655","\u2655","\u2655"},
           {"","",""},
-          {"\u265f","\u265f","\u265f"}
+          {"\u265A","\u265A","\u265A"}
+    };
+    
+    String[][] Matrix2 = {
+          {"\u265A","\u265A","\u265A"},
+          {"","",""},
+          {"\u2655","\u2655","\u2655"}
     };
 
     public void renderTable (javax.swing.JTable hourses__table) {
@@ -23,15 +37,15 @@ public class Chess {
         // идем сверху вниз
         for (int j = 0; j < WORLD_Y; j++) {
             hourses__table.setValueAt(Matrix[i][j], i, j);
-//            System.out.print("(" + i + "," + j + ") ");
-              System.out.print(Matrix[i][j] +  " ");
+            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+            centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+//            hourses__table.setDefaultRenderer(String.class, centerRenderer);
+            hourses__table.getColumnModel().getColumn(i).setCellRenderer( centerRenderer );
         }
-
-        System.out.println("\n");
       }
     }
 
-    public void checkMove (javax.swing.JTable hourses__table, int x, int y, String value) {
+    public void checkMove (javax.swing.JTable hourses__table, javax.swing.JTable stepTable, int x, int y, String value) {
       if (boxValue == "") {
         boxValue = value;
         corX = x;
@@ -39,21 +53,101 @@ public class Chess {
       } else {
         int modX = Math.abs(corX - x);
         int modY = Math.abs(corY - y);
+        
+        if (boxValue == "\u2655") {
+            if ((((modX >= 1) && (modY == 0)) || ((modX == 0) && (modY >= 1))) || (modX == modY)) {
+                if (value.length() == 0) {
+                    System.out.println("Ходит ферзь");
+                    
+                    boolean fl = true;
 
-        if (((modX == 1) && (modY == 2)) || ((modX == 2) && (modY == 1))) {
-          if (value.length() == 0) {
-            console.log("Оо красавчик, нашел таки пустую клетку!");
-            setValue(hourses__table, x, y, value);
-          } else {
-            console.log("Че слепой, что-ли?!? Клетка занята, выбирай другую!");
-          }
+                    int k1 = corX - x;
+                    int k2 = corY - y;
+                    
+                    // диагонали:
+                    if ((Math.abs(k1) == Math.abs(k2)) && (k1 > 0 && k2 > 0)) {
+                        System.out.println("по диагонали влево вверх");
+                        if (Matrix[corX-1][corY-1].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((Math.abs(k1) == Math.abs(k2)) && (k1 < 0 && k2 > 0)) {
+                        System.out.println("по диагонали влево вниз");
+                        if (Matrix[corX+1][corY-1].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((Math.abs(k1) == Math.abs(k2)) && (k1 < 0 && k2 < 0)) {
+                        System.out.println("по диагонали вправо вниз");
+                        if (Matrix[corX+1][corY+1].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((Math.abs(k1) == Math.abs(k2)) && (k1 > 0 && k2 < 0)) {
+                        System.out.println("по диагонали вправо вверх");
+                        if (Matrix[corX-1][corY+1].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((k1 > 0) && (k2 == 0)) {
+                        System.out.println("по вертикали вверх");
+                        if (Matrix[corX-1][corY].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((k1 < 0) && (k2 == 0)) {
+                        System.out.println("по вертикали вниз");
+                        if (Matrix[corX+1][corY].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((k1 == 0) && (k2 > 0)) {
+                        System.out.println("по горизонтали влево");
+                        if (Matrix[corX][corY-1].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    } else if ((k1 == 0) && (k2 < 0)) {
+                        System.out.println("по горизонтали вправо");
+                        if (Matrix[corX][corY+1].length() == 0) {
+                            setValue(hourses__table, x, y, value, stepTable);
+                        } else {
+                            System.out.println("На пути стоит клетка!");
+                        }
+                    }
+                } else {
+                    System.out.println("Клетка занята!");
+                }
+            } else {
+                System.out.println("Ферзь так не ходит!");
+            }
         } else {
-          console.log("Неверный ход, чекай справочник!");
+            if ((modX <= 1) && (modY <= 1)) {
+                if (value.length() == 0) {
+                    System.out.println("Ходит Король");
+                    setValue(hourses__table, x, y, value, stepTable);
+                } else {
+                    System.out.println("Клетка занята!");
+                }
+            } else {
+                System.out.println("Король так не ходит!");
+            }
         }
+        
+        renderTable(hourses__table);
 
         if (checkEnd(hourses__table)) {
-          console.log("Игра закончена, всем спасибо!");
+          System.out.println("Игра закончена, всем спасибо!");
+          JOptionPane.showMessageDialog(null, "Игра закончена!", "Вы молодец!", 1);
         }
+        
 
         boxValue = "";
         corX = 0;
@@ -66,11 +160,12 @@ public class Chess {
 
       for (int i = 0; i < WORLD_X; i++) {
         for (int j = 0; j < WORLD_Y; j++) {
-          if (Matrix[i][j] != get(hourses__table, i,j)) {
+          if (Matrix2[i][j] != get(hourses__table, i,j)) {
             flag = false;
             break;
           }
         }
+
         if (!flag) break;
       }
 
@@ -78,17 +173,19 @@ public class Chess {
     }
 
     private String get (javax.swing.JTable hourses__table, int x, int y) {
-      String value = ""+hourses__table.getValueAt(x,y);
-      return "string";
+      return (String)hourses__table.getValueAt(x,y);
     }
 
-    private void setValue (javax.swing.JTable hourses__table, int x, int y, String value) {
+    private void setValue (javax.swing.JTable hourses__table, int x, int y, String value, javax.swing.JTable stepTable) {
       hourses__table.setValueAt(value, x,y);
+      
+      stepTable.setValueAt(boxValue,STEP,0);
+      stepTable.setValueAt((corY == 0) ? "A"+corX : (corY == 1) ? "B" + corX : "C" + corX,STEP,1);
+      stepTable.setValueAt((y == 0) ? "A"+x : (y == 1) ? "B" + x : "C" + x,STEP,2);
+      STEP = STEP + 1;
+      
       Matrix[x][y] = boxValue;
-      System.out.println("value: " + boxValue);
       Matrix[corX][corY] = "";
-
-      console.log("bum");
     }
 
 }

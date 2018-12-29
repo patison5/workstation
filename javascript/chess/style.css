@@ -43,14 +43,14 @@ html {
 
 .reset {
 	padding: 10px 15px;
-	background:  #3385ff;
+	background:  #189054;
 	color: #fff;
 	text-decoration: none;
 	border-radius: 4px;
 }
 
 .reset:hover {
-	background: #0066ff;
+	background: #0f5833;
 }
 
 .game {
@@ -84,7 +84,7 @@ html {
 
 .f-s {
 	font-size: 22px;
-	background: #3385ff;
+	background: #189054;
 	color: #fff;
 	cursor: default;
 }
@@ -95,14 +95,14 @@ html {
 .showHow {
 	cursor: pointer;
 	padding: 10px 15px;
-	background:  #3385ff;
+	background:  #189054;
 	color: #fff;
 	text-decoration: none;
 	border-radius: 4px;
 }
 
 .showHow:hover {
-	background: #0066ff;
+	background: #0f5833;
 }
 
 .set-menu_wraper {

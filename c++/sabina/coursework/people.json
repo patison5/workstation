@@ -1,0 +1,26 @@
+[{
+    "id" : 2,
+    "name" : "Fedor",
+    "telephoneNumber" : 89263508033,
+    "surname" : "Penin",
+    "age": 19,
+    "passport" : {
+      "number" : 4513061272,
+      "placeOfResidence" : "Sokolinaya Gora, tram taram taram...",
+      "placeOfIssue" : "Borisobskaya street, 8A, 12",
+      "dateOfIssue" : "13.12.1999"
+    }
+},
+{
+    "id" : 1,
+    "name" : "Some Pidor's name",
+    "telephoneNumber" : 89263508033,
+    "surname" : "Pidor's surname",
+    "age": 18,
+    "passport" : {
+      "number" : 4513061272,
+      "placeOfResidence" : "Sokolinaya Gora, tram taram taram...",
+      "placeOfIssue" : "Borisobskaya street, 8A, 12",
+      "dateOfIssue" : "13.12.1999"
+    }
+}]

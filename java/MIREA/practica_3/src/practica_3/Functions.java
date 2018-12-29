@@ -61,9 +61,9 @@ public class Functions {
 
     public String getNumberByByteCode (String numb, boolean sign) {
         if (sign) 
-            getNumberByByteCode(numb);
+            return getNumberByByteCode(numb);
         else {
-            
+            return "a";
         }
     }
 

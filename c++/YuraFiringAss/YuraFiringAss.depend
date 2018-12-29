@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1545235344 source:d:\workstation\c++\yurafiringass\src\arithprogression.cpp
+	"ArithProgression.h"
+
+1545235043 d:\workstation\c++\yurafiringass\include\arithprogression.h
+	<MyMath.h>
+
+1545235348 d:\workstation\c++\yurafiringass\include\mymath.h
+	<iostream>
+	<vector>
+
+1545235639 source:d:\workstation\c++\yurafiringass\src\geomprogression.cpp
+	"GeomProgression.h"
+
+1545235847 d:\workstation\c++\yurafiringass\include\geomprogression.h
+	<MyMath.h>
+	<math.h>
+
+1545235308 source:d:\workstation\c++\yurafiringass\src\mymath.cpp
+	"MyMath.h"
+
+1545235846 source:d:\workstation\c++\yurafiringass\main.cpp
+	<iostream>
+	"MyMath.h"
+	"ArithProgression.h"
+	"GeomProgression.h"
+

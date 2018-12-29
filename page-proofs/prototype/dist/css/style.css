@@ -77,6 +77,13 @@ body {
 }
 .clearfix:after { clear: both; }
 
+.lock-position {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	/*position: fixed;*/
+}
+
 /* ************************************************************** */
 /* **********************  ОСНОВНЫЕ СТИЛИ *********************** */
 /* ************************************************************** */
@@ -168,8 +175,12 @@ header {
 	border: 1px solid #cce2ed;
 	box-sizing: border-box;
 	padding: 8px 30px;
-	border-radius: 3px;
 	font: 1.2em 'Montserrat regular';
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	   	 -o-border-radius: 3px;
+			border-radius: 3px;
 }
 
 .light-btn:hover {
@@ -264,10 +275,14 @@ header {
 }
 
 .light__section {
-	border-radius: 8px;
 	background: #fff;
 	overflow: hidden;
 	display: flex;
+
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   	 -o-border-radius: 8px;
+			border-radius: 8px;
 }
 
 
@@ -354,8 +369,9 @@ header {
 
 
 
-/* ****** СЕРВИСЫ ****** */
-
+/* **************************************************** */
+/* ********************* СЕРВИСЫ ********************** */
+/* **************************************************** */
 .services__wrap {
 	background: #125e78;
 	padding: 70px 0 40px 0;
@@ -482,8 +498,12 @@ header {
 .staff-left__block,
 .staff-right__block {
 	background: #fff;
-	border-radius: 8px;
 	padding: 30px;
+
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   	 -o-border-radius: 8px;
+			border-radius: 8px;
 }
 
 .staff__title {
@@ -512,16 +532,28 @@ header {
 	width: 85%;
 	padding-bottom: 85%;
 	display: inline-block;
-	background: url('http://photocasa.ru/uploads/posts/2015-10/1444685949_dsc08577.jpg') center center;
+	background-image: url('http://photocasa.ru/uploads/posts/2015-10/1444685949_dsc08577.jpg');
+	background-position: center 0;
+
 	-webkit-background-size: cover;
-	background-size: cover;
-	border-radius: 50%;
+	   -moz-background-size: cover;
+	   	 -o-background-size: cover;
+			background-size: cover;
+
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	   	 -o-border-radius: 50%;
+			border-radius: 50%;
+
+	-webkit-box-shadow: 0px 0px 25px 1px rgba(143,143,143,.3);
+	   -moz-box-shadow: 0px 0px 25px 1px rgba(143,143,143,.3);
+			box-shadow: 0px 0px 25px 1px rgba(143,143,143,.3);
 }
 
 .staff__block:hover .staff-img {
-	-webkit-box-shadow: 0px 0px 1px 1px rgba(143,143,143,.3);
-	   -moz-box-shadow: 0px 0px 1px 1px rgba(143,143,143,.3);
-			box-shadow: 0px 0px 1px 1px rgba(143,143,143,.3);
+	-webkit-box-shadow: 0px 0px 25px 1px rgba(143,143,143,.5);
+	   -moz-box-shadow: 0px 0px 25px 1px rgba(143,143,143,.5);
+			box-shadow: 0px 0px 25px 1px rgba(143,143,143,.5);
 }
 
 
@@ -534,6 +566,10 @@ header {
 .staff__info {
 	margin-bottom: 10px;
 	font-family: 'Montserrat italic';
+}
+
+.staff__speciality {
+	color: #000;
 }
 
 
@@ -558,6 +594,15 @@ footer {
 	width: 100%;
 	overflow: hidden;
 	margin-bottom: 40px;
+}
+footer .footer__text {
+	color: #fff;
+}
+footer .footer__text a {
+	color: #fff;
+}
+.tell-number a{
+	color: #fff;
 }
 
 .footer__title {
@@ -620,6 +665,7 @@ footer .list-menu__element {
 	justify-content: center;
 	align-items: center;
 	z-index: 999;
+	cursor: pointer;
 }
 
 
@@ -629,6 +675,11 @@ footer .list-menu__element {
 	overflow: hidden;
 	color: #686868;
 	position: relative;
+
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   	 -o-border-radius: 8px;
+			border-radius: 8px;
 }
 
 .widget__left,
@@ -688,11 +739,20 @@ footer .list-menu__element {
 	width: 75%;
 	padding-bottom: 75%;
 	display: inline-block;
-	background: url('http://photocasa.ru/uploads/posts/2015-10/1444685949_dsc08577.jpg') center center;
+	background-image: url('http://photocasa.ru/uploads/posts/2015-10/1444685949_dsc08577.jpg');
+	background-position: center 0;
+	background-color: #fff;
+	background-repeat: no-repeat;
+
 	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
 			background-size: cover;
 
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+		 -o-border-radius: 50%;
+			border-radius: 50%;
 }
 
 .widget__staff-name {
@@ -754,6 +814,11 @@ footer .list-menu__element {
 	border-radius: 50%;
 	cursor: pointer;
 	opacity: 0.5;
+
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	   	 -o-border-radius: 50%;
+			border-radius: 50%;
 }
 
 .widget__close-btn:before, .widget__close-btn:after {
@@ -783,7 +848,7 @@ footer .list-menu__element {
 
 
 
-/*second type of widget BUSINESS AND AND FINANAL MODELING */
+/*second type of widget BUSINESS AND FINANAL MODELING */
 
 .widget__company-info {
 	display: grid;
@@ -819,8 +884,12 @@ footer .list-menu__element {
 .widget__c-left, .widget__c-right {
 	color: #767676;
 	background: #fff;
-	border-radius: 8px;
 	padding: 2em;
+
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   	 -o-border-radius: 8px;
+			border-radius: 8px;
 }
 
 
@@ -889,8 +958,10 @@ footer .list-menu__element {
 
 
 .k-services__img {
-	background: url(../images/grid_test.png) no-repeat center center;
+	background: url(../images/grid_test.png);
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 	height: 100%;
 	width: 100%;
 	display: block;
@@ -930,9 +1001,9 @@ footer .list-menu__element {
 }
 
 .list-menu__link-mobile {
-	color: #cce2ed;
-	display: inline-block;
-    font: 15px 'Montserrat light';
+	color: #cce2ed !important;
+	display: inline-block !important;
+    font: 15px 'Montserrat light' !important;
 }
 .list-menu__link-mobile:hover {
 	text-decoration: none;

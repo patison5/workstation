@@ -1,0 +1,13 @@
+f or F - searching in line toward or backward
+t or T - searching in word toward or backward
+; - using to go to the next one (in searching...)
+r - replace on character
+ctrl+o - allows u to execute one command and return into inserting mode
+
+ctrl+n - start multiple cursors
+ctrl+x - skiping the next match
+ctrl+p - remove current cursor and go back to previous selection
+
+
+test commit
+

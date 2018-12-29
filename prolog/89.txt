@@ -1,0 +1,23 @@
+domains 
+tree = tree(integer,tree,tree); empty 
+
+predicates 
+nondeterm task(tree) 
+nondeterm tree_summits(tree,integer) % подсчет количества вершин 
+
+clauses 
+task(tree(_,L,R)):- 
+tree_summits(L,N1), % вызов для левого поддерева 
+tree_summits(R,N2), % вызов для правого поддерева 
+write("Levoe podderevo imeet ",N1," vershin"),nl, 
+write("Pravoe podderevo imeet ",N2," vershin"),nl. 
+
+tree_summits(empty,0). 
+tree_summits(tree(_, L, R), N):-!, 
+tree_summits(L, N1), 
+tree_summits(R, N2), 
+N=N1+N2+1. 
+
+goal 
+Tree=tree(2, tree(1, empty, empty), tree(4, tree(3, tree(10, empty, empty), empty), tree(6, empty, empty))), 
+task(Tree).

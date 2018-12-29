@@ -1,0 +1,54 @@
+DOMAINS 
+u=integer 
+list=u*
+c=char
+lis=c*
+PREDICATES 
+nondeterm menu(integer) 
+nondeterm com(c,c)
+nondeterm p1(lis,lis)
+nondeterm p4(c,lis,lis)
+nondeterm p3(c,lis,lis)
+nondeterm p5(lis,lis)
+nondeterm p6(lis,lis)
+nondeterm p7(lis)
+
+CLAUSES 
+com('#',_).
+com('&','@').com('&','+').com('&','>').com('&','=').com('&','(').com('&',')').
+com('@','>').com('@','=').com('@','(').com('@',')').
+com('+','>').com('+','=').com('+','(').com('+',')').
+com('>','=').com('>','(').com('>',')').
+com('=','(').com('=',')').
+com('(',')').
+
+p1(['#'|L],S):- p4('#',L,S).
+p1(['&'|L],S):- p4('&',L,S).
+p1(['@'|L],S):- p4('@',L,S).
+p1(['+'|L],S):- p4('+',L,S).
+p1(['>'|L],S):- p4('>',L,S).
+p1(['='|L],S):- p4('=',L,S).
+p1(['('|L],S):- p5(L,S).
+p1([')'|L],S):- p6(L,S).
+p1([ ],S):- p7(S).
+p1([H|L],S):- p3(H,L,S).
+
+p3(H,L,S):- write(H,','),p1(L,S).
+
+p4(C,L,[ ]):- NS=[C], p1(L,NS).
+p4(C,L,[H|S]):- not(com(C,H)), write(H), p4(C,L,S).
+p4(C,L,S):- NS=[C|S], p1(L,NS).
+
+p5(L,S):- NS=['('|S], p1(L,NS).
+
+p6(L,['('|S]):- p1(L,S).
+p6(L,[H|S]):- write(H), p6(L,S).
+
+p7([H|S]):- write(H), p7(S).
+p7([ ]):- write(""\n the end \n""), menu(0).
+
+menu(1):- readterm(lis,S), P=[ ], p1(S,P).
+menu(2):- write(""THANK YOU!!! \n""). 
+menu(_):- write(""1- Start \n2- Exit \n""), readint(A), menu(A).
+GOAL 
+menu(0).

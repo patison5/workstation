@@ -4,9 +4,9 @@
 // WhiteHOURSE  WhitePAWN  WhiteKING  WhiteQUEEN  WhiteROOK  WhiteBISHOP
 // BlackHOURSE  BlackPAWN  BlackKING  BlackQUEEN  BlackROOK  BlackBISHOP
 
-var arr    = [["", "", ""],  
-              ["", "WhiteHOURSE","BlackROOK"], 
-              ["", "", ""]],
+var arr    = [["BlackROOK", "BlackROOK", "BlackROOK"],  
+              ["", "",""], 
+              ["WhiteHOURSE", "WhiteHOURSE", "WhiteHOURSE"]],
 
     arr2   = [["", "", ""], 
               ["", "", ""], 
