@@ -10,14 +10,17 @@ const NavigationElements = (props) => {
 
 			{
 				props.elements.map((item, index) => {
-					// let a = require( { item.iconSrc } );
-
 					return (
-						<li className="nav__element" 
-							key = { index } 
-							style={ { background: `url(` + a + `) no-repeat left center` } }>
+						<li className="nav__element" key = { index }>
+							<i 
+								style = {{ 
+									background: `url(` + require(`../images/icons/${item.iconSrc}`) + `) no-repeat left center`,
+									backgroundSize: 'cover'
+								}}
 
-							<NavLink className="nav__link" to={item.src}>{item.iconSrc}</NavLink>
+								className="nav__element-icon"
+							/>
+							<NavLink className="nav__link" to={item.src}>{item.title}</NavLink>
 						</li>
 					)	
 				})
@@ -28,6 +31,3 @@ const NavigationElements = (props) => {
 };
 
 export default NavigationElements;
-
-
-// style={{backgroundImage: url({require("../images/avatar.png")})}}

@@ -6,47 +6,47 @@ export default function() {
 				{
 					title: 'Главная',
 					src: '/',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'avatar.png'
 				},
 				{
 					title: 'Страницы',
 					src: '/pages',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'domain-registration.png'
 				},
 				{
 					title: 'Посты',
 					src: '/posts',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'edit.png'
 				},
 				{
 					title: 'Пользователи',
 					src: '/users',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'multiple-users-silhouette.png'
 				},
 				{
 					title: 'Медиа',
 					src: '/media',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'folder.png'
 				},
 				{
 					title: 'Инструменты',
 					src: '/tools',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'tools.png'
 				},
 				{
 					title: 'Темы',
 					src: '/plugins',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'web-design.png'
 				},
 				{
 					title: 'Плагины',
 					src: '/users',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'tools.png'
 				},
 				{
 					title: 'Настройки',
 					src: '/settings',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'settings.png'
 				}
 			]
 		},
@@ -56,27 +56,27 @@ export default function() {
 				{
 					title: 'Мои статьи',
 					src: '/profile/articles',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'article.png'
 				},
 				{
 					title: 'Сообщения',
 					src: '/profile/messages',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'edit.png'
 				},
 				{
 					title: 'Комментарии',
 					src: '/profile/comments',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'contract.png'
 				},
 				{
 					title: 'Календарь',
 					src: '/profile/calendar',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'calendar.png'
 				},
 				{
 					title: 'Редактировать',
 					src: '/profile/settings',
-					iconSrc: '../images/avatar.png'
+					iconSrc: 'settings.png'
 				}
 			]
 		}

@@ -28732,11 +28732,13 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-
 var _logo = __webpack_require__(/*! ../images/logo.png */ "./src/components/images/logo.png");
 
 var _logo2 = _interopRequireDefault(_logo);
+
+var _NavigationElements = __webpack_require__(/*! ./NavigationElements */ "./src/components/Layouts/NavigationElements.js");
+
+var _NavigationElements2 = _interopRequireDefault(_NavigationElements);
 
 var _menuList = __webpack_require__(/*! ../server/menuList */ "./src/components/server/menuList.js");
 
@@ -28764,10 +28766,10 @@ var Navigation = function (_React$Component) {
 		value: function createListItems() {
 
 			return (0, _menuList2.default)().map(function (item, index) {
-				return _react2.default.createElement(
-					'li',
-					{ key: index },
-					item.category
+				return (
+					// <li key={index}>{item.category}</li>
+
+					_react2.default.createElement(_NavigationElements2.default, { key: index, category: item.category, elements: item.elements })
 				);
 			});
 		}
@@ -28794,6 +28796,62 @@ var Navigation = function (_React$Component) {
 ;
 
 exports.default = Navigation;
+
+/***/ }),
+
+/***/ "./src/components/Layouts/NavigationElements.js":
+/*!******************************************************!*\
+  !*** ./src/components/Layouts/NavigationElements.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var NavigationElements = function NavigationElements(props) {
+
+	return _react2.default.createElement(
+		"div",
+		{ className: "nav__category" },
+		_react2.default.createElement(
+			"li",
+			{ className: "nav__element nav__element-title" },
+			props.category
+		),
+		props.elements.map(function (item, index) {
+			// let a = require( { item.iconSrc } );
+
+			return _react2.default.createElement(
+				"li",
+				{ className: "nav__element",
+					key: index,
+					style: { background: "url(" + a + ") no-repeat left center" } },
+				_react2.default.createElement(
+					_reactRouterDom.NavLink,
+					{ className: "nav__link", to: item.src },
+					item.iconSrc
+				)
+			);
+		})
+	);
+};
+
+exports.default = NavigationElements;
+
+// style={{backgroundImage: url({require("../images/avatar.png")})}}
 
 /***/ }),
 
@@ -29405,25 +29463,63 @@ exports.default = function () {
 		category: 'Управление',
 		elements: [{
 			title: 'Главная',
-			src: '/'
+			src: '/',
+			iconSrc: '../images/avatar.png'
 		}, {
 			title: 'Страницы',
-			src: '/pages'
+			src: '/pages',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Посты',
+			src: '/posts',
+			iconSrc: '../images/avatar.png'
 		}, {
 			title: 'Пользователи',
-			src: '/users'
+			src: '/users',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Медиа',
+			src: '/media',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Инструменты',
+			src: '/tools',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Темы',
+			src: '/plugins',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Плагины',
+			src: '/users',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Настройки',
+			src: '/settings',
+			iconSrc: '../images/avatar.png'
 		}]
 	}, {
 		category: 'Профиль',
 		elements: [{
 			title: 'Мои статьи',
-			src: '/'
+			src: '/profile/articles',
+			iconSrc: '../images/avatar.png'
 		}, {
 			title: 'Сообщения',
-			src: '/pages'
+			src: '/profile/messages',
+			iconSrc: '../images/avatar.png'
 		}, {
 			title: 'Комментарии',
-			src: '/users'
+			src: '/profile/comments',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Календарь',
+			src: '/profile/calendar',
+			iconSrc: '../images/avatar.png'
+		}, {
+			title: 'Редактировать',
+			src: '/profile/settings',
+			iconSrc: '../images/avatar.png'
 		}]
 	}];
 };
