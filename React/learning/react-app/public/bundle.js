@@ -86,6 +86,153 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/css/style.css":
+/*!****************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/css/style.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+var urlEscape = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/url-escape.js */ "./node_modules/css-loader/dist/runtime/url-escape.js");
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ../images/logo.png */ "./src/components/images/logo.png"));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(/*! ../images/mountains.jpg */ "./src/components/images/mountains.jpg"));
+
+// Module
+exports.push([module.i, "html, body, div, span, applet, object, iframe,\r\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\r\na, abbr, acronym, address, big, cite, code,\r\ndel, dfn, em, img, ins, kbd, q, s, samp,\r\nsmall, strike, strong, sub, sup, tt, var, u, i, center,\r\ndl, dt, dd, ol, ul, li,\r\nfieldset, form, label, legend,\r\ntable, caption, tbody, tfoot, thead, tr, th, td,\r\narticle, aside, canvas, details, embed,\r\nfigure, figcaption, footer, header, hgroup,\r\nmenu, nav, output, ruby, section, summary,\r\ntime, mark, audio, video {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: 0;\r\n  font-size: 100%;\r\n  font: inherit;\r\n  vertical-align: baseline; }\r\n\r\nhtml {\r\n  height: 100%; }\r\n\r\nbody {\r\n  height: 100%;\r\n  font: 13px/16px Arial, Tahoma, sans-serif;\r\n  color: #383838;\r\n  background: #fff; \r\n}\r\n\r\nol, ul, li {\r\n  list-style: none; \r\n}\r\n\r\na {\r\n  color: #3b3b3b;\r\n  text-decoration: none; \r\n}\r\n\r\na:hover {\r\n  color: #000;\r\n}\r\n\r\n.clearfix:before,\r\n.clearfix:after {\r\n  content: \" \";\r\n  display: table; \r\n}\r\n\r\n.clearfix:after {\r\n  clear: both; \r\n}\r\n\r\n.left {\r\n  float: left; \r\n}\r\n\r\n.right {\r\n  float: right; \r\n}\r\n\r\ninput {\r\n  -webkit-appearance: none; \r\n}\r\n\r\n* {\r\n\tmargin: 0;\r\n\toutline: none;\r\n\tpadding: 0;\r\n\r\n\t-webkit-box-sizing: border-box;\r\n\t   -moz-box-sizing: border-box;\r\n\t\t\tbox-sizing: border-box;\r\n}\r\n\r\n.logo {\r\n\tbackground: url(" + ___CSS_LOADER_URL___0___ + ");\r\n}\r\n\r\n.wraper {\r\n\twidth: 100vw;\r\n  \theight: 100vh;\r\n  \tbackground: url(" + ___CSS_LOADER_URL___1___ + ");\r\n  \t-webkit-background-size: cover;\r\n  \tbackground-size: cover;\r\n\tdisplay: grid;\r\n\tgrid-column-gap: 20px;\r\n\talign-content: stretch;\t\r\n\tjustify-content: stretch;\t\r\n\tgrid-template-columns: minmax(130px, 300px) minmax(400px, auto);\r\n}\r\n\r\n\r\n\r\n.navigation__wrap {\r\n\tbackground: rgba(255,255,255, 0.5);\r\n\tpadding: 50px;\r\n\tpadding-top: 35px;\r\n}\r\n\r\n.navigation__logo {\r\n\tmargin: 0 auto 40px;\r\n\tdisplay: block;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n.header__wrap {\r\n\theight: 35px;\r\n\tline-height: 35px;\r\n\tbackground: rgba(255,255,255, 0.5);\r\n\ttext-align: right;\r\n\tcolor: #4c4c4c;\r\n\t/*font-weight: bold;*/\r\n\tpadding: 0 20px;\r\n}\r\n\r\n.header__nickname {\r\n\tfont-weight: bold;\r\n}\r\n\r\n\r\n.main-content {\r\n\tpadding: 15px;\r\n\tdisplay: block;\r\n\tmargin-top: 20px;\r\n\tmargin-right: 20px;\r\n\tbackground: rgba(255,255,255, 0.5);\r\n}\r\n\r\n\r\n.navigation__list {}\r\n.nav__element {\r\n\tdisplay: block;\r\n\tmargin-bottom: 25px;\r\n\tpadding-left: 30px;\r\n\toverflow: hidden;\r\n}\r\n\r\n.nav__link {\r\n\tcolor: #4c4c4c;\r\n}\r\n\r\n\r\n\r\n.nav__element-title {\r\n\tpadding-top: 15px;\r\n\tpadding-left: 0;\r\n\tcolor: #3b3b3b;\r\n\tfont-weight: bold;\r\n}", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
+}
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/url-escape.js":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/url-escape.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function escape(url, needQuotes) {
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || needQuotes) {
+    return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"';
+  }
+
+  return url;
+};
+
+/***/ }),
+
 /***/ "./node_modules/history/es/DOMUtils.js":
 /*!*********************************************!*\
   !*** ./node_modules/history/es/DOMUtils.js ***!
@@ -27736,6 +27883,515 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/value-equal/index.js":
 /*!*******************************************!*\
   !*** ./node_modules/value-equal/index.js ***!
@@ -27902,7 +28558,7 @@ module.exports = g;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27917,6 +28573,8 @@ var _Layouts = __webpack_require__(/*! ./Layouts */ "./src/components/Layouts/in
 
 var _Pages = __webpack_require__(/*! ./Pages */ "./src/components/Pages/index.js");
 
+__webpack_require__(/*! ./css/style.css */ "./src/components/css/style.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27925,59 +28583,55 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var NewRoute = function NewRoute() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'p',
-      null,
-      'Old Route'
-    )
-  );
-};
-
 var App = function (_React$Component) {
-  _inherits(App, _React$Component);
+	_inherits(App, _React$Component);
 
-  function App() {
-    var _ref;
+	function App() {
+		var _ref;
 
-    var _temp, _this, _ret;
+		var _temp, _this, _ret;
 
-    _classCallCheck(this, App);
+		_classCallCheck(this, App);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.handleClicked = function (evt) {
-      return console.log('clicked');
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.handleClicked = function (evt) {
+			return console.log('clicked');
+		}, _temp), _possibleConstructorReturn(_this, _ret);
+	}
 
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _reactRouterDom.BrowserRouter,
-        null,
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_Layouts.Navigation, null),
-          _react2.default.createElement(
-            _reactRouterDom.Switch,
-            null,
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: NewRoute, exact: true }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: _Pages.Home })
-          )
-        )
-      );
-    }
-  }]);
+	_createClass(App, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				_reactRouterDom.BrowserRouter,
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'wraper' },
+					_react2.default.createElement(_Layouts.Navigation, null),
+					_react2.default.createElement(
+						_reactRouterDom.Switch,
+						null,
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Pages.Home, exact: true }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/posts', component: _Pages.Posts }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/pages', component: _Pages.Pages }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/users', component: _Pages.Users }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/media', component: _Pages.Media }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/tools', component: _Pages.Tools }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/themes', component: _Pages.Themes }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/plugins', component: _Pages.Plugins }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/settings', component: _Pages.Settings }),
+						_react2.default.createElement(_reactRouterDom.Route, { component: _Pages.Error })
+					)
+				)
+			);
+		}
+	}]);
 
-  return App;
+	return App;
 }(_react2.default.Component);
 
 exports.default = App;
@@ -28040,12 +28694,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (props) {
 	return _react2.default.createElement(
-		'div',
-		null,
+		"div",
+		{ className: "header__wrap" },
 		_react2.default.createElement(
-			'h1',
+			"h1",
 			null,
-			' Header '
+			" Welcome, ",
+			_react2.default.createElement(
+				"span",
+				{ className: "header__nickname" },
+				"Lulex.py"
+			),
+			" "
 		)
 	);
 };
@@ -28063,8 +28723,10 @@ exports.default = function (props) {
 
 
 Object.defineProperty(exports, "__esModule", {
-		value: true
+	value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -28072,84 +28734,64 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
+var _logo = __webpack_require__(/*! ../images/logo.png */ "./src/components/images/logo.png");
+
+var _logo2 = _interopRequireDefault(_logo);
+
+var _menuList = __webpack_require__(/*! ../server/menuList */ "./src/components/server/menuList.js");
+
+var _menuList2 = _interopRequireDefault(_menuList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Navigation = function Navigation() {
-		return _react2.default.createElement(
-				"div",
-				null,
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Navigation = function (_React$Component) {
+	_inherits(Navigation, _React$Component);
+
+	function Navigation() {
+		_classCallCheck(this, Navigation);
+
+		return _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).apply(this, arguments));
+	}
+
+	_createClass(Navigation, [{
+		key: 'createListItems',
+		value: function createListItems() {
+
+			return (0, _menuList2.default)().map(function (item, index) {
+				return _react2.default.createElement(
+					'li',
+					{ key: index },
+					item.category
+				);
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'navigation__wrap' },
+				_react2.default.createElement('img', { src: _logo2.default, alt: _logo2.default, className: 'navigation__logo' }),
 				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/" },
-						"Home"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/pages" },
-						"pages"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/posts" },
-						"posts"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/users" },
-						"users"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/media" },
-						"media"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/tools" },
-						"tools"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/themes" },
-						"themes"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/plugins" },
-						"plugins"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/settings" },
-						"settings"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/profile/articles" },
-						"articles"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/profile/messages" },
-						"messages"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/profile/comments" },
-						"comments"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/profile/calendar" },
-						"calendar"
-				),
-				_react2.default.createElement(
-						_reactRouterDom.NavLink,
-						{ to: "/profile/settings" },
-						"settings"
+					'ul',
+					{ className: 'navigation__list' },
+					this.createListItems()
 				)
-		);
-};
+			);
+		}
+	}]);
+
+	return Navigation;
+}(_react2.default.Component);
+
+;
 
 exports.default = Navigation;
 
@@ -28201,25 +28843,34 @@ exports.Navigation = _Navigation2.default;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+		value: true
 });
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Error = function Error() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'p',
-      null,
-      'Error: Path does not exist!!!11!!1'
-    )
-  );
+var Error = function Error(_ref) {
+		var location = _ref.location;
+
+		return _react2.default.createElement(
+				'div',
+				{ className: 'main-content__wrap' },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						'div',
+						{ className: 'main-content' },
+						_react2.default.createElement(
+								'p',
+								null,
+								'Error'
+						)
+				)
+		);
 };
 
 exports.default = Error;
@@ -28237,28 +28888,379 @@ exports.default = Error;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "p",
-      null,
-      "Home"
-    )
-  );
+	return _react2.default.createElement(
+		"div",
+		{ className: "main-content__wrap" },
+		_react2.default.createElement(_Layouts.Header, null),
+		_react2.default.createElement(
+			"div",
+			{ className: "main-content" },
+			_react2.default.createElement(
+				"p",
+				null,
+				"Home"
+			)
+		)
+	);
 };
 
 exports.default = Home;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Media.js":
+/*!***************************************!*\
+  !*** ./src/components/Pages/Media.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Media = function Media() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Media"
+						)
+				)
+		);
+};
+
+exports.default = Media;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Pages.js":
+/*!***************************************!*\
+  !*** ./src/components/Pages/Pages.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Pages = function Pages() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Pages"
+						)
+				)
+		);
+};
+
+exports.default = Pages;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Plugins.js":
+/*!*****************************************!*\
+  !*** ./src/components/Pages/Plugins.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Plugins = function Plugins() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Plugins"
+						)
+				)
+		);
+};
+
+exports.default = Plugins;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Posts.js":
+/*!***************************************!*\
+  !*** ./src/components/Pages/Posts.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Posts = function Posts() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Posts"
+						)
+				)
+		);
+};
+
+exports.default = Posts;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Settings.js":
+/*!******************************************!*\
+  !*** ./src/components/Pages/Settings.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Settings = function Settings() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Settings"
+						)
+				)
+		);
+};
+
+exports.default = Settings;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Themes.js":
+/*!****************************************!*\
+  !*** ./src/components/Pages/Themes.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Themes = function Themes() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Themes"
+						)
+				)
+		);
+};
+
+exports.default = Themes;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Tools.js":
+/*!***************************************!*\
+  !*** ./src/components/Pages/Tools.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Tools = function Tools() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Tools"
+						)
+				)
+		);
+};
+
+exports.default = Tools;
+
+/***/ }),
+
+/***/ "./src/components/Pages/Users.js":
+/*!***************************************!*\
+  !*** ./src/components/Pages/Users.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Layouts = __webpack_require__(/*! ./../Layouts */ "./src/components/Layouts/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Users = function Users() {
+		return _react2.default.createElement(
+				"div",
+				{ className: "main-content__wrap" },
+				_react2.default.createElement(_Layouts.Header, null),
+				_react2.default.createElement(
+						"div",
+						{ className: "main-content" },
+						_react2.default.createElement(
+								"p",
+								null,
+								"Users"
+						)
+				)
+		);
+};
+
+exports.default = Users;
 
 /***/ }),
 
@@ -28275,7 +29277,7 @@ exports.default = Home;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.Error = exports.Home = undefined;
+exports.Users = exports.Tools = exports.Themes = exports.Settings = exports.Plugins = exports.Pages = exports.Media = exports.Posts = exports.Error = exports.Home = undefined;
 
 var _Home = __webpack_require__(/*! ./Home */ "./src/components/Pages/Home.js");
 
@@ -28285,10 +29287,146 @@ var _Error = __webpack_require__(/*! ./Error */ "./src/components/Pages/Error.js
 
 var _Error2 = _interopRequireDefault(_Error);
 
+var _Posts = __webpack_require__(/*! ./Posts */ "./src/components/Pages/Posts.js");
+
+var _Posts2 = _interopRequireDefault(_Posts);
+
+var _Media = __webpack_require__(/*! ./Media */ "./src/components/Pages/Media.js");
+
+var _Media2 = _interopRequireDefault(_Media);
+
+var _Pages = __webpack_require__(/*! ./Pages */ "./src/components/Pages/Pages.js");
+
+var _Pages2 = _interopRequireDefault(_Pages);
+
+var _Plugins = __webpack_require__(/*! ./Plugins */ "./src/components/Pages/Plugins.js");
+
+var _Plugins2 = _interopRequireDefault(_Plugins);
+
+var _Settings = __webpack_require__(/*! ./Settings */ "./src/components/Pages/Settings.js");
+
+var _Settings2 = _interopRequireDefault(_Settings);
+
+var _Themes = __webpack_require__(/*! ./Themes */ "./src/components/Pages/Themes.js");
+
+var _Themes2 = _interopRequireDefault(_Themes);
+
+var _Tools = __webpack_require__(/*! ./Tools */ "./src/components/Pages/Tools.js");
+
+var _Tools2 = _interopRequireDefault(_Tools);
+
+var _Users = __webpack_require__(/*! ./Users */ "./src/components/Pages/Users.js");
+
+var _Users2 = _interopRequireDefault(_Users);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Home = _Home2.default;
 exports.Error = _Error2.default;
+exports.Posts = _Posts2.default;
+exports.Media = _Media2.default;
+exports.Pages = _Pages2.default;
+exports.Plugins = _Plugins2.default;
+exports.Settings = _Settings2.default;
+exports.Themes = _Themes2.default;
+exports.Tools = _Tools2.default;
+exports.Users = _Users2.default;
+
+/***/ }),
+
+/***/ "./src/components/css/style.css":
+/*!**************************************!*\
+  !*** ./src/components/css/style.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/css/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/images/logo.png":
+/*!****************************************!*\
+  !*** ./src/components/images/logo.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/components/images/logo.png";
+
+/***/ }),
+
+/***/ "./src/components/images/mountains.jpg":
+/*!*********************************************!*\
+  !*** ./src/components/images/mountains.jpg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/components/images/mountains.jpg";
+
+/***/ }),
+
+/***/ "./src/components/server/menuList.js":
+/*!*******************************************!*\
+  !*** ./src/components/server/menuList.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function () {
+	return [{
+		category: 'Управление',
+		elements: [{
+			title: 'Главная',
+			src: '/'
+		}, {
+			title: 'Страницы',
+			src: '/pages'
+		}, {
+			title: 'Пользователи',
+			src: '/users'
+		}]
+	}, {
+		category: 'Профиль',
+		elements: [{
+			title: 'Мои статьи',
+			src: '/'
+		}, {
+			title: 'Сообщения',
+			src: '/pages'
+		}, {
+			title: 'Комментарии',
+			src: '/users'
+		}]
+	}];
+};
 
 /***/ }),
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
 export default props =>
-	<div>
-		<h1> Header </h1>
+	<div className="header__wrap">
+		<h1> Welcome, <span className="header__nickname">Lulex.py</span> </h1>
 	</div>

@@ -1,10 +1,15 @@
 import React from "react";
+import { Header, Footer } from './../Layouts'
 
 const Media = () => {
   return (
-    <div>
-      <p>Media</p>
-    </div>
+    <div className="main-content__wrap">
+		<Header />
+
+		<div className="main-content">
+			<p>Media</p>
+		</div>
+	</div>
   );
 };
 

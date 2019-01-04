@@ -1,10 +1,15 @@
 import React from "react";
+import { Header, Footer } from './../Layouts'
 
 const Home = () => {
   return (
-    <div>
-      <p>Home</p>
-    </div>
+	<div className="main-content__wrap">
+		<Header />
+
+		<div className="main-content">
+			<p>Home</p>
+		</div>
+	</div>
   );
 };
 

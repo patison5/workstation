@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font: 13px/16px Arial, Tahoma, sans-serif;
+  color: #383838;
+  background: #fff; 
+}
+
+ol, ul, li {
+  list-style: none; 
+}
+
+a {
+  color: #3b3b3b;
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #000;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; 
+}
+
+.clearfix:after {
+  clear: both; 
+}
+
+.left {
+  float: left; 
+}
+
+.right {
+  float: right; 
+}
+
+input {
+  -webkit-appearance: none; 
+}
+
+* {
+	margin: 0;
+	outline: none;
+	padding: 0;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+.logo {
+	background: url("../images/logo.png");
+}
+
+.wraper {
+	width: 100vw;
+  	height: 100vh;
+  	background: url("../images/mountains.jpg");
+  	-webkit-background-size: cover;
+  	background-size: cover;
+	display: grid;
+	grid-column-gap: 20px;
+	align-content: stretch;	
+	justify-content: stretch;	
+	grid-template-columns: minmax(130px, 300px) minmax(400px, auto);
+}
+
+
+
+.navigation__wrap {
+	background: rgba(255,255,255, 0.5);
+	padding: 50px;
+	padding-top: 35px;
+}
+
+.navigation__logo {
+	margin: 0 auto 40px;
+	display: block;
+}
+
+
+
+
+
+.header__wrap {
+	height: 35px;
+	line-height: 35px;
+	background: rgba(255,255,255, 0.5);
+	text-align: right;
+	color: #4c4c4c;
+	/*font-weight: bold;*/
+	padding: 0 20px;
+}
+
+.header__nickname {
+	font-weight: bold;
+}
+
+
+.main-content {
+	padding: 15px;
+	display: block;
+	margin-top: 20px;
+	margin-right: 20px;
+	background: rgba(255,255,255, 0.5);
+}
+
+
+.navigation__list {}
+.nav__element {
+	display: block;
+	margin-bottom: 25px;
+	padding-left: 30px;
+	overflow: hidden;
+}
+
+.nav__link {
+	color: #4c4c4c;
+}
+
+
+
+.nav__element-title {
+	padding-top: 15px;
+	padding-left: 0;
+	color: #3b3b3b;
+	font-weight: bold;
+}

@@ -3,12 +3,15 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header, Footer, Navigation } from './Layouts'
 import { Home, Error, Posts, Users, Media, Tools, Themes, Plugins, Settings, Pages } from './Pages'
 
+import './css/style.css';
+
 class App extends React.Component {
 	handleClicked = evt => console.log('clicked')
 
 	render () {
 		return <BrowserRouter>
-			<div>
+			<div className="wraper">
+
 				<Navigation />
 
 				<Switch>

@@ -1,10 +1,15 @@
 import React from 'react';
+import { Header, Footer } from './../Layouts'
 
 const Error = ({ location }) => {
   return (
-    <div>
-    	<h3>No match for <code>{location.pathname}</code></h3>
-    </div>
+    <div className="main-content__wrap">
+		<Header />
+
+		<div className="main-content">
+			<p>Error</p>
+		</div>
+	</div>
   );
 };
 
