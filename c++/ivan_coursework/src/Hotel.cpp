@@ -37,8 +37,80 @@ void Hotel::setup () {
     addClient(client3);
 }
 
+void Hotel :: startProgram () {
+    showMenuCommands();
+    //createOrder("Fedor", "Penin", 101);
+
+
+    bool flag = true;
+    int menuCommand = 0;
+
+    while (flag) {
+        cout << endl << "Choose command from list: " << endl;
+        cin >> menuCommand;
+
+        switch (menuCommand) {
+            case 0:
+                cout << "Quiting..." << endl;
+                flag = false;
+                break;
+
+            case 1:
+                addNewOrder ();
+                break;
+
+            case 5:
+                filterRooms();
+                break;
+
+            case 9:
+                createOrder("Fedor", "Penin", 101);
+                break;
+
+            default:
+                cout << "UNKNOWN COMMAND... " << endl;
+                flag = false;
+                break;
+        }
+    }
+}
+
 Hotel::~Hotel(){}
 
+
+void Hotel :: addNewRoom () {
+    int n;
+    int pr;
+    int bN;
+    bool iL;
+
+    cout << "write number of room: ";
+    cin >> n;
+    cout << "write price of room: ";
+    cin >> pr;
+    cout << "write number of beds: ";
+    cin >> bN;
+    cout << "Is it luxery? (0 or 1) ";
+    cin >> iL;
+
+    Room * room = new Room (n, pr, iL, bN);
+    _rooms.push_back(room);
+}
+
+void Hotel :: addNewOrder () {
+    string name;
+    string surname;
+    int roomNumber;
+
+    cout << "write name: ";
+    cin >> name;
+    cout << "write surname: ";
+    cin >> surname;
+    cout << "write room number: ";
+    cin >> roomNumber;
+
+   createOrder(name, surname, roomNumber);
+}
 
 vector <Room *> Hotel::getRooms () {
     return this -> _rooms;
@@ -103,7 +175,8 @@ void Hotel::createOrder(string name, string surmane, int roomNumber) {
         }
 
     } else {
-        cout << "Error! Client not existed!";
+        cout << "Error! Client not existed!" << endl;
+        cout << "You need to register client first!" << endl;
     }
 }
 
@@ -118,14 +191,90 @@ void Hotel::filterRooms() {
 
     bool isLuxery = false;
 
-    cout << endl << endl;
-    cout << "FILTERING BY:   " << endl;
-    cout << "PRICE:          " << lowerPrice << "-" << MaxPrice << "$" << endl;
-    cout << "NUMBER OF BEDS: " << minBedsNumber << "-" << maxBedsNumber << endl;
-    cout << "IS LUXERY:      " << isLuxery << endl;
+    _filteredRooms.clear();
 
-    vector <Room *> _filteredRooms;
 
+    showFilterCommands (); //showing commands
+
+    bool fl = true;
+
+    while (fl) {
+        int command = 0;
+
+        cout << endl << "Choose command: ";
+        cin >> command; // тут нужна проверка на билеберду! иначе вылетит с ошибкой!
+
+        showFilterOptions(lowerPrice, MaxPrice, minBedsNumber, maxBedsNumber, isLuxery);
+
+        switch (command) {
+            case 0:
+                cout << "Quiting..." << endl;
+                fl = false;
+                break;
+
+            case 1:
+                cout << "Starting filtering..." << endl;
+                _filteredRooms.clear();
+                startFilter(lowerPrice, MaxPrice, minBedsNumber, maxBedsNumber, isLuxery);
+                break;
+
+            case 2:
+                cout << "Set minimum price" << endl;
+                cin >> lowerPrice;
+                break;
+
+            case 3:
+                cout << "Set maximum price" << endl;
+                cin >> MaxPrice;
+                break;
+
+            case 4:
+                cout << "Set minimum beds number" << endl;
+                cin >> minBedsNumber;
+                break;
+
+            case 5:
+                cout << "Set minimum beds number" << endl;
+                cin >> maxBedsNumber;
+                break;
+
+            case 6:
+                cout << "Set luxery value: " << endl;
+                cin >> isLuxery;
+                break;
+
+            case 7:
+                cout << "Filtered rooms list:";
+                showFilteredList();
+                break;
+
+            case 8:
+                showFilterCommands ();
+                break;
+
+            default:
+                cout << "UNKNOWN COMMAND... " << endl;
+                fl = false;
+                break;
+        }
+    }
+}
+
+
+void Hotel::showFilteredList() {
+    if (_filteredRooms.size() == 0) {
+        cout << " empty..." << endl;
+    } else {
+        cout << endl;
+        for(vector<Room *>::iterator it = _filteredRooms.begin(); it != _filteredRooms.end(); ++it) {
+            cout << "#" << (*it) -> number << ", " << (*it) -> bedsNumber << " beds, " << (*it) -> price << "$, " << (*it) -> isLuxery << endl;
+        }
+    }
+}
+
+
+
+void Hotel :: startFilter (double lowerPrice, double MaxPrice, int minBedsNumber, int maxBedsNumber, bool isLuxery) {
     for(vector<Room *>::iterator it = _rooms.begin(); it != _rooms.end(); ++it) {
         if (((*it) -> price >= lowerPrice)          &&
             ((*it) -> price <= MaxPrice)            &&
@@ -135,13 +284,38 @@ void Hotel::filterRooms() {
         }
     }
 
-    cout << "FILTER FINISHED: " << _filteredRooms.size() << " rooms founded!" << endl;
+    cout << endl << "FILTER FINISHED: " << _filteredRooms.size() << " rooms founded!" << endl;
+}
 
-    cout << endl << "###### COMMANDS ######" << endl;
+void Hotel :: showFilterCommands () {
+    cout << endl << "###### FILTER COMMANDS ######" << endl;
     cout << "0 - stop filtering" << endl;
-    cout << "1 - show rooms details" << endl;
+    cout << "1 - start filtering" << endl;
     cout << "2 - set minimum price" << endl;
     cout << "3 - set maximum price" << endl;
     cout << "4 - set minimum beds number" << endl;
     cout << "5 - set maximum beds number" << endl;
+    cout << "6 - set luxery value" << endl;
+    cout << "7 - Show filtered rooms list" << endl;
+    cout << "8 - Show commands" << endl;
+}
+
+void Hotel :: showFilterOptions (double lowerPrice, double MaxPrice, int minBedsNumber, int maxBedsNumber, bool isLuxery) {
+    cout << endl << endl;
+    cout << "FILTERING BY:   " << endl;
+    cout << "PRICE:          " << lowerPrice << "-" << MaxPrice << "$" << endl;
+    cout << "NUMBER OF BEDS: " << minBedsNumber << "-" << maxBedsNumber << endl;
+    cout << "IS LUXERY:      " << isLuxery << endl << endl;
+}
+
+
+void Hotel :: showMenuCommands() {
+    cout << endl << "###### MAIN COMMANDS ######" << endl;
+    cout << "0 - quit" << endl;
+    cout << "1 - check in client" << endl;
+    cout << "2 - check out client" << endl;
+    cout << "3 - add new room" << endl;
+    cout << "4 - add new client" << endl;
+    cout << "5 - filter rooms" << endl;
+    cout << "6 - Show commands" << endl << endl;
 }
