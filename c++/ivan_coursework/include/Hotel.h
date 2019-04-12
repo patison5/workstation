@@ -23,9 +23,8 @@ class Hotel {
 
         void addNewRoom();
         void addNewClient();
-        void addNewOrder();
 
-        void createOrder (string name, string surmane, int roomNumber);
+        void createOrder (string name, string surmane, int roomNumber, int rentalPeriod);
 
         void filterRooms();
         void showFilteredList();

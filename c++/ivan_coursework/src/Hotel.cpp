@@ -12,6 +12,7 @@ Hotel::Hotel(){
 }
 
 void Hotel::setup () {
+
     // комнаты, пусть их будет 5
     Room * room1 = new Room (101, 1500, false, 1);
     Room * room2 = new Room (202, 2400, false, 3);
@@ -56,7 +57,7 @@ void Hotel :: startProgram () {
                 break;
 
             case 1:
-                addNewOrder ();
+                checkIn ();
                 break;
 
             case 5:
@@ -64,7 +65,7 @@ void Hotel :: startProgram () {
                 break;
 
             case 9:
-                createOrder("Fedor", "Penin", 101);
+                createOrder("Fedor", "Penin", 101, 6);
                 break;
 
             default:
@@ -97,10 +98,11 @@ void Hotel :: addNewRoom () {
     _rooms.push_back(room);
 }
 
-void Hotel :: addNewOrder () {
+void Hotel :: checkIn () {
     string name;
     string surname;
     int roomNumber;
+    int rentalPeriod = 1;
 
     cout << "write name: ";
     cin >> name;
@@ -108,8 +110,10 @@ void Hotel :: addNewOrder () {
     cin >> surname;
     cout << "write room number: ";
     cin >> roomNumber;
+    cout << "Write rental time: ";
+    cin >> rentalPeriod;
 
-   createOrder(name, surname, roomNumber);
+    createOrder(name, surname, roomNumber, rentalPeriod);
 }
 
 vector <Room *> Hotel::getRooms () {
@@ -125,7 +129,7 @@ void Hotel::addClient(Client * client){
 }
 
 
-void Hotel::createOrder(string name, string surmane, int roomNumber) {
+void Hotel::createOrder(string name, string surmane, int roomNumber, int rentalPeriod) {
     Client * client = NULL;
     Room * room = NULL;
 
@@ -157,6 +161,15 @@ void Hotel::createOrder(string name, string surmane, int roomNumber) {
                 cout << "Price:  " << room -> price << endl;
                 cout << "Number: " << room -> number << endl << endl;
                 cout << "Room is free, starting creating order\n\n";
+
+                string arrivingDate;
+                string leavingDate;
+
+                //cout << endl << "Choose arriving and leaving date: " << endl;
+                //cout << "Arriving date: ";
+                //cin >> arrivingDate;
+                //cout << "Leaving date: ";
+                //cin >> leavingDate;
 
                 // делаем заказ
                 Order * order = new Order(client, room, 7, 4564);
