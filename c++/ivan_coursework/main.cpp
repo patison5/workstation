@@ -14,7 +14,7 @@ int main() {
     (*hotel).createOrder("Fedor", "Penin", 101);
 
 
-    (*hotel).filterRooms(3000, NULL, NULL, NULL, true);
+    (*hotel).filterRooms();
 
     //cout << (*room).number;
     //cout << (*hotel).getRooms()[2] -> number;

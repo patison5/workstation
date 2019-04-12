@@ -22,7 +22,7 @@ class Hotel {
 
         void createOrder (string name, string surmane, int roomNumber);
 
-        void filterRooms(double lowerPrice = 0, double  MaxPrice = 100000, int minBedsNumber = 1, int maxBedsNumber = 100, bool isLuxery = false);
+        void filterRooms();
 
         vector <Room *> getRooms ();
 

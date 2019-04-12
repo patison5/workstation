@@ -107,7 +107,17 @@ void Hotel::createOrder(string name, string surmane, int roomNumber) {
     }
 }
 
-void Hotel::filterRooms(double lowerPrice, double MaxPrice, int minBedsNumber, int maxBedsNumber, bool isLuxery) {
+void Hotel::filterRooms() {
+
+    // DEFAULT VALUES FOR SEARCH
+    double lowerPrice = 0;
+    double MaxPrice = 100000;
+
+    int minBedsNumber = 1;
+    int maxBedsNumber = 100;
+
+    bool isLuxery = false;
+
     cout << endl << endl;
     cout << "FILTERING BY:   " << endl;
     cout << "PRICE:          " << lowerPrice << "-" << MaxPrice << "$" << endl;
@@ -126,4 +136,12 @@ void Hotel::filterRooms(double lowerPrice, double MaxPrice, int minBedsNumber, i
     }
 
     cout << "FILTER FINISHED: " << _filteredRooms.size() << " rooms founded!" << endl;
+
+    cout << endl << "###### COMMANDS ######" << endl;
+    cout << "0 - stop filtering" << endl;
+    cout << "1 - show rooms details" << endl;
+    cout << "2 - set minimum price" << endl;
+    cout << "3 - set maximum price" << endl;
+    cout << "4 - set minimum beds number" << endl;
+    cout << "5 - set maximum beds number" << endl;
 }
