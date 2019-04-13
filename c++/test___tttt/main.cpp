@@ -7,7 +7,6 @@ using namespace std;
 
 int main() {
 
-    // ֳכאגםûי מבתוךע
     Hotel * hotel = new Hotel ();
 
     (*hotel).setup();

@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1555162872 source:d:\github\workstation\c++\test___tttt\main.cpp
+	<iostream>
+	<vector>
+	"Hotel.h"
+
+1555166600 d:\github\workstation\c++\test___tttt\include\hotel.h
+	<istream>
+	<vector>
+
+1555163041 source:d:\github\workstation\c++\test___tttt\src\client.cpp
+	"Client.h"
+
+1555163040 d:\github\workstation\c++\test___tttt\include\client.h
+	<Hotel.h>
+
+1555166628 source:d:\github\workstation\c++\test___tttt\src\hotel.cpp
+	"Hotel.h"
+	"Room.h"
+	"Client.h"
+	"Order.h"
+	<iostream>
+
+1555163138 d:\github\workstation\c++\test___tttt\include\room.h
+	<Hotel.h>
+
+1555164076 d:\github\workstation\c++\test___tttt\include\order.h
+	<Hotel.h>
+
+1555166106 source:d:\github\workstation\c++\test___tttt\src\order.cpp
+	"Order.h"
+	"Room.h"
+	"Client.h"
+	<iostream>
+	<ctime>
+
+1555163134 source:d:\github\workstation\c++\test___tttt\src\room.cpp
+	"Room.h"
+	<iostream>
+
