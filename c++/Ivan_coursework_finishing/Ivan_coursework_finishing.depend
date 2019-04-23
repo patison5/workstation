@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1556042311 source:d:\github\workstation\c++\ivan_coursework_finishing\main.cpp
+	<iostream>
+	<vector>
+	"Hotel.h"
+
+1556042337 d:\github\workstation\c++\ivan_coursework_finishing\include\hotel.h
+	<istream>
+	<vector>
+
+1556042445 source:d:\github\workstation\c++\ivan_coursework_finishing\src\client.cpp
+	"Client.h"
+
+1556042439 d:\github\workstation\c++\ivan_coursework_finishing\include\client.h
+	<Hotel.h>
+
+1556042915 source:d:\github\workstation\c++\ivan_coursework_finishing\src\hotel.cpp
+	"Hotel.h"
+	"Room.h"
+	"Client.h"
+	"Order.h"
+	<iostream>
+
+1556042368 d:\github\workstation\c++\ivan_coursework_finishing\include\room.h
+	<Hotel.h>
+
+1556042400 d:\github\workstation\c++\ivan_coursework_finishing\include\order.h
+	<Hotel.h>
+
+1556042410 source:d:\github\workstation\c++\ivan_coursework_finishing\src\order.cpp
+	"Order.h"
+	"Room.h"
+	"Client.h"
+	<iostream>
+	<ctime>
+
+1556042374 source:d:\github\workstation\c++\ivan_coursework_finishing\src\room.cpp
+	"Room.h"
+	<iostream>
+

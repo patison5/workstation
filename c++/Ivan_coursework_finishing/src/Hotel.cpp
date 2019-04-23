@@ -12,26 +12,26 @@ Hotel::~Hotel(){}
 
 void Hotel::setup () {
 
-    // комнаты, пусть их будет 5
+    // ГЄГ®Г¬Г­Г ГІГ», ГЇГіГ±ГІГј ГЁГµ ГЎГіГ¤ГҐГІ 5
     Room * room1 = new Room (101, 1500, false, 1);
     Room * room2 = new Room (202, 2400, false, 3);
     Room * room3 = new Room (303, 5100, true, 2);
     Room * room4 = new Room (404, 7800, true, 5);
     Room * room5 = new Room (505, 2210, false, 7);
 
-    // помещаем комнаты в вектор главного класса приложения
+    // ГЇГ®Г¬ГҐГ№Г ГҐГ¬ ГЄГ®Г¬Г­Г ГІГ» Гў ГўГҐГЄГІГ®Г° ГЈГ«Г ГўГ­Г®ГЈГ® ГЄГ«Г Г±Г±Г  ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
     addRoom(room1);
     addRoom(room2);
     addRoom(room3);
     addRoom(room4);
     addRoom(room5);
 
-    // делаем клиентов
+    // Г¤ГҐГ«Г ГҐГ¬ ГЄГ«ГЁГҐГ­ГІГ®Гў
     Client * client1 = new Client ("Fedor", "Penin", 20);
     Client * client2 = new Client ("Alexandr", "Parnev", 20);
-    Client * client3 = new Client ("Ivan", "Zuravlev", 20);
+    Client * client3 = new Client ("Ivan", "Zhuravlev", 20);
 
-    // сохраняем клиентов
+    // Г±Г®ГµГ°Г Г­ГїГҐГ¬ ГЄГ«ГЁГҐГ­ГІГ®Гў
     addClient(client1);
     addClient(client2);
     addClient(client3);
@@ -59,12 +59,32 @@ void Hotel :: startProgram () {
                 checkIn ();
                 break;
 
+            case 2:
+                checkOut ();
+                break;
+
+            case 3:
+                addNewRoom ();
+                break;
+
+            case 4:
+                addNewClient ();
+                break;
+
             case 5:
                 filterRooms();
                 break;
 
+            case 6:
+                showMenuCommands();
+                break;
+
+            case 7:
+                showAllClients();
+                break;
+
             case 9:
-                createOrder("Fedor", "Penin", 101, 6);
+                createOrder("Fedor", "Penin", 101, 6, 4544);
                 break;
 
             default:
@@ -94,11 +114,31 @@ void Hotel :: addNewRoom () {
     _rooms.push_back(room);
 }
 
+void Hotel :: addNewClient () {
+    string name;
+    string surname;
+    int age;
+
+    cout << "write client's name: ";
+    cin >> name;
+    cout << "write client's surname: ";
+    cin >> surname;
+    cout << "write client's age: ";
+    cin >> age;
+
+
+    Client * client = new Client (name, surname, age);
+    _clients.push_back(client);
+
+    cout << "New client has been added to database!" << endl;
+}
+
 void Hotel :: checkIn () {
     string name;
     string surname;
     int roomNumber;
     int rentalPeriod = 1;
+    int promo = 0;
 
     cout << "write name: ";
     cin >> name;
@@ -109,7 +149,33 @@ void Hotel :: checkIn () {
     cout << "Write rental time: ";
     cin >> rentalPeriod;
 
-    createOrder(name, surname, roomNumber, rentalPeriod);
+    cout << "Do you have any promocode? ";
+    cin >> promo;
+
+    createOrder(name, surname, roomNumber, rentalPeriod, promo);
+}
+
+void Hotel :: checkOut () {
+    int roomNumber;
+
+    cout << "write room number: ";
+    cin >> roomNumber;
+
+    Room * room = NULL;
+
+    for(vector<Room *>::iterator it = _rooms.begin(); it != _rooms.end(); ++it) {
+        if ((*it) -> number == roomNumber) {
+            room = (*it);
+            break;
+        }
+    }
+
+    if (room) {
+        (*room).isFree = true;
+        cout << "Client have been checked out.. " << endl;
+    } else {
+        cout << "No room found!..." << endl;
+    }
 }
 
 vector <Room *> Hotel::getRooms () {
@@ -124,12 +190,11 @@ void Hotel::addClient(Client * client){
     this -> _clients.push_back(client);
 }
 
-
-void Hotel::createOrder(string name, string surmane, int roomNumber, int rentalPeriod) {
+void Hotel::createOrder(string name, string surmane, int roomNumber, int rentalPeriod, int promo) {
     Client * client = NULL;
     Room * room = NULL;
 
-    // смотрим, существует ли такой пользователь в системе
+    // Г±Г¬Г®ГІГ°ГЁГ¬, Г±ГіГ№ГҐГ±ГІГўГіГҐГІ Г«ГЁ ГІГ ГЄГ®Г© ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гј Гў Г±ГЁГ±ГІГҐГ¬ГҐ
     for(vector<Client *>::iterator it = _clients.begin(); it != _clients.end(); ++it) {
         if (((*it) -> name == name) && ((*it) -> surname == surmane)) {
             client = (*it);
@@ -137,7 +202,7 @@ void Hotel::createOrder(string name, string surmane, int roomNumber, int rentalP
         }
     }
 
-    // смотрим существует ли такая команата
+    // Г±Г¬Г®ГІГ°ГЁГ¬ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ Г«ГЁ ГІГ ГЄГ Гї ГЄГ®Г¬Г Г­Г ГІГ 
     for(vector<Room *>::iterator it = _rooms.begin(); it != _rooms.end(); ++it) {
         if ((*it) -> number == roomNumber) {
             room = (*it);
@@ -153,13 +218,21 @@ void Hotel::createOrder(string name, string surmane, int roomNumber, int rentalP
 
         if (room) {
             if (room -> isFree == true) {
-                cout << "Beds:   " << room -> bedsNumber << endl;
-                cout << "Price:  " << room -> price << endl;
-                cout << "Number: " << room -> number << endl << endl;
                 cout << "Room is free, starting creating order\n\n";
 
-                string arrivingDate;
-                string leavingDate;
+                cout << "\n------------------------------------------------------------"<< endl;
+                cout <<   "---------------------- CREATING ORDER ----------------------";
+                cout << "\n------------------------------------------------------------"<< endl << endl;
+
+                cout << "################" << endl;
+                cout << "# Beds:   " << room -> bedsNumber  <<endl;
+                cout << "# Price:  " << room -> price  << endl;
+                cout << "# Number: " << room -> number  << endl;
+                cout << "################" << endl << endl;
+
+
+                //string arrivingDate;
+                //string leavingDate;
 
                 //cout << endl << "Choose arriving and leaving date: " << endl;
                 //cout << "Arriving date: ";
@@ -167,14 +240,18 @@ void Hotel::createOrder(string name, string surmane, int roomNumber, int rentalP
                 //cout << "Leaving date: ";
                 //cin >> leavingDate;
 
-                // делаем заказ
-                Order * order = new Order(client, room, 7, 4564);
+                // Г¤ГҐГ«Г ГҐГ¬ Г§Г ГЄГ Г§
+                Order * order = new Order(client, room, rentalPeriod, promo);
 
                 client -> addOrderToHistory(order);
                 room   -> addOrderToHistory(order);
                 room   -> isFree = false;
 
                 _ordersHistory.push_back(order);
+
+                cout << "\n-----------------------------------------------------------"<< endl;
+                cout <<   "---------------------- ORDER CREATED ----------------------";
+                cout << "\n-----------------------------------------------------------"<< endl;
 
             } else {
                 cout << "Room is occupied\n";
@@ -201,7 +278,7 @@ void Hotel::filterRooms() {
     bool isLuxery = false;
 
     _filteredRooms.clear();
-
+    startFilter(lowerPrice, MaxPrice, minBedsNumber, maxBedsNumber, isLuxery);
 
     showFilterCommands (); //showing commands
 
@@ -211,7 +288,7 @@ void Hotel::filterRooms() {
         int command = 0;
 
         cout << endl << "Choose command: ";
-        cin >> command; // тут нужна проверка на билеберду! иначе вылетит с ошибкой!
+        cin >> command; // ГІГіГІ Г­ГіГ¦Г­Г  ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЎГЁГ«ГҐГЎГҐГ°Г¤Гі! ГЁГ­Г Г·ГҐ ГўГ»Г«ГҐГІГЁГІ Г± Г®ГёГЁГЎГЄГ®Г©!
 
         showFilterOptions(lowerPrice, MaxPrice, minBedsNumber, maxBedsNumber, isLuxery);
 
@@ -276,7 +353,7 @@ void Hotel::showFilteredList() {
     } else {
         cout << endl;
         for(vector<Room *>::iterator it = _filteredRooms.begin(); it != _filteredRooms.end(); ++it) {
-            cout << "#" << (*it) -> number << ", " << (*it) -> bedsNumber << " beds, " << (*it) -> price << "$, " << (*it) -> isLuxery << endl;
+            cout << "#" << (*it) -> number << ", " << (*it) -> bedsNumber << " beds, " << (*it) -> price << "$, " << "Is luxery: " << (*it) -> isLuxery << ", is free: " <<  (*it) -> isFree << endl;
         }
     }
 }
@@ -327,4 +404,11 @@ void Hotel :: showMenuCommands() {
     cout << "4 - add new client" << endl;
     cout << "5 - filter rooms" << endl;
     cout << "6 - Show commands" << endl << endl;
+    cout << "7 - show all clients" << endl;
+}
+
+void Hotel :: showAllClients () {
+    for(vector<Client *>::iterator it = _clients.begin(); it != _clients.end(); ++it) {
+        cout << (*it) -> name << " " << (*it) -> surname << " | " << (*it) -> age << endl;
+    }
 }
